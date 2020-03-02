@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Помогайка</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.min.css">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel='stylesheet' href='/fonts/Futura PT/stylesheet.css'>
+
+    <link rel='stylesheet' href='/public/css/style.css'>
+
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__inner">
+            <div class="header__left">
+                <div class="header__left-phone">
+                    <a href="tel:+380503768478">050-376-84-78</a>
+                </div>
+                <div class="header__left-email">
+                    <a href="mailto:infopomogay@gmail.com">infopomogay@gmail.com</a>
+                </div>
+            </div>
+            <div class="header__logo">
+                <a href=""><img src="/images/logo.png" alt=""></a>
+            </div>
+            <div class="header__right">
+                <div class="header__right-social">
+                    <a href="#"><img src="/images/telegram.png" alt=""></a>
+                    <a href="#"><img src="/images/facebook.png" alt=""></a>
+                    <a href="#"><img src="/images/twitter.png" alt=""></a>
+                    <a href="#"><img src="/images/instagram.png" alt=""></a>
+
+                </div>
+                <div class="header__right-user-actions">
+                    <img src="/images/user.png" alt="">
+                    <span><a href="#">Вход</a> или <a href="#">регистрация</a></span>
+                </div>
+                <div class="header__right-language">
+                    Ru
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="main">
+        <div class="container">
+            <div class="main__top">
+                <div class="main__top-search">
+                    <span class="main__top-search-wrap">
+                        <input type="text" placeholder="Введите что нужно сделать">
+                    </span>
+                </div>
+                <div class="main__top-logo">
+                    <a href=""><img src="/images/logo.png" alt=""></a>
+                </div>
+                <div class="main__top-btn">
+                    <button type="button">Стать исполнителем</button>
+                </div>
+            </div>
+            <div class="main__content">
+                <div class="main__title">
+                    Мы помогаем Вы отдыхаете
+                </div>
+                <div class="main__text">
+                    У нас вы сможете найти более 100 000 опытных специалистов
+                </div>
+            </div>
+            <div class="main__categories">
+                <div class="main__categories-list">
+                    <div class="active">
+                        <a href="#/cleaning"><span class="img-wrapper"><img
+                                    src="/images/cleaning.png"></span><span>Уборка</span></a>
+                    </div>
+                    <div class="">
+                        <a href="#/delivery"><span class="img-wrapper"><img
+                                    src="/images/delivery.png"></span><span>Доставка</span></a>
+                    </div>
+                    <div class="">
+                        <a href="#/installing"><span class="img-wrapper"><img
+                                    src="/images/installing.png"></span><span>Установка</span></a>
+                    </div>
+                    <div class="">
+                        <a href="#/repair"><span class="img-wrapper"><img
+                                    src="/images/repair.png"></span><span>Ремонт</span></a>
+                    </div>
+                    <div class="">
+                        <a href="#/cleaning"><span class="img-wrapper"><img
+                                    src="/images/cleaning.png"></span><span>Уборка</span></a>
+                    </div>
+                    <div class="">
+                        <a href="#"><span class="img-wrapper"><img src="/images/icon-dots.svg"></span><span>Все
+                                категории</span></a>
+                    </div>
+                </div>
+                <div class="main__categories-content">
+                    <div class="main__tab" id="cleaning">
+                        <form>
+                            <div>
+                                <label>Выберите категорию</label>
+                                <div class="category-select">
+                                    <select name="category" id="category">
+                                        <option value="1" selected>Курьер на авто</option>
+                                        <option value="2">На авто курьер</option>
+                                        <option value="3">Курьер без авто</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div>
+                                <label>Выберите город</label>
+                                <div class="city-select">
+                                    <select name="city" id="city">
+                                        <option value="1" selected>Харьков</option>
+                                        <option value="2">Одесса</option>
+                                        <option value="3">Киев</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="main__tab" id="delivery">
+                        <form>
+                            <div>
+                                <label>Выберите категорию</label>
+                                <div class="category-select">
+                                    <select name="category" id="category">
+                                        <option value="1" selected>Курьер на авто</option>
+                                        <option value="2">На авто курьер</option>
+                                        <option value="3">Курьер без авто</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="popular-categories accordion">
+        <div class="container">
+            <div class="popular-categories__title title">
+                Популярные категории улуг:
+            </div>
+
+            <div class="popular-categories__top">
+                <div class="popular-categoties__item">
+                    <a >
+                        <img src="/images/popular/service.png">
+                        <span>Ремонт техники</span>
+                    </a>
+                    <div class="content">
+                        <ul>
+                            <li>Услуги пешего курьера</li>
+                            <li>Услуги курьера на легковом авто </li>
+                            <li>Срочная доставка</li>
+                            <li>Другая посылка</li>
+                            <li class="soon">Доставка продуктов<span>скоро</span></li>
+                            <li class="soon">Доставка еды из ресторанов<span>скоро</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="popular-categoties__item">
+
+                    <a >
+                        <img src="/images/popular/delivery.png">
+                        <span>Услуги курьера</span>
+                    </a>
+                    <div class="content">
+                        <ul>
+                            <li>Услуги пешего курьера</li>
+                            <li>Услуги курьера на легковом авто </li>
+                            <li>Срочная доставка</li>
+                            <li>Другая посылка</li>
+                            <li class="soon">Доставка продуктов<span>скоро</span></li>
+                            <li class="soon">Доставка еды из ресторанов<span>скоро</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="popular-categoties__item">
+
+                    <a >
+                        <img src="/images/popular/cleaning.png">
+                        <span>Уборка</span>
+                    </a>
+                    <div class="content">
+                        <ul>
+                            <li>Услуги пешего курьера</li>
+                            <li>Услуги курьера на легковом авто </li>
+                            <li>Срочная доставка</li>
+                            <li>Другая посылка</li>
+                            <li class="soon">Доставка продуктов<span>скоро</span></li>
+                            <li class="soon">Доставка еды из ресторанов<span>скоро</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="popular-categories__bottom">
+                <div class="popular-categoties__item">
+
+                    <a >
+                        <img src="/images/popular/repair.png">
+                        <span>Сборка мебели</span>
+                    </a>
+                    <div class="content">
+                        <ul>
+                            <li>Услуги пешего курьера</li>
+                            <li>Услуги курьера на легковом авто </li>
+                            <li>Срочная доставка</li>
+                            <li>Другая посылка</li>
+                            <li class="soon">Доставка продуктов<span>скоро</span></li>
+                            <li class="soon">Доставка еды из ресторанов<span>скоро</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="popular-categoties__item">
+
+                    <a >
+                        <img src="/images/popular/cleaning.png">
+                        <span>Уборка</span>
+                    </a>
+                    <div class="content">
+                        <ul>
+                            <li>Услуги пешего курьера</li>
+                            <li>Услуги курьера на легковом авто </li>
+                            <li>Срочная доставка</li>
+                            <li>Другая посылка</li>
+                            <li class="soon">Доставка продуктов<span>скоро</span></li>
+                            <li class="soon">Доставка еды из ресторанов<span>скоро</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="popular-categoties__item">
+
+                    <a >
+                        <img src="/images/popular/repair.png">
+                        <span>Сборка мебели</span>
+                    </a>
+                    <div class="content">
+                        <ul>
+                            <li>Услуги пешего курьера</li>
+                            <li>Услуги курьера на легковом авто </li>
+                            <li>Срочная доставка</li>
+                            <li>Другая посылка</li>
+                            <li class="soon">Доставка продуктов<span>скоро</span></li>
+                            <li class="soon">Доставка еды из ресторанов<span>скоро</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="popular-categoties__item">
+
+                    <a >
+                        <img src="/images/popular/cleaning.png">
+                        <span>Уборка</span>
+                    </a>
+                    <div class="content">
+                        <ul>
+                            <li>Услуги пешего курьера</li>
+                            <li>Услуги курьера на легковом авто </li>
+                            <li>Срочная доставка</li>
+                            <li>Другая посылка</li>
+                            <li class="soon">Доставка продуктов<span>скоро</span></li>
+                            <li class="soon">Доставка еды из ресторанов<span>скоро</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="popular-categories__btn">
+                <button type="button">Все категории</button>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="about">
+        <div class="container">
+            <div class="about__inner">
+                <div class="about__title title">
+                    Pomogayka это?
+                </div>
+                <div class="about__content">
+                    <div class="about__contant-item">
+                        <img src="/images/about/about-1.png">
+                        <div class="about__content-item-title">
+                            Удобная и безопасная оплата
+                        </div>
+                        <div class="about__content-item-text">
+                            При оплате через <a href="#">Сделку без риска</a>
+                            мы вернем вам деньги, если что-то пойдет не так.
+                        </div>
+                    </div>
+                    <div class="about__contant-item">
+                        <img src="/images/about/about-2.png">
+                        <div class="about__content-item-title">
+                            Надежные исполнители
+                        </div>
+                        <div class="about__content-item-text">
+                            <a href="#">Проверенные исполнители</a> подтвердили свои документы.
+                        </div>
+                    </div>
+                    <div class="about__contant-item">
+                        <img src="/images/about/about-3.png">
+                        <div class="about__content-item-title">
+                            Достоверные отзывы
+                        </div>
+                        <div class="about__content-item-text">
+                            Более <a href="#">1 000 000 отзывов</a> от заказчиков помогут выбрать подходящего
+                            исполнителя.
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="how">
+        <div class="container">
+            <div class="how__inner">
+                <div class="how__title title">
+                    Как мы работаем
+                </div>
+                <div class="how__content">
+                    <div class="how__contant-item">
+                        <img src="/images/how/map-1.png">
+                        <div class="how__content-item-title">
+                            Поиск мастера
+                        </div>
+                        <div class="how__content-item-text">
+                            Опишите своими словами задачу, которую требуется выполнить.
+                        </div>
+                    </div>
+                    <div class="how__contant-item">
+                        <img src="/images/how/map-2.png">
+                        <div class="how__content-item-title">
+                            Выбор лучшее предложения
+                        </div>
+                        <div class="how__content-item-text">
+                            Опишите своими словами задачу, которую требуется выполнить.
+                        </div>
+                    </div>
+                    <div class="how__contant-item">
+                        <img src="/images/how/how-user.png">
+                        <div class="how__content-item-title">
+                            Закрытие заказа
+                        </div>
+                        <div class="how__content-item-text">
+                            Оставьте отзыв за выполненую работу.
+                        </div>
+                    </div>
+                </div>
+                <div class="how__btn">
+                    <button type="button">Стать исполнителем</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="start">
+        <div class="container">
+            <div class="start__card">
+                <div class="start__card-title">
+                    Хочешь работать с Pomogayka, но не знаешь с чего начать?
+                </div>
+                <div class="start__card-text">
+                    Поможем стать исполнителем и создать первый заказ.
+                </div>
+                <div class="start__card-btn">
+                    <button type="button">Стать исполнителем</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="blog">
+        <div class="container">
+
+            <div class="blog__title title">
+                Журнал Pomo<span class="color-orange">gayka</span>
+            </div>
+            <div class="blog-slick">
+                <div class="blog-item">
+                    <div class="blog-box">
+                        <div class="blog-img">
+                            <img src="images/blog.jpg" alt="">
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-subtitle">
+                                Необычные задания
+                            </div>
+                            <div class="blog-title">
+                                Как заправить постель
+                            </div>
+                            <div class="blog-text">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lacus dolor massa tellus.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="blog-box">
+                        <div class="blog-img">
+                            <img src="images/blog.jpg" alt="">
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-subtitle">
+                                Необычные задания
+                            </div>
+                            <div class="blog-title">
+                                Как заправить постель
+                            </div>
+                            <div class="blog-text">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lacus dolor massa tellus.
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="blog-item">
+                    <div class="blog-box">
+                        <div class="blog-img">
+                            <img src="images/blog.jpg" alt="">
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-subtitle">
+                                Необычные задания
+                            </div>
+                            <div class="blog-title">
+                                Как заправить постель
+                            </div>
+                            <div class="blog-text">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lacus dolor massa tellus.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="blog-box">
+                        <div class="blog-img">
+                            <img src="images/blog.jpg" alt="">
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-subtitle">
+                                Необычные задания
+                            </div>
+                            <div class="blog-title">
+                                Как заправить постель
+                            </div>
+                            <div class="blog-text">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lacus dolor massa tellus.
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="blog-item">
+                    <div class="blog-box">
+                        <div class="blog-img">
+                            <img src="images/blog.jpg" alt="">
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-subtitle">
+                                Необычные задания
+                            </div>
+                            <div class="blog-title">
+                                Как заправить постель
+                            </div>
+                            <div class="blog-text">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lacus dolor massa tellus.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="blog-box">
+                        <div class="blog-img">
+                            <img src="images/blog.jpg" alt="">
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-subtitle">
+                                Необычные задания
+                            </div>
+                            <div class="blog-title">
+                                Как заправить постель
+                            </div>
+                            <div class="blog-text">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lacus dolor massa tellus.
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="blog-item">
+                    <div class="blog-box">
+                        <div class="blog-img">
+                            <img src="images/blog.jpg" alt="">
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-subtitle">
+                                Необычные задания
+                            </div>
+                            <div class="blog-title">
+                                Как заправить постель
+                            </div>
+                            <div class="blog-text">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lacus dolor massa tellus.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="blog-box">
+                        <div class="blog-img">
+                            <img src="images/blog.jpg" alt="">
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-subtitle">
+                                Необычные задания
+                            </div>
+                            <div class="blog-title">
+                                Как заправить постель
+                            </div>
+                            <div class="blog-text">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lacus dolor massa tellus.
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__social">
+                <a href="#"><img src="images/footer-fb.svg" alt="Facebook"></a>
+                <a href="#"><img src="images/footer-instagram.svg" alt="Instagrem"></a>
+                <a href="#"><img src="images/footer-twitter.svg" alt="Twitter"></a>
+                <a href="#"><img src="images/footer-telegram.svg" alt="Telegram"></a>
+                <a href="#"><img src="images/footer-yuotube.svg" alt="YouTube"></a>
+
+            </div>
+            <div class="footer__copyright">
+                <span>©
+                    <script type="text/javascript">document.write(new Date().getFullYear());</script> Pomogayka
+                    (Pomogayka.com)</span>
+                <a href="#">Правила сервиса</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="/public/js/main.js"></script>
+</body>
+
+</html>
