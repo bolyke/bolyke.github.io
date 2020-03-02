@@ -22,13 +22,8 @@
 <body>
     <header class="header">
         <div class="header__inner">
-            <div class="header__left">
-                <div class="header__left-phone">
-                    <a href="tel:+380503768478">050-376-84-78</a>
-                </div>
-                <div class="header__left-email">
-                    <a href="mailto:infopomogay@gmail.com">infopomogay@gmail.com</a>
-                </div>
+            <div class="header__user">
+                <a href=""><img src="/images/user.png" alt=""></a>
             </div>
             <div class="header__logo">
                 <a href=""><img src="/images/logo.png" alt=""></a>
@@ -39,7 +34,6 @@
                     <a href="#"><img src="/images/facebook.png" alt=""></a>
                     <a href="#"><img src="/images/twitter.png" alt=""></a>
                     <a href="#"><img src="/images/instagram.png" alt=""></a>
-
                 </div>
                 <div class="header__right-user-actions">
                     <img src="/images/user.png" alt="">
@@ -49,20 +43,26 @@
                     Ru
                 </div>
             </div>
+            <div class="header__menu-wrapper">
+                <div class="burger-container">
+                    <img src="/images/menu.svg" alt="">
+                </div>
+                <!-- <div class="header__menu">
+                    <ul class="menu">
+                        <li class="menu-item"><a href="#">Услуги</a></li>
+                        <li class="menu-item"><a href="#">О проекте</a></li>
+                        <li class="menu-item"><a href="#">Блог</a></li>
+                        <li class="menu-item"><a href="#">Контакты</a></li>
+
+                    </ul>
+                </div> -->
+            </div>
         </div>
     </header>
 
     <div class="main">
         <div class="container">
             <div class="main__top">
-                <div class="main__top-search">
-                    <span class="main__top-search-wrap">
-                        <input type="text" placeholder="Введите что нужно сделать">
-                    </span>
-                </div>
-                <div class="main__top-logo">
-                    <a href=""><img src="/images/logo.png" alt=""></a>
-                </div>
                 <div class="main__top-btn">
                     <button type="button">Стать исполнителем</button>
                 </div>
@@ -102,6 +102,16 @@
                     <div class="main__tab" id="cleaning">
                         <form>
                             <div>
+                                <div>
+                                    <label>Поиск</label>
+                                    <div class="category-select">
+                                        <select name="category" id="category">
+                                            <option value="1" selected>Что нужно сделать</option>
+                                            <option value="2">На авто курьер</option>
+                                            <option value="3">Курьер без авто</option>
+                                        </select>
+                                    </div>
+                                </div>
                             <div>
                                 <label>Выберите категорию</label>
                                 <div class="category-select">
