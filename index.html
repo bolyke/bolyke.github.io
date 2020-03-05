@@ -10,11 +10,9 @@
     <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.min.css">
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <link rel='stylesheet' href='/fonts/Futura PT/stylesheet.css'>
-
+    <link rel='stylesheet' href='/public/js/datetimepicker/css/bootstrap-datepicker.min.css'>
     <link rel='stylesheet' href='/public/css/style.css'>
 
 </head>
@@ -46,16 +44,47 @@
             <div class="header__menu-wrapper">
                 <div class="burger-container">
                     <img src="/images/menu.svg" alt="">
+                    <img src="/images/menu-close.svg" alt="">
                 </div>
-                <!-- <div class="header__menu">
-                    <ul class="menu">
+                <div class="header__menu">
+                    <div class="header__menu-header">
+                        <a href="" class="header__logo"><img src="/images/logo-menu.png" alt=""></a>
+                        <div class="header__map-point">
+                            <img src="images/map-point.png" alt="">
+                            <a href="">Харьков</a>
+                        </div>
+                    </div>
+                    <div class="header__menu-auth">
+                        <button type="button">Войти</button>
+                        <button type="button">Регистрация</button>
+                        <button type="button"><img src="images/info.png" alt=""></button>
+                    </div>
+                    <ul class="header__menu-list-top">
                         <li class="menu-item"><a href="#">Услуги</a></li>
                         <li class="menu-item"><a href="#">О проекте</a></li>
                         <li class="menu-item"><a href="#">Блог</a></li>
                         <li class="menu-item"><a href="#">Контакты</a></li>
-
                     </ul>
-                </div> -->
+                    <div class="header__menu-apps">
+                        <a href="#"><img src="images/google-play.png" alt=""></a>
+                        <a href="#"><img src="images/app-store.png" alt=""></a>
+                    </div>
+                    <ul class="header__menu-list">
+                        <li class="menu-item"><a href="#">Исполнителям</a></li>
+                        <li class="menu-item"><a href="#">Рекламодателям</a></li>
+                        <li class="menu-item"><a href="#">Партнерам</a></li>
+                    </ul>
+                    <div class="header__menu-footer">
+                        <div class="header__menu-footer-left">
+                            <span>Служба поддержки</span>
+                            <a href="tel:08007770000">0 800 777 00 00</a>
+                        </div>
+                        <div class="header__menu-footer-right">
+                            <span>Будни: c 8 до 22</span>
+                            <span>Выходные: c 10 до 19</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </header>
@@ -77,8 +106,8 @@
             </div>
             <div class="main__categories">
                 <div class="main__categories-list">
-                    <div class="active">
-                        <a href="#/cleaning"><span class="img-wrapper"><img
+                    <div>
+                        <a href="#/cleaning" class="active"><span class="img-wrapper"><img
                                     src="/images/cleaning.png"></span><span>Уборка</span></a>
                     </div>
                     <div class="">
@@ -104,9 +133,9 @@
                             <div>
                                 <div>
                                     <label>Поиск</label>
-                                    <div class="category-select">
-                                        <select name="category" id="category">
-                                            <option value="1" selected>Что нужно сделать</option>
+                                    <div class="select-wrapper search-select">
+                                        <select name="search" id="search">
+                                            <option value="1" selected>Чем вам помочь?</option>
                                             <option value="2">На авто курьер</option>
                                             <option value="3">Курьер без авто</option>
                                         </select>
@@ -114,7 +143,7 @@
                                 </div>
                             <div>
                                 <label>Выберите категорию</label>
-                                <div class="category-select">
+                                <div class="select-wrapper category-select">
                                     <select name="category" id="category">
                                         <option value="1" selected>Курьер на авто</option>
                                         <option value="2">На авто курьер</option>
@@ -124,7 +153,7 @@
                             </div>
                             <div>
                                 <label>Выберите город</label>
-                                <div class="city-select">
+                                <div class="select-wrapper city-select">
                                     <select name="city" id="city">
                                         <option value="1" selected>Харьков</option>
                                         <option value="2">Одесса</option>
@@ -132,7 +161,13 @@
                                     </select>
                                 </div>
                             </div>
-                    </div>
+                            <div>
+                                <label>Выберите дату</label>
+                                <div class="select-wrapper date-select">
+                                    <input name="date" id="date" type="text" placeholder="Выберите дату" />
+                                </div>
+                            </div>
+                        </div>
                             <button type="button">Найти специалиста</button>
                         </form>
                     </div>
@@ -140,18 +175,27 @@
                     <div class="main__tab" id="delivery">
                         <form>
                             <div>
-
-                            <div>
-                                <label>Выберите категорию</label>
-                                <div class="category-select">
-                                    <select name="category" id="category">
-                                        <option value="1" selected>Курьер на авто</option>
-                                        <option value="2">На авто курьер</option>
-                                        <option value="3">Курьер без авто</option>
-                                    </select>
+                                <div>
+                                    <label>Выберите категорию</label>
+                                    <div class="select-wrapper category-select">
+                                        <select name="category" id="category">
+                                            <option value="1" selected>Курьер на авто</option>
+                                            <option value="2">На авто курьер</option>
+                                            <option value="3">Курьер без авто</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div>
+                                    <label>Выберите тип мастера</label>
+                                    <div class="select-wrapper master-select">
+                                        <select name="master" id="master">
+                                            <option value="1" selected>Мастер</option>
+                                            <option value="2">Механик</option>
+                                            <option value="3">Электрик</option>
+                                        </select>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
 
                             <button type="button">Найти специалиста</button>
 
@@ -164,7 +208,7 @@
 
                             <div>
                                 <label>Выберите тип мастера</label>
-                                <div class="category-select">
+                                <div class="select-wrapper category-select">
                                     <select name="category" id="category">
                                         <option value="1" selected>Курьер на авто</option>
                                         <option value="2">На авто курьер</option>
@@ -174,7 +218,7 @@
                             </div>
                             <div>
                                 <label>Выберите город</label>
-                                <div class="city-select">
+                                <div class="select-wrapper city-select">
                                     <select name="city" id="city">
                                         <option value="1" selected>Харьков</option>
                                         <option value="2">Одесса</option>
@@ -194,7 +238,7 @@
 
                             <div>
                                 <label>Выберите категорию</label>
-                                <div class="category-select">
+                                <div class="select-wrapper category-select">
                                     <select name="category" id="category">
                                         <option value="1" selected>Курьер на авто</option>
                                         <option value="2">На авто курьер</option>
@@ -204,21 +248,11 @@
                             </div>
                             <div>
                                 <label>Выберите город</label>
-                                <div class="city-select">
+                                <div class="select-wrapper city-select">
                                     <select name="city" id="city">
                                         <option value="1" selected>Харьков</option>
                                         <option value="2">Одесса</option>
                                         <option value="3">Киев</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div>
-                                <label>Выберите тип мастера</label>
-                                <div class="category-select">
-                                    <select name="category" id="category">
-                                        <option value="1" selected>Курьер на авто</option>
-                                        <option value="2">На авто курьер</option>
-                                        <option value="3">Курьер без авто</option>
                                     </select>
                                 </div>
                             </div>
@@ -654,9 +688,8 @@
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-    <script
-        src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="/public/js/datetimepicker/js/bootstrap-datepicker.min.js"></script>
     <script src="/public/js/main.js"></script>
 </body>
 
