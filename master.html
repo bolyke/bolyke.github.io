@@ -35,7 +35,7 @@
                 </div>
                 <div class="header__right-user-actions">
                     <img src="/images/user.png" alt="">
-                    <span><a href="#">Вход</a> или <a href="#">регистрация</a></span>
+                    <span><a href="/registry.html">Вход</a> или <a href="/registry.html">регистрация</a></span>
                 </div>
                 <div class="header__right-language">
                     Ru
@@ -93,7 +93,7 @@
         <div class="container">
             <div class="main__top">
                 <div class="main__top-btn">
-                    <button type="button">Стать исполнителем</button>
+                    <a href="/registry.html">Стать исполнителем</a>
                 </div>
             </div>
             <div class="main__content">
@@ -134,11 +134,7 @@
                                 <div>
                                     <label>Поиск</label>
                                     <div class="select-wrapper search-select">
-                                        <select name="search" id="search">
-                                            <option value="1" selected>Чем вам помочь?</option>
-                                            <option value="2">На авто курьер</option>
-                                            <option value="3">Курьер без авто</option>
-                                        </select>
+                                        <input type="text" placeholder="Чем вам помочь?">
                                     </div>
                                 </div>
                             <div>
@@ -205,27 +201,26 @@
                     <div class="main__tab" id="installing">
                         <form>
                             <div>
-
-                            <div>
-                                <label>Выберите тип мастера</label>
-                                <div class="select-wrapper category-select">
-                                    <select name="category" id="category">
-                                        <option value="1" selected>Курьер на авто</option>
-                                        <option value="2">На авто курьер</option>
-                                        <option value="3">Курьер без авто</option>
-                                    </select>
+                                <div>
+                                    <label>Выберите тип мастера</label>
+                                    <div class="select-wrapper category-select">
+                                        <select name="category" id="category">
+                                            <option value="1" selected>Курьер на авто</option>
+                                            <option value="2">На авто курьер</option>
+                                            <option value="3">Курьер без авто</option>
+                                        </select>
+                                    </div>
                                 </div>
-                            </div>
-                            <div>
-                                <label>Выберите город</label>
-                                <div class="select-wrapper city-select">
-                                    <select name="city" id="city">
-                                        <option value="1" selected>Харьков</option>
-                                        <option value="2">Одесса</option>
-                                        <option value="3">Киев</option>
-                                    </select>
+                                <div>
+                                    <label>Выберите город</label>
+                                    <div class="select-wrapper city-select">
+                                        <select name="city" id="city">
+                                            <option value="1" selected>Харьков</option>
+                                            <option value="2">Одесса</option>
+                                            <option value="3">Киев</option>
+                                        </select>
+                                    </div>
                                 </div>
-                            </div>
                             </div>
                             <button type="button">Найти специалиста</button>
 
@@ -296,7 +291,6 @@
                                     <div class="master__card-rate">
                                         <span class="text-muted"><span class="master__card-review-count">36</span> отзывов</span>
                                         <span class="master__card-review-score">4.0</span>
-                                        <span class="master__card-price"><span class="master__card-price-blue">1450</span> грн</span>
                                     </div>
                                     <span class="master__card-age text-muted">26 лет</span>
                                 </div>
@@ -305,15 +299,11 @@
                     </div>
                     <div class="master__actions" role="tablist">
                         <div class="master__actions-mini">
-                            <div>
-                                <button type="button" class="master__action-message"><img src="/images/master/icons/message.svg" alt=""></button>
-                                <button type="button" class="master__action-call"><img src="/images/master/icons/call.svg" alt=""></button>
-                            </div>
-                            <button type="button" class="master__action-order"><img src="/images/master/icons/calendar.svg" alt=""> Запись</button>
+                            <span class="master__card-price">К оплате: <span class="master__card-price-blue">1450</span> грн</span>
+                            <button type="button" class="master__action-order">Запись к мастеру <img src="/images/master/icons/calendar-white.svg" alt=""></button>
                         </div>
                         <div class="master__actions-collapsed nav nav-tabs">
                             <a class="master__action-info active" id="info-tab" data-toggle="tab" href="#info" role="tab" aria-controls="info" aria-selected="true"><img src="/images/master/icons/info.svg" alt=""> Информация</a>
-                            <a class="master__action-contact" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false"><img src="/images/master/icons/contact.svg" alt=""> Контакты</a>
                             <a class="master__action-rate" id="rate-tab" data-toggle="tab" href="#rate" role="tab" aria-controls="rate" aria-selected="false"><img src="/images/master/icons/rate.svg" alt=""> Рейтинг</a>
                             <a class="master__action-rate" id="order-tab" data-toggle="tab" href="#order" role="tab" aria-controls="order" aria-selected="false"><img src="/images/master/icons/calendar.svg" alt=""> Запись</a>
                         </div>
@@ -373,33 +363,6 @@
                                     <div><img src="/images/master/content/video1.jpg" alt=""></div>
                                 </div>
                             </div>
-                        </div>
-
-
-                        <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
-                            <div class="tab-title">
-                                Обратный звонок
-                            </div>
-                            <div class="tab-content">
-                                <form class="form-callback" action="">
-                                    <input type="tel" name="phone" placeholder="+380 ваш телефон">
-                                    <button class="btn-green" type="button"><img src="/images/master/icons/call-white.svg" alt=""> Перезвонить</button>
-                                </form>
-                            </div>
-                            <div class="tab-title">
-                                Задать вопрос
-                            </div>
-                            <div class="tab-content">
-                                <div class="text-red">Обычно отвечает в течение нескольких минут</div>
-                                <form class="form-message" action="">
-                                    <textarea name="message" placeholder="Начните писать текст" rows="3"></textarea>
-                                    <div>
-                                        <div class="text-auth">Вы сможете задать вопрос после <a href="#">авторизации</a> на сайте</div>
-                                        <button class="btn-blue" type="button"><img src="/images/master/icons/message-white.svg" alt=""> Отправить</button>
-                                    </div>
-                                </form>
-                            </div>
-                            <button class="btn-orange" type="button">Перейти к записи</button>
                         </div>
 
 
@@ -489,7 +452,6 @@
                         </div>
                         <div class="master__actions-collapsed nav nav-tabs">
                             <a class="master__action-info active" id="info-tab" data-toggle="tab" href="#info-2" role="tab" aria-controls="info-2" aria-selected="true"><img src="/images/master/icons/info.svg" alt=""> Информация</a>
-                            <a class="master__action-contact" id="contact-tab" data-toggle="tab" href="#contact-2" role="tab" aria-controls="contact-2" aria-selected="false"><img src="/images/master/icons/contact.svg" alt=""> Контакты</a>
                             <a class="master__action-rate" id="rate-tab" data-toggle="tab" href="#rate-2" role="tab" aria-controls="rate-2" aria-selected="false"><img src="/images/master/icons/rate.svg" alt=""> Рейтинг</a>
                             <a class="master__action-rate" id="order-tab" data-toggle="tab" href="#order-2" role="tab" aria-controls="order-2" aria-selected="false"><img src="/images/master/icons/calendar.svg" alt=""> Запись</a>
                         </div>
@@ -550,34 +512,6 @@
                                 </div>
                             </div>
                         </div>
-
-
-                        <div class="tab-pane fade" id="contact-2" role="tabpanel" aria-labelledby="contact-tab">
-                            <div class="tab-title">
-                                Обратный звонок
-                            </div>
-                            <div class="tab-content">
-                                <form class="form-callback" action="">
-                                    <input type="tel" name="phone" placeholder="+380 ваш телефон">
-                                    <button class="btn-green" type="button"><img src="/images/master/icons/call-white.svg" alt=""> Перезвонить</button>
-                                </form>
-                            </div>
-                            <div class="tab-title">
-                                Задать вопрос
-                            </div>
-                            <div class="tab-content">
-                                <div class="text-red">Обычно отвечает в течение нескольких минут</div>
-                                <form class="form-message" action="">
-                                    <textarea name="message" placeholder="Начните писать текст" rows="3"></textarea>
-                                    <div>
-                                        <div class="text-auth">Вы сможете задать вопрос после <a href="#">авторизации</a> на сайте</div>
-                                        <button class="btn-blue" type="button"><img src="/images/master/icons/message-white.svg" alt=""> Отправить</button>
-                                    </div>
-                                </form>
-                            </div>
-                            <button class="btn-orange" type="button">Перейти к записи</button>
-                        </div>
-
 
                         <div class="tab-pane fade" id="rate-2" role="tabpanel" aria-labelledby="rate-tab">
                             <div class="rate__general">
@@ -665,7 +599,6 @@
                         </div>
                         <div class="master__actions-collapsed nav nav-tabs">
                             <a class="master__action-info active" id="info-tab" data-toggle="tab" href="#info-3" role="tab" aria-controls="info-3" aria-selected="true"><img src="/images/master/icons/info.svg" alt=""> Информация</a>
-                            <a class="master__action-contact" id="contact-tab" data-toggle="tab" href="#contact-3" role="tab" aria-controls="contact-3" aria-selected="false"><img src="/images/master/icons/contact.svg" alt=""> Контакты</a>
                             <a class="master__action-rate" id="rate-tab" data-toggle="tab" href="#rate-3" role="tab" aria-controls="rate-3" aria-selected="false"><img src="/images/master/icons/rate.svg" alt=""> Рейтинг</a>
                             <a class="master__action-rate" id="order-tab" data-toggle="tab" href="#order-3" role="tab" aria-controls="order-3" aria-selected="false"><img src="/images/master/icons/calendar.svg" alt=""> Запись</a>
                         </div>
@@ -726,34 +659,6 @@
                                 </div>
                             </div>
                         </div>
-
-
-                        <div class="tab-pane fade" id="contact-3" role="tabpanel" aria-labelledby="contact-tab">
-                            <div class="tab-title">
-                                Обратный звонок
-                            </div>
-                            <div class="tab-content">
-                                <form class="form-callback" action="">
-                                    <input type="tel" name="phone" placeholder="+380 ваш телефон">
-                                    <button class="btn-green" type="button"><img src="/images/master/icons/call-white.svg" alt=""> Перезвонить</button>
-                                </form>
-                            </div>
-                            <div class="tab-title">
-                                Задать вопрос
-                            </div>
-                            <div class="tab-content">
-                                <div class="text-red">Обычно отвечает в течение нескольких минут</div>
-                                <form class="form-message" action="">
-                                    <textarea name="message" placeholder="Начните писать текст" rows="3"></textarea>
-                                    <div>
-                                        <div class="text-auth">Вы сможете задать вопрос после <a href="#">авторизации</a> на сайте</div>
-                                        <button class="btn-blue" type="button"><img src="/images/master/icons/message-white.svg" alt=""> Отправить</button>
-                                    </div>
-                                </form>
-                            </div>
-                            <button class="btn-orange" type="button">Перейти к записи</button>
-                        </div>
-
 
                         <div class="tab-pane fade" id="rate-3" role="tabpanel" aria-labelledby="rate-tab">
                             <div class="rate__general">
@@ -1209,7 +1114,21 @@
         </div>
     </div>
 
+
+    <div class="pagination">
+        <div class="container">
+            <div class="pagination__prev"></div>
+            <div class="pagination__pages">
+                1 из 8 
+            </div>
+            <div class="pagination__next"></div> 
+
+        </div>
+    </div>
+
+
     <footer class="footer">
+        <div class="callback"><a href="#"></a></div>
         <div class="container">
             <div class="footer__social">
                 <a href="#"><img src="images/footer-fb.svg" alt="Facebook"></a>
