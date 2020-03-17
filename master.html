@@ -89,175 +89,26 @@
         </div>
     </header>
 
-    <div class="main">
+    <div class="main main__master">
         <div class="container">
-            <div class="main__top">
-                <div class="main__top-btn">
-                    <a href="/registry.html">Стать исполнителем</a>
-                </div>
-            </div>
-            <div class="main__content">
-                <div class="main__title">
-                    Мы помогаем Вы отдыхаете
-                </div>
-                <div class="main__text">
-                    У нас вы сможете найти более 100 000 опытных специалистов
-                </div>
-            </div>
-            <div class="main__categories">
-                <div class="main__categories-list">
-                    <div>
-                        <a href="#/cleaning" class="active"><span class="img-wrapper"><img
-                                    src="/images/cleaning.png"></span><span>Уборка</span></a>
-                    </div>
-                    <div class="">
-                        <a href="#/delivery"><span class="img-wrapper"><img
-                                    src="/images/delivery.png"></span><span>Доставка</span></a>
-                    </div>
-                    <div class="">
-                        <a href="#/installing"><span class="img-wrapper"><img
-                                    src="/images/installing.png"></span><span>Установка</span></a>
-                    </div>
-                    <div class="">
-                        <a href="#/repair"><span class="img-wrapper"><img
-                                    src="/images/repair.png"></span><span>Ремонт</span></a>
-                    </div>
-                    <div class="">
-                        <a href="#"><span class="img-wrapper"><img src="/images/icon-dots.svg"></span><span>Все
-                                категории</span></a>
-                    </div>
-                </div>
-                <div class="main__categories-content">
-                    <div class="main__tab" id="cleaning">
-                        <form>
-                            <div>
-                                <div>
-                                    <label>Поиск</label>
-                                    <div class="select-wrapper search-select">
-                                        <input type="text" placeholder="Чем вам помочь?">
-                                    </div>
-                                </div>
-                            <div>
-                                <label>Выберите категорию</label>
-                                <div class="select-wrapper category-select">
-                                    <select name="category" id="category">
-                                        <option value="1" selected>Вид услуг</option>
-                                        <option value="2">На авто курьер</option>
-                                        <option value="3">Курьер без авто</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div>
-                                <label>Выберите город</label>
-                                <div class="select-wrapper city-select">
-                                    <select name="city" id="city">
-                                        <option value="1" selected>Ваш город</option>
-                                        <option value="2">Одесса</option>
-                                        <option value="3">Киев</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div>
-                                <label>Выберите дату</label>
-                                <div class="select-wrapper date-select">
-                                    <input name="date" id="date" type="text" placeholder="Выберите дату" />
-                                </div>
-                            </div>
+            <div class="main__form">
+                <form>
+                    <div class="main__form-top">
+                        <span class="select-category">Муж на час</span>
+                        <div class="select-wrapper action-select">
+                            <select name="action" id="action">
+                                <option value="1" selected>Собрать шкаф</option>
+                                <option value="2">Повесить шторы</option>
+                                <option value="3">Натянуть потолок</option>
+                            </select>
                         </div>
-                            <button type="button">Найти специалиста</button>
-                        </form>
                     </div>
-
-                    <div class="main__tab" id="delivery">
-                        <form>
-                            <div>
-                                <div>
-                                    <label>Выберите категорию</label>
-                                    <div class="select-wrapper category-select">
-                                        <select name="category" id="category">
-                                            <option value="1" selected>Вид услуг</option>
-                                            <option value="2">На авто курьер</option>
-                                            <option value="3">Курьер без авто</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div>
-                                    <label>Выберите тип мастера</label>
-                                    <div class="select-wrapper master-select">
-                                        <select name="master" id="master">
-                                            <option value="1" selected>Мастер</option>
-                                            <option value="2">Механик</option>
-                                            <option value="3">Электрик</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <button type="button">Найти специалиста</button>
-
-                        </form>
+                    <div class="main__form-actions">
+                        <button type="button">Сегодня</button>
+                        <button type="button">Выбрать дату</button>
+                        <button type="button">Фильтр</button>
                     </div>
-
-                    <div class="main__tab" id="installing">
-                        <form>
-                            <div>
-                                <div>
-                                    <label>Выберите тип мастера</label>
-                                    <div class="select-wrapper category-select">
-                                        <select name="category" id="category">
-                                            <option value="1" selected>Вид услуг</option>
-                                            <option value="2">На авто курьер</option>
-                                            <option value="3">Курьер без авто</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div>
-                                    <label>Выберите город</label>
-                                    <div class="select-wrapper city-select">
-                                        <select name="city" id="city">
-                                            <option value="1" selected>Ваш город</option>
-                                            <option value="2">Одесса</option>
-                                            <option value="3">Киев</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-                            <button type="button">Найти специалиста</button>
-
-                        </form>
-                    </div>
-
-                    <div class="main__tab" id="repair">
-                        <form>
-                            <div>
-
-                            <div>
-                                <label>Выберите категорию</label>
-                                <div class="select-wrapper category-select">
-                                    <select name="category" id="category">
-                                        <option value="1" selected>Вид услуг</option>
-                                        <option value="2">На авто курьер</option>
-                                        <option value="3">Курьер без авто</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div>
-                                <label>Выберите город</label>
-                                <div class="select-wrapper city-select">
-                                    <select name="city" id="city">
-                                        <option value="1" selected>Ваш город</option>
-                                        <option value="2">Одесса</option>
-                                        <option value="3">Киев</option>
-                                    </select>
-                                </div>
-                            </div>
-                            </div>
-
-                            <button type="button">Найти специалиста</button>
-
-                        </form>
-                    </div>
-                </div>
+                </form>
             </div>
         </div>
     </div>
