@@ -1366,7 +1366,9 @@ button {
 .about-2-text .about-2-card_title {
     padding: 0;
 }
-
+.video-title {
+    margin-top: 50px;
+}
 .about-video {
     display: flex;
     flex-direction: row;
@@ -2620,6 +2622,7 @@ button {
     }
 
     .about-video {
+        margin-top: 20px;
         flex-direction: column;
     }
 
