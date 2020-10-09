@@ -5,688 +5,886 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Помогайка</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+    <title>Multiprint - Типография полного цикла</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon">
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-    <link rel='stylesheet' href='/fonts/Futura PT/stylesheet.css'>
-    <link rel='stylesheet' href='/public/js/datetimepicker/css/bootstrap-datepicker.min.css'>
-    <link rel='stylesheet' href='/public/css/style.css'>
+    <link rel='stylesheet' href='./css/style.css'>
+    <script src="js/main.js"></script>
 
 </head>
 
 <body>
     <header class="header">
-        <div class="header__inner">
-            <div class="header__user">
-                <a href=""><img src="/images/user.png" alt=""></a>
-            </div>
-            <div class="header__logo">
-                <a href=""><img src="/images/logo.png" alt=""></a>
-            </div>
-            <div class="header__right">
-                <div class="header__right-social">
-                    <a href="#"><img src="/images/telegram.png" alt=""></a>
-                    <a href="#"><img src="/images/facebook.png" alt=""></a>
-                    <a href="#"><img src="/images/twitter.png" alt=""></a>
-                    <a href="#"><img src="/images/instagram.png" alt=""></a>
-                </div>
-                <div class="header__right-user-actions">
-                    <img src="/images/user.png" alt="">
-                    <span><a href="#">Вход</a> или <a href="#">регистрация</a></span>
-                </div>
-                <div class="header__right-language">
-                    Ru
+        <div class="header-top">
+            <div class="container d-flex flex-row justify-space-between align-center align-xs-start">
+                <img src="./images/logo.png" class="logo" alt="Logo">
+                <div class="header-text">Все виды полиграфических услуг для частных лиц, бизнеса, госсектора</div>
+                <div class="header-contact">
+                    <div>
+                        <div class="header-phone d-flex align-center"><img src="./images/phone-call.png"><a
+                                href="tel:+79099944944">+7 (909) 994 49 44</a></div>
+                        <div class="header-mail d-flex align-center"><img src="./images/mail.png"><a
+                                href="mailto:multiprint.msk@yandex.ru">multiprint.msk@yandex.ru</a></div>
+                    </div>
+                    <a href="#feedback" class="btn-primary btn-xs">Заказать звонок</a>
                 </div>
             </div>
-            <div class="header__menu-wrapper">
-                <div class="burger-container">
-                    <img src="/images/menu.svg" alt="">
-                    <img src="/images/menu-close.svg" alt="">
-                </div>
-                <div class="header__menu">
-                    <div class="header__menu-header">
-                        <a href="" class="header__logo"><img src="/images/logo-menu.png" alt=""></a>
-                        <div class="header__map-point">
-                            <img src="images/map-point.png" alt="">
-                            <a href="">Ваш город</a>
-                        </div>
+        </div>
+
+        <div class="header-nav">
+            <span class="toggle-menu-mob" id="burger"></span>
+            <div class="burger-lines">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="nav container d-flex flex-row flex-xs-column justify-space-between justify-xs-start">
+                <a href="#start">Начало</a>
+                <a href="#about">О нас</a>
+                <a href="#examples">Примеры работ</a>
+                <a href="#review">Отзывы</a>
+                <a href="#stock">Акция</a>
+                <a href="#contact">Контакты</a>
+                <div class="header-contact">
+                    <div>
+                        <div class="header-phone d-flex align-center"><img src="./images/phone-call.png"><a
+                                href="tel:+79099944944">+7 (909) 994 49 44</a></div>
+                        <div class="header-mail d-flex align-center"><img src="./images/mail.png"><a
+                                href="mailto:multiprint.msk@yandex.ru">multiprint.msk@yandex.ru</a></div>
                     </div>
-                    <div class="header__menu-auth">
-                        <button type="button">Войти</button>
-                        <button type="button">Регистрация</button>
-                        <button type="button"><img src="images/info.png" alt=""></button>
-                    </div>
-                    <ul class="header__menu-list-top">
-                        <li class="menu-item"><a href="#">Услуги</a></li>
-                        <li class="menu-item"><a href="#">О проекте</a></li>
-                        <li class="menu-item"><a href="#">Блог</a></li>
-                        <li class="menu-item"><a href="#">Контакты</a></li>
-                    </ul>
-                    <div class="header__menu-apps">
-                        <a href="#"><img src="images/google-play.png" alt=""></a>
-                        <a href="#"><img src="images/app-store.png" alt=""></a>
-                    </div>
-                    <ul class="header__menu-list">
-                        <li class="menu-item"><a href="#">Исполнителям</a></li>
-                        <li class="menu-item"><a href="#">Рекламодателям</a></li>
-                        <li class="menu-item"><a href="#">Партнерам</a></li>
-                    </ul>
-                    <div class="header__menu-footer">
-                        <div class="header__menu-footer-left">
-                            <span>Служба поддержки</span>
-                            <a href="tel:08007770000">0 800 777 00 00</a>
-                        </div>
-                        <div class="header__menu-footer-right">
-                            <span>Будни: c 8 до 22</span>
-                            <span>Выходные: c 10 до 19</span>
-                        </div>
-                    </div>
+                    <a href="#feedback" class="btn-primary btn-xs">Заказать звонок</a>
                 </div>
             </div>
         </div>
     </header>
-
     <div class="main">
         <div class="container">
-            <div class="main__top">
-                <div class="main__top-btn">
-                    <a href="/registry.html">Стать исполнителем</a>
+            <div class="main-top">
+                <div class="main-title"><span class="text-blue">Типография</span> полного цикла</div>
+                <div class="main-list">
+                    <div class="main-list-item">
+                        <img src="./images/checkmark.png" alt="">
+                        <div>Решение задач любой сложности, <span class="small-text">включая нестандартные</span></div>
+                    </div>
+                    <div class="main-list-item">
+                        <img src="./images/checkmark.png" alt="">
+                        <div>Премиальное качество печати <span class="small-text">при любом бюджете</span></div>
+                    </div>
+                    <div class="main-list-item">
+                        <img src="./images/checkmark.png" alt="">
+                        <div>Визитки в подарок <span class="small-text">каждому заказчику</span></div>
+                    </div>
                 </div>
             </div>
-            <div class="main__content">
-                <div class="main__title">
-                    Мы помогаем Вы отдыхаете
+            <div id="feedback" class="main-bottom">
+                <div class="main-bottom-title">Изложите задачу, а всё остальное сделаем мы</div>
+                <div class="main-bottom-text">Заполните форму и отправьте заявку - мы свяжемся с вами в течение 15 минут
                 </div>
-                <div class="main__text">
-                    У нас вы сможете найти более 100 000 опытных специалистов
-                </div>
-            </div>
-            <div class="main__categories">
-                <div class="main__categories-list">
+                <form class="main-form" action="">
                     <div>
-                        <a href="#/cleaning" class="active"><span class="img-wrapper"><img
-                                    src="/images/cleaning.png"></span><span>Уборка</span></a>
+                        <img src="./images/user.png"><input type="text" name="name" placeholder="Ваше имя">
+                        <span class="error-text"></span>
                     </div>
-                    <div class="">
-                        <a href="#/delivery"><span class="img-wrapper"><img
-                                    src="/images/delivery.png"></span><span>Доставка</span></a>
+                    <div>
+                        <img src="./images/phone.png"><input type="text" name="phone" placeholder="Ваш телефон">
+                        <span class="error-text"></span>
                     </div>
-                    <div class="">
-                        <a href="#/installing"><span class="img-wrapper"><img
-                                    src="/images/installing.png"></span><span>Установка</span></a>
-                    </div>
-                    <div class="">
-                        <a href="#/repair"><span class="img-wrapper"><img
-                                    src="/images/repair.png"></span><span>Ремонт</span></a>
-                    </div>
-                    <div class="">
-                        <a href="#"><span class="img-wrapper"><img src="/images/icon-dots.svg"></span><span>Все
-                                категории</span></a>
-                    </div>
-                </div>
-                <div class="main__categories-content">
-                    <div class="main__tab" id="cleaning">
-                        <form>
-                            <div>
-                                <div>
-                                    <label>Поиск</label>
-                                    <div class="select-wrapper search-select">
-                                        <input type="text" placeholder="Чем вам помочь?">
-                                    </div>
-                                </div>
-                            <div>
-                                <label>Выберите категорию</label>
-                                <div class="select-wrapper category-select">
-                                    <select name="category" id="category">
-                                        <option value="1" selected>Вид услуг</option>
-                                        <option value="2">На авто курьер</option>
-                                        <option value="3">Курьер без авто</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div>
-                                <label>Выберите город</label>
-                                <div class="select-wrapper city-select">
-                                    <select name="city" id="city">
-                                        <option value="1" selected>Ваш город</option>
-                                        <option value="2">Одесса</option>
-                                        <option value="3">Киев</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div>
-                                <label>Выберите дату</label>
-                                <div class="select-wrapper date-select">
-                                    <input name="date" id="date" type="text" placeholder="Выберите дату" />
-                                </div>
-                            </div>
-                        </div>
-                            <button type="button">Найти специалиста</button>
-                        </form>
-                    </div>
-
-                    <div class="main__tab" id="delivery">
-                        <form>
-                            <div>
-                                <div>
-                                    <label>Выберите категорию</label>
-                                    <div class="select-wrapper category-select">
-                                        <select name="category" id="category">
-                                            <option value="1" selected>Вид услуг</option>
-                                            <option value="2">На авто курьер</option>
-                                            <option value="3">Курьер без авто</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div>
-                                    <label>Выберите тип мастера</label>
-                                    <div class="select-wrapper master-select">
-                                        <select name="master" id="master">
-                                            <option value="1" selected>Мастер</option>
-                                            <option value="2">Механик</option>
-                                            <option value="3">Электрик</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <button type="button">Найти специалиста</button>
-
-                        </form>
-                    </div>
-
-                    <div class="main__tab" id="installing">
-                        <form>
-                            <div>
-
-                            <div>
-                                <label>Выберите тип мастера</label>
-                                <div class="select-wrapper category-select">
-                                    <select name="category" id="category">
-                                        <option value="1" selected>Вид услуг</option>
-                                        <option value="2">На авто курьер</option>
-                                        <option value="3">Курьер без авто</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div>
-                                <label>Выберите город</label>
-                                <div class="select-wrapper city-select">
-                                    <select name="city" id="city">
-                                        <option value="1" selected>Ваш город</option>
-                                        <option value="2">Одесса</option>
-                                        <option value="3">Киев</option>
-                                    </select>
-                                </div>
-                            </div>
-                            </div>
-                            <button type="button">Найти специалиста</button>
-
-                        </form>
-                    </div>
-
-                    <div class="main__tab" id="repair">
-                        <form>
-                            <div>
-
-                            <div>
-                                <label>Выберите категорию</label>
-                                <div class="select-wrapper category-select">
-                                    <select name="category" id="category">
-                                        <option value="1" selected>Вид услуг</option>
-                                        <option value="2">На авто курьер</option>
-                                        <option value="3">Курьер без авто</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div>
-                                <label>Выберите город</label>
-                                <div class="select-wrapper city-select">
-                                    <select name="city" id="city">
-                                        <option value="1" selected>Ваш город</option>
-                                        <option value="2">Одесса</option>
-                                        <option value="3">Киев</option>
-                                    </select>
-                                </div>
-                            </div>
-                            </div>
-
-                            <button type="button">Найти специалиста</button>
-
-                        </form>
-                    </div>
+                    <button class="btn-primary btn-send" type="button">Отправить заявку</button>
+                </form>
+                <div class="policy">
+                    Нажимая на кнопку, вы принимаете нашу <span class="btn-modal-policy">политику
+                        конфиденциальности</span>
+                    и даете <span class="btn-modal-consent">согласие на обработку персональных данных</span>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="popular-categories accordion">
+    <div id="examples" class="services">
         <div class="container">
-            <div class="popular-categories__title title">
-                Популярные категории улуг:
+            <div class="services-title">
+                С <span class="text-blue">1992</span> года печатаем с любовью и душой
+                <span class="dash"></span>
             </div>
-
-            <div class="popular-categories__top">
-                <div class="popular-categoties__item">
-                    <a >
-                        <img src="/images/popular/service.png">
-                        <span>Ремонт техники</span>
-                    </a>
-                    <div class="content">
-                        <ul>
-                            <li>Услуги пешего курьера</li>
-                            <li>Услуги курьера на легковом авто </li>
-                            <li>Срочная доставка</li>
-                            <li>Другая посылка</li>
-                            <li class="soon">Доставка продуктов<span>скоро</span></li>
-                            <li class="soon">Доставка еды из ресторанов<span>скоро</span></li>
-                        </ul>
-                    </div>
+            <div class="services-example-content">
+                <div class="services-card">
+                    <div class="services-card_img"><img src="./images/service1.jpg"></div>
+                    <div class="services-card_title">Книги и учебники в твёрдом и мягком переплёте</div>
+                    <div class="services-card_text">Приятно читать и просто держать в руках</div>
                 </div>
-                <div class="popular-categoties__item">
-
-                    <a >
-                        <img src="/images/popular/delivery.png">
-                        <span>Услуги курьера</span>
-                    </a>
-                    <div class="content">
-                        <ul>
-                            <li>Услуги пешего курьера</li>
-                            <li>Услуги курьера на легковом авто </li>
-                            <li>Срочная доставка</li>
-                            <li>Другая посылка</li>
-                            <li class="soon">Доставка продуктов<span>скоро</span></li>
-                            <li class="soon">Доставка еды из ресторанов<span>скоро</span></li>
-                        </ul>
-                    </div>
+                <div class="services-card">
+                    <div class="services-card_img"><img src="./images/service2.jpg"></div>
+                    <div class="services-card_title">Полноцветные журналы и каталоги</div>
+                    <div class="services-card_text">Хочется листать и рассматривать бесконечно </div>
                 </div>
-
-                <div class="popular-categoties__item">
-
-                    <a >
-                        <img src="/images/popular/cleaning.png">
-                        <span>Уборка</span>
-                    </a>
-                    <div class="content">
-                        <ul>
-                            <li>Услуги пешего курьера</li>
-                            <li>Услуги курьера на легковом авто </li>
-                            <li>Срочная доставка</li>
-                            <li>Другая посылка</li>
-                            <li class="soon">Доставка продуктов<span>скоро</span></li>
-                            <li class="soon">Доставка еды из ресторанов<span>скоро</span></li>
-                        </ul>
-                    </div>
+                <div class="services-card">
+                    <div class="services-card_img"><img src="./images/service3.jpg"></div>
+                    <div class="services-card_title">Рекламная продукция: листовки, буклеты, лифлеты</div>
+                    <div class="services-card_text">Для успешного продвижения вашего бизнеса</div>
+                </div>
+                <div class="services-card">
+                    <div class="services-card_img"><img src="./images/service4.jpg"></div>
+                    <div class="services-card_title">Подарочные издания, календари, блокноты</div>
+                    <div class="services-card_text">Получать и вручать - одно удовольствие</div>
                 </div>
             </div>
-            <div class="popular-categories__bottom">
-                <div class="popular-categoties__item">
-
-                    <a >
-                        <img src="/images/popular/repair.png">
-                        <span>Сборка мебели</span>
-                    </a>
-                    <div class="content">
-                        <ul>
-                            <li>Услуги пешего курьера</li>
-                            <li>Услуги курьера на легковом авто </li>
-                            <li>Срочная доставка</li>
-                            <li>Другая посылка</li>
-                            <li class="soon">Доставка продуктов<span>скоро</span></li>
-                            <li class="soon">Доставка еды из ресторанов<span>скоро</span></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="popular-categoties__item">
-
-                    <a >
-                        <img src="/images/popular/cleaning.png">
-                        <span>Уборка</span>
-                    </a>
-                    <div class="content">
-                        <ul>
-                            <li>Услуги пешего курьера</li>
-                            <li>Услуги курьера на легковом авто </li>
-                            <li>Срочная доставка</li>
-                            <li>Другая посылка</li>
-                            <li class="soon">Доставка продуктов<span>скоро</span></li>
-                            <li class="soon">Доставка еды из ресторанов<span>скоро</span></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="popular-categoties__item">
-
-                    <a >
-                        <img src="/images/popular/repair.png">
-                        <span>Сборка мебели</span>
-                    </a>
-                    <div class="content">
-                        <ul>
-                            <li>Услуги пешего курьера</li>
-                            <li>Услуги курьера на легковом авто </li>
-                            <li>Срочная доставка</li>
-                            <li>Другая посылка</li>
-                            <li class="soon">Доставка продуктов<span>скоро</span></li>
-                            <li class="soon">Доставка еды из ресторанов<span>скоро</span></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="popular-categoties__item">
-
-                    <a >
-                        <img src="/images/popular/cleaning.png">
-                        <span>Уборка</span>
-                    </a>
-                    <div class="content">
-                        <ul>
-                            <li>Услуги пешего курьера</li>
-                            <li>Услуги курьера на легковом авто </li>
-                            <li>Срочная доставка</li>
-                            <li>Другая посылка</li>
-                            <li class="soon">Доставка продуктов<span>скоро</span></li>
-                            <li class="soon">Доставка еды из ресторанов<span>скоро</span></li>
-                        </ul>
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="popular-categories__btn">
-                <button type="button">Все категории</button>
-            </div>
-
         </div>
-
     </div>
 
+    <div class="stock">
+        <div class="container d-flex flex-column align-start">
+            <div class="stock-title">При заказе на сумму</div>
+            <div>
+                <div class="stock-title-white">от 10 000 руб.</div>
+                <div class="stock-title-blue">скидка 5%</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="services">
+        <div class="container">
+            <div class="services-title">
+                Полный цикл полиграфических услуг: <span class="services-subtitle">от разработки макета до организации
+                    доставки</span>
+                <span class="dash"></span>
+            </div>
+            <div class="services-content">
+                <div class="services-card">
+                    <div class="services-card-inner">
+                        <div class="services-card_img"><img src="./images/hydraulic.png"></div>
+                        <div class="services-card_title">Предпечатная подготовка (препресс)</div>
+                        <div class="services-card_text">
+                            <b>Выразительный макет</b><br>
+                            Создаем профессиональный макет с нуля.
+                            При необходимости дорабатываем ваш вариант.<br><br>
+
+                            <b>Безупречная корректура</b><br>
+                            Ни единого шанса для ошибок и опечаток.<br><br>
+
+                            <b>Идеальная верстка</b><br>
+                            Каждая деталь на своём месте и при этом нет ничего лишнего.
+                        </div>
+                    </div>
+                    <div class="triangle"></div>
+                </div>
+                <div class="services-card">
+                    <div class="services-card-inner">
+                        <div class="services-card_img"><img src="./images/printer.png"></div>
+                        <div class="services-card_title">Печать</div>
+                        <div class="services-card_text">
+                            <b>Цифровая печать</b><br>
+                            Идеально подходит для “микро”-тиражей.<br><br>
+
+                            <b>Офсетная печать</b><br>
+                            Для тиражей от 100 экземпляров.<br><br>
+
+                            <b>Полноцветная и черно-белая печать</b><br>
+                            Выбирайте вариант, который больше вам подходит.
+                        </div>
+                    </div>
+                </div>
+                <div class="services-card">
+                    <div class="services-card-inner">
+                        <div class="services-card_img"><img src="./images/hydraulic-yellow.png"></div>
+                        <div class="services-card_title">Послепечатная обработка (постпресс)</div>
+                        <div class="services-card_text">
+                            <b>Декорирование обложки</b><br>
+                            с использованием всех возможных техник (биговка, фальцовка,
+                            перфорация, тиснение фольгой, высечка, уф-лак, ламинация, вырубка)<br><br>
+
+                            <b>Брошюровка и переплет</b> <br>
+                            Надёжное крепление разными методами: термоклеевой способ,
+                            скоба, пластиковая или металлическая пружина, люверсы.
+                        </div>
+                    </div>
+                    <div class="triangle"></div>
+                </div>
+                <div class="services-card">
+                    <div class="services-card-inner">
+                        <div class="services-card_img"><img src="./images/delivery-truck.png"></div>
+                        <div class="services-card_title">Доставка</div>
+                        <div class="services-card_text">
+                            Берём на себя организацию доставки отпечатанного тиража
+                            по нужному вам адресу:
+                            <ul>
+                                <li>По Москве БЕСПЛАТНО</li>
+                                <li>В другие регионы - по тарифам транспортной компании.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="services-warranty">
+                <div class="services-warranty_img"><img src="./images/winner.png"></div>
+                <div class="services-warranty_title">Гарантия качества</div>
+                <div class="services-warranty_text">В случае ошибок, возникших по нашей вине, перепечатаем весь тираж за
+                    свой счёт или вернём деньги</div>
+            </div>
+        </div>
+    </div>
 
     <div class="about">
         <div class="container">
-            <div class="about__inner">
-                <div class="about__title title">
-                    Pomogayka это?
-                </div>
-                <div class="about__content">
-                    <div class="about__content-item">
-                        <img src="/images/about/about-1.png">
-                        <div class="about__content-item-title">
-                            Удобная и безопасная оплата
-                        </div>
-                        <div class="about__content-item-text">
-                            При оплате через <a href="#">Сделку без риска</a>
-                            мы вернем вам деньги, если что-то пойдет не так.
-                        </div>
-                    </div>
-                    <div class="about__content-item">
-                        <img src="/images/about/about-2.png">
-                        <div class="about__content-item-title">
-                            Надежные исполнители
-                        </div>
-                        <div class="about__content-item-text">
-                            <a href="#">Проверенные исполнители</a> подтвердили свои документы.
-                        </div>
-                    </div>
-                    <div class="about__content-item">
-                        <img src="/images/about/about-3.png">
-                        <div class="about__content-item-title">
-                            Достоверные отзывы
-                        </div>
-                        <div class="about__content-item-text">
-                            Более <a href="#">1 000 000 отзывов</a> от заказчиков помогут выбрать подходящего
-                            исполнителя.
-                        </div>
+            <div class="about-title">
+                <div class="about-title-inner">
+                    <div><span class="text-blue">“Мультипринт”</span>: больше, чем просто типография</div>
+                    <div class="about-subtitle">Мы не просто типография, где на автомате печатают то,
+                        что прислали. Мы помогаем воплотить ваши идеи в жизнь наилучшим из возможных способов.<br>
+                        Вместе с вами болеем за результат.
                     </div>
                 </div>
-
+                <span class="dash"></span>
+            </div>
+            <div class="about-content">
+                <div class="about-card">
+                    <div class="about-text-wrapper">
+                        <div class="about-card_title">Издание книг</div>
+                        <div class="about-card_text">Готова рукопись? Отправьте её нам. А мы сделаем всё остальное - от
+                            подготовки книги к печати до помощи с её продвижением и продажей.<br>Для этого:
+                            <ul>
+                                <li>Разработаем эффективную PR-кампанию</li>
+                                <li>Организуем презентацию в Московском Доме книги (или другом месте) </li>
+                                <li>Поможем с реализацией на маркетмлейсах.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="about-card_img"><img src="./images/about2.jpg"></div>
+                </div>
+                <div class="about-card">
+                    <div class="about-card_img"><img src="./images/about1.jpg"></div>
+                    <div class="about-text-wrapper">
+                        <div class="about-card_title">Разработка бренд-бука</div>
+                        <div class="about-card_text">Опытные дизайнеры разрабатывают все необходимые элементы вашего
+                            фирменного стиля - логотип, шрифты, цветовую палитру,
+                            визуальные образы, которые:
+                            <ul>
+                                <li>Отражают ваши ценности, миссию и философию</li>
+                                <li>Формируют правильное восприятие вашего бренда</li>
+                                <li>Способствуют узнаваемости вашей компании.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
+    <div class="review">
+        <div class="container">
+            <div class="review-title">
+                “Эти ребята всё исполнят качественно и на пять баллов!" <span class="review-subtitle">говорят наши
+                    клиенты и вот, почему:</span>
+                <span class="dash"></span>
+            </div>
+            <div class="review-content">
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="review-card_img"><img src="./images/document.png"></div>
+                        <div class="review-card_title">Напечатано в типографии “Мультипринт” = безусловное качество
+                        </div>
+                    </div>
+                    <div class="review-card_text">
+                        <ul>
+                            <li>Чёткий текст, точная цветопередача, красочная палитра. Получается именно так, как вы
+                                мечтали, и даже лучше.</li>
+                            <li>Долговечный переплет. Склейка держится десятилетиями: книгу даже в мягкой обложке
+                                разорвать руками очень сложно - проверено клиентами и нами.</li>
+                        </ul>
+                    </div>
+                    <div class="review-bottom">
+                        <div class="review-bottom_img"><img src="./images/review1.jpg"></div>
+                        <div class="review-blockquote">
+                            “В 1995 году издавала в Мультипринте сборник статей, а спустя 25 лет решила утилизировать
+                            его, пустив на растопку. Но как я ни пыталась разорвать мягкий переплёт - у меня сил не
+                            хватило. Настолько качественная склейка.”
+                            (Елена Журавлёва)
+                        </div>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="review-card_img"><img src="./images/hand-shake.png"></div>
+                        <div class="review-card_title">Комфортное сотрудничество</div>
+                    </div>
+                    <div class="review-card_text">
+                        <ul>
+                            <li>Соблюдение дедлайнов. Ваши планы осуществляются согласно задуманному графику.</li>
+                            <li>Работа по принципу “одного окна”. Например, при подготовке бизнес-мероприятий вам не
+                                нужно заказывать в одном месте рекламную полиграфию, в другом - пакеты, а в третьем -
+                                ручки с фирменной символикой. Вместо этого вы размещаете заказ у нас, а в назначенный
+                                день принимаете готовые материалы по нужному вам адресу.</li>
+                            <li>Сотрудничество офлайн или удаленно - как вам удобно. Вы можете решить все вопросы в
+                                нашем офисе. Или выслать нам исходные файлы по электронной почте из любой точки России.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="stock" class="stock-2">
+        <div class="container">
+            <div class="stock-left">
+                <div class="stock-title"><span class="text-blue">Сэкономьте больше</span> с помощью нашей акции</div>
+                <div class="stock-text">Отправьте заявку на сумму <span class="text-pink">от 10 000 рублей</span> и
+                    получите <span class="text-pink">СКИДКУ 5%</span></div>
+            </div>
+            <form class="main-form" action="">
+                <div>
+                    <img src="./images/user.png"><input type="text" name="name" placeholder="Ваше имя">
+                    <span class="error-text"></span>
+                </div>
+                <div>
+                    <img src="./images/phone.png"><input type="text" name="phone" placeholder="Ваш телефон">
+                    <span class="error-text"></span>
+                </div>
+                <button class="btn-primary btn-send" type="button">Узнать подробности</button>
+            </form>
+            <div class="policy">
+                Нажимая на кнопку, вы принимаете нашу <span class="btn-modal-policy">политику конфиденциальности</span>
+                и даете <span class="btn-modal-consent">согласие на обработку персональных данных</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="review-2">
+        <div class="container">
+            <div class="review-title">
+                Почему 90% клиентов остаются с нами навсегда
+                <span class="dash"></span>
+            </div>
+            <div class="review-content">
+                <div class="review-card">
+                    <div class="review-card_img"><img src="./images/review2-1.jpg"></div>
+                    <div class="review-card_title">Делаем больше, чем обещаем</div>
+                    <div class="review-card_text">Заботимся о вашей репутации: даже если вы не заказываете корректуру,
+                        помогаем исключить ошибки и опечатки.<br>Бесплатно даём рекомендации по макету и вёрстке.</div>
+                    <div class="review-blockquote">
+                        Заказчик из Белгорода долго искал в Москве типографию, которая взялась бы напечатать для него
+                        книгу в твердом переплете нестандартного формата (между А4 и А5). Затем обратился к нам и
+                        получил именно то, что хотел.
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-card_img"><img src="./images/review2-2.jpg"></div>
+                    <div class="review-card_title">Решаем задачи любой сложности, включая нестандартные</div>
+                    <div class="review-card_text">Помогаем, даже когда другие беспомощно опускают руки. Вот характерная
+                        история одного из наших клиентов:</div>
+                    <div class="review-blockquote">
+                        Автор стихов задался целью издать небольшой сборник на 40 страниц, но обязательно с брошюровкой
+                        на КБС (клеевое бесшвейное скрепление). После нескольких отказов в других местах он сделал заказ
+                        у нас и мы напечатали книгу в соответствии с его требованиями.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="facts">
+        <div class="container">
+            <div class="facts-title">
+                <span class="text-blue">“Мультипринт”:</span> цифры и факты
+                <span class="dash"></span>
+            </div>
+            <div class="facts-content">
+                <div class="facts-card">
+                    <div class="facts-card_title">1992</div>
+                    <div class="facts-card_text"><b>С 1992 года</b><br>На рынке полиграфических услуг г. Москвы</div>
+                </div>
+                <div class="facts-card">
+                    <div class="facts-card_title">10 157</div>
+                    <div class="facts-card_text">Заказов выполнено<br>за время работы</div>
+                </div>
+                <div class="facts-card">
+                    <div class="facts-card_title">100%</div>
+                    <div class="facts-card_text">Гарантия качества<br>и соблюдения сроков</div>
+                </div>
+                <div class="facts-card">
+                    <div class="facts-card_title">0</div>
+                    <div class="facts-card_text"><b>(ноль!)</b><br>Ни одного случая перепечатки тиража по причине брака
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="about" class="about-2">
+        <div class="container">
+            <div class="about-2-title">
+                Имеем всё, чтобы выполнить ваш заказ качественно и в срок
+                <span class="dash"></span>
+            </div>
+            <div class="about-2-content">
+                <div class="about-2-card">
+                    <div class="about-2-card-inner">
+                        <div class="about-2-card_img"><img src="./images/designer.png"></div>
+                        <div class="about-2-card_title">Главный актив - люди</div>
+                        <div class="about-2-card_text">
+                            Над вашим проектом трудятся профи, для которых полиграфия - дело всей жизни. Многие из них в
+                            типографии “Мультипринт” со дня основания. Благодаря их любви к работе и огромному опыту
+                            ваши идеи находят наилучшее воплощение в бумаге.
+                        </div>
+                    </div>
+                </div>
+                <div class="about-2-card">
+                    <div class="about-2-card-inner">
+                        <div class="about-2-card_img"><img src="./images/printer-yellow.png"></div>
+                        <div class="about-2-card_title">Оборудование</div>
+                        <div class="about-2-card_text">
+                            Печать вашего тиража ведётся на современном оборудовании производства Японии, Германии,
+                            Чехии. Оно отличается высокой производительностью и обеспечивает превосходное качество
+                            каждой технологической операции.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="about-2-text d-flex flex-row flex-xs-column">
+                <div class="about-creator">
+                    <img src="./images/creator.jpg">
+                    <div class="about-creator-title">Карпов И.В.</div>
+                    <div class="about-creator-text">основатель и бессменный директор типографии “Мультипринт”</div>
+                </div>
+                <div>
+                    <div class="about-2-card_title">
+                        “Главная награда для нас - ваше искреннее СПАСИБО!”
+                    </div>
+                    <div class="about-creator-text">
+                        <p>Типография “Мультипринт” появилась на свет в 1992 году. Это были сложные времена, когда,
+                            казалось, рухнули все представления о профессиональной чести и простой человеческой
+                            порядочности. А единственным мерилом успеха стали деньги.</p>
+                        <p>Но несмотря на это, с первого дня главным ориентиром в работе мы выбрали качество продукции,
+                            которая выходит из наших рук. </p>
+                        <p>Мы хотим каждый день засыпать с чистой совестью и осознанием того, что сделали для вас
+                            абсолютно всё, что от нас зависит. А по возможности - даже больше. Поэтому работаем так,
+                            чтобы даже спустя десятилетия никому из нас не пришлось сгорать от стыда за огрехи вёрстки,
+                            рассыпавшуюся брошюру или порвавшийся переплет. </p>
+                        <p>Главная наша ценность - команда. </p>
+                        <p>С вами работают специалисты, которые целиком посвятили себя печатному делу. Про таких говорят
+                            “профи старой закалки”, подразумевая - нет, не только и не столько возраст - огромный опыт,
+                            великолепные навыки, честное отношение к делу, отзывчивость к нуждам каждого клиента.
+                            Словом, всё то, что входит в понятие “профессионализм” и позволяет находить решение любых
+                            задач, какими бы сложными они ни были. </p>
+                        <p>К каждому проекту мы относимся, как к самому важному и единственному. По-другому просто не
+                            умеем. Поэтому для нас не существует второстепенных заказов или неважных клиентов. </p>
+                        <p>И знаете, нам очень нравится превосходить ваши ожидания. А главная награда для нас - ваше
+                            искреннее “спасибо!” в телефонной трубке или при личной встрече”. </p>
+                    </div>
+                </div>
+            </div>
+            <div class="about-video">
+                <div class="about-video-card">
+                    <div class="about-video-card_video">
+                        <iframe width="350" height="350" src="https://www.youtube.com/embed/Ryw-SuT8lYM" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="about-video-card">
+                    <div class="about-video-card_video">
+                        <iframe width="350" height="350" src="https://www.youtube.com/embed/YNzTjcOEu-Q" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="about-video-card">
+                    <div class="about-video-card_video">
+                        <iframe width="350" height="350" src="https://www.youtube.com/embed/aqshFfCoDQE" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="customers">
+        <div class="container">
+            <div class="customers-title">
+                Наши постоянные заказчики
+                <span class="dash"></span>
+            </div>
+            <div class="customers-content">
+                <div class="customers-item">
+                    <a href="#"><img src="./images/customers/mgu.jpg"></a>
+                </div>
+                <div class="customers-item">
+                    <a href="#"><img src="./images/customers/mtpp.jpg"></a>
+                </div>
+                <div class="customers-item">
+                    <a href="#"><img src="./images/customers/oovep.jpg"></a>
+                </div>
+                <div class="customers-item">
+                    <a href="#"><img src="./images/customers/sffsrf.png"></a>
+                </div>
+                <div class="customers-item">
+                    <a href="#"><img src="./images/customers/spr.jpg"></a>
+                </div>
+                <div class="customers-item">
+                    <a href="#"><img src="./images/customers/mgu.jpg"></a>
+                </div>
+                <div class="customers-item">
+                    <a href="#"><img src="./images/customers/mtpp.jpg"></a>
+                </div>
+                <div class="customers-item">
+                    <a href="#"><img src="./images/customers/oovep.jpg"></a>
+                </div>
+                <div class="customers-item">
+                    <a href="#"><img src="./images/customers/sffsrf.png"></a>
+                </div>
+                <div class="customers-item">
+                    <a href="#"><img src="./images/customers/spr.jpg"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="review" class="clients">
+        <div class="container">
+            <div class="review-title">
+                Слово клиентам
+                <span class="dash"></span>
+            </div>
+            <div class="review-content">
+                <div class="controls" id="customize-controls" aria-label="Carousel Navigation" tabindex="0">
+                    <div class="prev" aria-controls="customize" data-controls="prev"></div>
+                    <div class="next" aria-controls="customize" data-controls="next"></div>
+                </div>
+                <div class="review-slider">
+                    <div class="review-card-wrapper">
+                        <div class="review-card">
+                            <div class="review-card_img"><img src="./images/man.jpg"></div>
+                            <div class="review-card_title">Александр Калуцкий</div>
+                            <div class="review-card_subtitle">член Союза журналистов России</div>
+                            <div class="review-card_text">
+                                <b>"Мультипринт неизменно даёт зелёный свет моим книгам"</b>
+                                <p>Встречи бывают разные: неинтересные, случайные, полезные. Моя встреча с издательством
+                                    Мультипринт была счастливой. Я нашёл в этих издателях надёжных партнёров, с которыми
+                                    уверенно иду по жизни, публикуя книгу за книгой и надеюсь, что и в будущем наше
+                                    сотрудничество не прервется.</p>
+                                <p>Что меня привлекает в этих партнёрах? Надёжность, креатив, исключительно
+                                    добросовестное
+                                    отношение. Раз от раза я убеждаюсь, что эти специалисты к заказу относятся не как к
+                                    банальной работе, а как к делу жизни и вкладывают в него душу. Потому и репутация у
+                                    них
+                                    безукоризненная и продукт - высокого качества. Если эти ребята что то вам пообещали,
+                                    то
+                                    будьте уверены, что исполнят в срок и на пять баллов. Будет все красиво и душевно.
+                                </p>
+                                <p>Герои моих книг - живые люди, я пишу документальные очерки, и мне очень важно вручить
+                                    герою
+                                    книгу, которая украсит его книжную полку, в том числе и своим полиграфическим
+                                    исполнением.
+                                    Мультипринт ни разу не разочаровал ни меня - автора, ни одного из моих героев.</p>
+                                <p>И это при очень демократичной ценовой политике.</p>
+                                <p>К моему сожалению, маститые раскрученные издательства не стоят в очереди за моими
+                                    произведениями, и в этом контексте мне, и таким как я авторам, издающим книги за
+                                    свой счёт,
+                                    важна цена издания. Зачастую именно она и определяет-- быть книге или не быть. Так
+                                    вот
+                                    Мультипринт неизменно даёт зелёный свет моим книгам, благодаря ему они приходят к
+                                    читателю.
+                                    И если мы- писатели-- слово пишем, то полиграфисты - издатели Мультипринт а - его
+                                    держат. За
+                                    что им мое искреннее, авторское спасибо!</p>
+                            </div>
+                            <div class="review-expand-btn"></div>
+                        </div>
+                    </div>
+                    <div class="review-card-wrapper">
+                        <div class="review-card">
+                            <div class="review-card_img"><img src="./images/man.jpg"></div>
+                            <div class="review-card_title">Галина Ягилева</div>
+                            <div class="review-card_subtitle">руководитель Департамента информационного обеспечения
+                                Аппарата
+                                Всероссийского Электропрофсоюза</div>
+                            <div class="review-card_text">
+                                <b>Благодарим за двадцать лет интересного и полезного сотрудничества</b>
+
+                                <p>Общественную организацию «Всероссийский Электропрофсоюз» и предприятие «Мастерпринт»
+                                    связывают партнерские отношения на протяжении 20 лет.</p>
+                                <p>Все эти годы мы размещаем заказы на подготовку и издание полиграфической продукции
+                                    именно в
+                                    «Мастерпринте». Наши заказы – это лицензированный периодический ежемесячный журнал
+                                    «Вестник
+                                    Электропрофсоюза», его специальные выпуски, открытки, брошюры и буклеты.</p>
+                                <p>Двадцать лет – серьезный срок! Уже можно сказать, что творческий тандем «ВЭП» +
+                                    «МастерПринт»
+                                    достойно прошел испытание временем и доказал свою жизнеспособность и надежность.</p>
+                                <p>Вместе с работниками «МастерПринта» наш журнал прошел большой путь развития, от
+                                    черно-белой
+                                    брошюры вначале до полноцветного издания, которое распространяется во все регионы
+                                    Российской
+                                    Федерации, его ждут и любят энергетики и электротехники – целевая аудитория нашего
+                                    издания.
+                                    Такое долгосрочное сотрудничество – результат инициативы творческого коллектива и
+                                    надежность
+                                    производственного персонала «Мастерпринта», а в целом самобытная, талантливая и
+                                    креативная
+                                    команда единомышленников. Сегодня коллектив типографии работает как единый слаженный
+                                    механизм с большим запасом прочности. </p>
+                                <p>Желаем вам и впредь искреннего доверия ваших заказчиков, неиссякаемого творческого
+                                    горения,
+                                    финансового благополучия, а также много интересной творческой работы, новых идей и
+                                    больших
+                                    тиражей! </p>
+                                <p>Желаем вашему коллективу искать и находить как можно больше союзников в своей трудной
+                                    и
+                                    важной просветительской деятельности</p>
+                                <p>Благодарим за двадцать лет интересного и полезного сотрудничества.
+                            </div>
+                            <div class="review-expand-btn"></div>
+                        </div>
+                    </div>
+                    <div class="review-card-wrapper">
+                        <div class="review-card">
+                            <div class="review-card_img"><img src="./images/man.jpg"></div>
+                            <div class="review-card_title">Ирина Ильинская</div>
+                            <div class="review-card_subtitle">выпускающий редактор Института эффективных технологий
+                            </div>
+                            <div class="review-card_text">
+                                <b>“Оперативные вопросы решаются и в праздники, и в выходные”</b>
+                                <p>Я как выпускающий редактор научного журнала, входящего в перечень ВАК, сотрудничаю с
+                                    типографией несколько лет. Устраивает и то, что режим работы очень гибкий, т.е.
+                                    оперативные
+                                    вопросы решаются и в праздники, и в выходные, и то, что типография часто "идет
+                                    навстречу",
+                                    ускоряя сроки печати, в некоторых случаях отмечает даже огрехи верстки, что особенно
+                                    важно,
+                                    и оперативно их исправляет самостоятельно.</p>
+                                <p>Я всегда на связи с директором, это ценно, когда речь идет о сравнительно небольших
+                                    тиражах.
+                                </p>
+                                <p>С документацией, к счастью, у меня никогда на возникало проблем. Менять партнера не
+                                    планируем, все устраивает. </p>
+                            </div>
+                            <div class="review-expand-btn"></div>
+                        </div>
+                    </div>
+                    <div class="review-card-wrapper">
+                        <div class="review-card">
+                            <div class="review-card_img"><img src="./images/man.jpg"></div>
+                            <div class="review-card_title">Ольга Владимировна Рубцова</div>
+                            <div class="review-card_subtitle">к.п.н., ректор Академии инновационного образования и
+                                развития,
+                                редакционный совет Всероссийского научно-методического журнала «Внешкольник»</div>
+                            <div class="review-card_text">
+                                <b>"Любое наше, самое творческое, ТЗ будет выполнено, а тираж доставлен чуть раньше
+                                    срока"</b>
+                                <p>Цена, качество и забота о заказчиках – три главных фактора, повлиявших на выбор
+                                    редакцией
+                                    журнала «Внешкольник» типографии «МультиПринт». </p>
+                                <p>Для нас важно, что любое наше, самое творческое, ТЗ будет выполнено, а тираж
+                                    доставлен чуть
+                                    раньше оговоренного срока. </p>
+                                <p>Внимательные менеджеры оперативно разрешат все специализированные вопросы,
+                                    порекомендуют
+                                    лучшее решение и ответят на звонок или сообщение в любое время. </p>
+                                <p>В режиме многозадачности и ограничения времени – это большой плюс.</p>
+                            </div>
+                            <div class="review-expand-btn"></div>
+                        </div>
+                    </div>
+                    <div class="review-card-wrapper">
+                        <div class="review-card">
+                            <div class="review-card_text">
+                                <img src="./images/review.jpg">
+                            </div>
+                            <div class="review-expand-btn"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <div class="how">
         <div class="container">
-            <div class="how__inner">
-                <div class="how__title title">
-                    Как мы работаем
-                </div>
-                <div class="how__content">
-                    <div class="how__content-item">
-                        <img src="/images/how/map-1.png">
-                        <div class="how__content-item-title">
-                            Поиск мастера
-                        </div>
-                        <div class="how__content-item-text">
-                            Опишите своими словами задачу, которую требуется выполнить.
-                        </div>
-                    </div>
-                    <div class="how__content-item">
-                        <img src="/images/how/map-2.png">
-                        <div class="how__content-item-title">
-                            Выбор лучшее предложения
-                        </div>
-                        <div class="how__content-item-text">
-                            Опишите своими словами задачу, которую требуется выполнить.
-                        </div>
-                    </div>
-                    <div class="how__content-item">
-                        <img src="/images/how/how-user.png">
-                        <div class="how__content-item-title">
-                            Закрытие заказа
-                        </div>
-                        <div class="how__content-item-text">
-                            Оставьте отзыв за выполненую работу.
-                        </div>
-                    </div>
-                </div>
-                <div class="how__btn">
-                    <button type="button">Стать исполнителем</button>
-                </div>
-
+            <div class="how-title">
+                Как мы работаем
+                <span class="dash"></span>
             </div>
-        </div>
-    </div>
-
-    <div class="start">
-        <div class="container">
-            <div class="start__card">
-                <div class="start__card-title">
-                    Хочешь работать с Pomogayka, но не знаешь с чего начать?
+            <div class="how-content">
+                <div class="how-item">
+                    <div class="how-number">1</div>
+                    <div class="how-text">Заявка</div>
                 </div>
-                <div class="start__card-text">
-                    Поможем стать исполнителем и создать первый заказ.
+                <div class="how-item">
+                    <div class="how-number">2</div>
+                    <div class="how-text">Обратный звонок</div>
                 </div>
-                <div class="start__card-btn">
-                    <button type="button">Стать исполнителем</button>
+                <div class="how-item">
+                    <div class="how-number">3</div>
+                    <div class="how-text">Расчёт стоимости</div>
+                </div>
+                <div class="how-item">
+                    <div class="how-number">4</div>
+                    <div class="how-text">Договор</div>
+                </div>
+                <div class="how-item">
+                    <div class="how-number">5</div>
+                    <div class="how-text">Предоплата 50-70%</div>
+                </div>
+                <div class="how-item">
+                    <div class="how-number">6</div>
+                    <div class="how-text">Макет, вёрстка</div>
+                </div>
+                <div class="how-item">
+                    <div class="how-number">7</div>
+                    <div class="how-text">Сигнальный экземпляр</div>
+                </div>
+                <div class="how-item">
+                    <div class="how-number">8</div>
+                    <div class="how-text">Доплата</div>
+                </div>
+                <div class="how-item">
+                    <div class="how-number">9</div>
+                    <div class="how-text">Печать тиража</div>
+                </div>
+                <div class="how-item">
+                    <div class="how-number">10</div>
+                    <div class="how-text">Доставка</div>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="blog">
-        <div class="container">
-
-            <div class="blog__title title">
-                Журнал Pomo<span class="color-orange">gayka</span>
+    <div id="start" class="start">
+        <div class="container d-flex flex-column align-center">
+            <div class="start-title">С чего начать?</div>
+            <div class="start-subtitle">
+                <div>Позвоните: <a href="tel:+79099944944" class="text-pink">+7 (909) 994 49 44</a></div>
+                или закажите обратный звонок - мы свяжемся с вами в течение 15 минут
             </div>
-            <div class="blog-slick">
-                <div class="blog-item">
-                    <div class="blog-box">
-                        <div class="blog-img">
-                            <img src="images/blog.jpg" alt="">
-                        </div>
-                        <div class="blog-content">
-                            <div class="blog-subtitle">
-                                Необычные задания
-                            </div>
-                            <div class="blog-title">
-                                Как заправить постель
-                            </div>
-                            <div class="blog-text">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lacus dolor massa tellus.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="blog-box">
-                        <div class="blog-img">
-                            <img src="images/blog.jpg" alt="">
-                        </div>
-                        <div class="blog-content">
-                            <div class="blog-subtitle">
-                                Необычные задания
-                            </div>
-                            <div class="blog-title">
-                                Как заправить постель
-                            </div>
-                            <div class="blog-text">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lacus dolor massa tellus.
-                            </div>
-                        </div>
-                    </div>
-
+            <form class="main-form start-form" action="">
+                <div>
+                    <img src="./images/user.png"><input type="text" name="name" placeholder="Ваше имя">
+                    <span class="error-text"></span>
                 </div>
-
-                <div class="blog-item">
-                    <div class="blog-box">
-                        <div class="blog-img">
-                            <img src="images/blog.jpg" alt="">
-                        </div>
-                        <div class="blog-content">
-                            <div class="blog-subtitle">
-                                Необычные задания
-                            </div>
-                            <div class="blog-title">
-                                Как заправить постель
-                            </div>
-                            <div class="blog-text">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lacus dolor massa tellus.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="blog-box">
-                        <div class="blog-img">
-                            <img src="images/blog.jpg" alt="">
-                        </div>
-                        <div class="blog-content">
-                            <div class="blog-subtitle">
-                                Необычные задания
-                            </div>
-                            <div class="blog-title">
-                                Как заправить постель
-                            </div>
-                            <div class="blog-text">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lacus dolor massa tellus.
-                            </div>
-                        </div>
-                    </div>
-
+                <div>
+                    <img src="./images/phone.png"><input type="text" name="phone" placeholder="Ваш телефон">
+                    <span class="error-text"></span>
                 </div>
-
-                <div class="blog-item">
-                    <div class="blog-box">
-                        <div class="blog-img">
-                            <img src="images/blog.jpg" alt="">
-                        </div>
-                        <div class="blog-content">
-                            <div class="blog-subtitle">
-                                Необычные задания
-                            </div>
-                            <div class="blog-title">
-                                Как заправить постель
-                            </div>
-                            <div class="blog-text">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lacus dolor massa tellus.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="blog-box">
-                        <div class="blog-img">
-                            <img src="images/blog.jpg" alt="">
-                        </div>
-                        <div class="blog-content">
-                            <div class="blog-subtitle">
-                                Необычные задания
-                            </div>
-                            <div class="blog-title">
-                                Как заправить постель
-                            </div>
-                            <div class="blog-text">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lacus dolor massa tellus.
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="blog-item">
-                    <div class="blog-box">
-                        <div class="blog-img">
-                            <img src="images/blog.jpg" alt="">
-                        </div>
-                        <div class="blog-content">
-                            <div class="blog-subtitle">
-                                Необычные задания
-                            </div>
-                            <div class="blog-title">
-                                Как заправить постель
-                            </div>
-                            <div class="blog-text">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lacus dolor massa tellus.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="blog-box">
-                        <div class="blog-img">
-                            <img src="images/blog.jpg" alt="">
-                        </div>
-                        <div class="blog-content">
-                            <div class="blog-subtitle">
-                                Необычные задания
-                            </div>
-                            <div class="blog-title">
-                                Как заправить постель
-                            </div>
-                            <div class="blog-text">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lacus dolor massa tellus.
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
+                <button class="btn-primary btn-send" type="button">Перезвоните мне</button>
+            </form>
+            <div class="policy">
+                Нажимая на кнопку, вы принимаете нашу <span class="btn-modal-policy">политику конфиденциальности</span>
+                и даете <span class="btn-modal-consent">согласие на обработку персональных данных</span>
             </div>
         </div>
-
     </div>
 
-
-    <footer class="footer">
-        <div class="container">
-            <div class="footer__social">
-                <a href="#"><img src="images/footer-fb.svg" alt="Facebook"></a>
-                <a href="#"><img src="images/footer-instagram.svg" alt="Instagrem"></a>
-                <a href="#"><img src="images/footer-twitter.svg" alt="Twitter"></a>
-                <a href="#"><img src="images/footer-telegram.svg" alt="Telegram"></a>
-                <a href="#"><img src="images/footer-yuotube.svg" alt="YouTube"></a>
-
+    <footer id="contact" class="footer">
+        <div class="footer-inner">
+            <div class="footer-left">
+                <div class="footer-title">"Мультипринт"</div>
+                <div class="footer-subtitle">Типография полного цикла</div>
+                <div class="footer-text">
+                    ООО ''МастерПринт''
+                    ОГРН 1107746782351
+                    ИНН 7731657179
+                </div>
+                <div class="footer-contact d-flex flex-column">
+                    <span><img src="./images/place.png"> г. Москва, Ленинский проспект, 2.</span>
+                    <a href="tel:+79099944944"><img src="./images/phone-call-black.png">+7 (909) 994 49 44</a>
+                    <a href="mailto:multiprint.msk@yandex.ru"><img src="./images/mail.png"> multiprint.msk@yandex.ru</a>
+                    <div class="footer-social">
+                        Присоединяйтесь к нам в соцсетях:
+                        <a href="https://www.instagram.com/multiprint_msk/" target="_blank"><img
+                                src="./images/instagram.png"></a>
+                        <a href="https://www.instagram.com/multiprint_msk/" target="_blank" class="footer-facebook"><img
+                                src="./images/facebook-logo.png"></a>
+                    </div>
+                </div>
             </div>
-            <div class="footer__copyright">
-                <span>©
-                    <script type="text/javascript">document.write(new Date().getFullYear());</script> Pomogayka
-                    (Pomogayka.com)</span>
-                <a href="#">Правила сервиса</a>
+            <div class="footer-map">
+                <iframe width="600" height="300" frameborder="0" style="border:0"
+                    src="https://www.google.com/maps/embed/v1/place?key=AIzaSyC5C4L7LZhzjc6JIPb6Dp2Y1CodlTuLB_k&q=Ленинский+пр-т.,+2,+Москва,+Россия,+119049&center=55.7238925,37.6023887"
+                    allowfullscreen>
+                </iframe>
             </div>
+        </div>
+        <div class="footer-copyright">
+            <span>©
+                <script>document.write(new Date().getFullYear())</script> «MULTIPRINT»</span>
+            <div class="btn-modal-policy">Политика конфиденциальности</div>
+            <div class="btn-modal-consent">Согласие на обработку персональных данных</div>
         </div>
     </footer>
 
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <script src="/public/js/datetimepicker/js/bootstrap-datepicker.min.js"></script>
-    <script src="/public/js/main.js"></script>
+    <div class="overlay" id="overlay"></div>
+    <div class="modal modal-policy">
+        <button class="modal-close-btn" id="close-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" version="1" viewBox="0 0 24 24">
+                <path d="M13 12l5-5-1-1-5 5-5-5-1 1 5 5-5 5 1 1 5-5 5 5 1-1z"></path>
+            </svg>
+        </button>
+        <h2><span>Политика </span>конфиденциальности</h2>
+        <p>Администрация посадочной страницы (далее Портал) обязуется не передавать, не продавать и не раскрывать
+            информацию, предоставленную пользователем (далее Пользователь) при регистрации и использовании функций сайта
+            третьим лицам, кроме случаев, описанных законодательством страны, на территории которой Пользователь ведет
+            свою деятельность.</p>
+        <h4>Анонимная информация</h4>
+        <p>Для контроля персональной информации в Портале реализованы механизмы верификации личных данных посетителей.
+            Портал отслеживает активность посетителей сайта с помощью IP-адресов и создает временные cookie-файлы для
+            проверки сеансов пользователей.</p>
+        <p>Эти данные помогают нам узнать количество посетителей и способствуют динамичности нашего сайта. Информация
+            никаким образом не связана с вашей персональной информацией (именем, адресом и т.д.). Она не раскрывает
+            личность пользователя. Ответственность за предоставление недостоверных данных полностью лежит на
+            Пользователе.</p>
+        <h4">Регистрационная информация</h4>
+        <p>Если посетитель сайта заполняет регистрационную форму, указанная в ней информация будет использоваться только
+            для связи с Порталом. Никто, кроме владельца сайта или уполномоченных им представителей, не имеет доступа к
+            Вашей персональной информации.</p>
+        <h4>Политика конфиденциальности третьих сторон</h4>
+        <p>Помните, что другие веб-сайты, к которым Вы можете обращаться через наш сайт, могут собирать персональную
+            информацию о Вас. Настоящая политика конфиденциальности не распространяется на принятые такими сторонними
+            веб-сайтами правила обращения с информацией.</p>
+        <h4>Безопасность</h4>
+        <p>Портал обеспечивает безопасность учетной записи Пользователя от несанкционированного доступа.</p>
+        <h4>Хранение персональных данных</h4>
+        <p>Персональные данные пользователей хранятся в электронном виде в информационной системе персональных данных.
+            Порядок архивирования и сроки хранения баз данных информационной системы персональных данных бессрочно.</p>
+    </div>
+    <div class="modal modal-consent">
+        <button class="modal-close-btn" id="close-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" version="1" viewBox="0 0 24 24">
+                <path d="M13 12l5-5-1-1-5 5-5-5-1 1 5 5-5 5 1 1 5-5 5 5 1-1z"></path>
+            </svg>
+        </button>
+        <h2>Согласие на обработку персональных данных</h2>
+        <p>
+            Пользователь, оформляя заявку на сайте <b><a
+                    href="http://multiprint.msk.ru/">http://multiprint.msk.ru/</a></b>&nbsp;(далее – Сайт), соглашается
+            с условиями настоящего Согласия на обработку персональных данных (далее - Согласие). Принятием (акцептом)
+            оферты Согласия является отправка заявки с Сайта или заказ у Оператора по телефонам Сайта.
+        </p>
+        <p>Пользователь дает свое согласие на обработку своих персональных данных со следующими условиями:</p>
+        <p>1. Данное Согласие дается на обработку персональных данных как без, так и с использованием средств
+            автоматизации.</p>
+        <p>2. Согласие распространяется на следующую информацию: фамилия, имя, отчество, телефон.</p>
+        <p>3. Согласие на обработку персональных данных дается в целях предоставления Пользователю ответа на заявку,
+            дальнейшего заключения и выполнения обязательств по договорам, осуществления клиентской поддержки,
+            информирования об услугах, которые, по мнению Оператора, могут представлять интерес для Пользователя,
+            проведения опросов и маркетинговых исследований.</p>
+        <p>4. Пользователь, предоставляет Оператору право осуществлять следующие действия (операции) с персональными
+            данными: сбор, запись, систематизация, накопление, хранение, уточнение (обновление, изменение),
+            использование, обезличивание, блокирование, удаление и уничтожение, передача третьим лицам, с согласия
+            субъекта персональных данных и соблюдением мер, обеспечивающих защиту персональных данных от
+            несанкционированного доступа.</p>
+        <p>6. Персональные данные обрабатываются Оператором до завершения всех необходимых процедур. Также <b>обработка
+                может быть прекращена по запросу Пользователя на электронную почту</b>: <a
+                href="mailto:multiprint.msk@yandex.ru"><b>multiprint.msk@yandex.ru</b></a></p>
+        <p>7. Пользователь подтверждает, что, давая Согласие, он действует свободно, своей волей и в своем интересе.</p>
+        <p>8. Настоящее Согласие действует бессрочно до момента прекращения обработки персональных данных по причинам,
+            указанным в п.6 данного документа.</p>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
 </body>
 
 </html>
