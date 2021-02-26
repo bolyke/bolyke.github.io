@@ -14552,6 +14552,30 @@ aside {
   color: grey;
 }
 
+.toTop {
+  display: none;
+  position: fixed;
+  bottom: 100px;
+  right: 20px;
+  z-index: 10;
+  width: 40px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  background: #FFFFFF;
+  border-radius: 5px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.toTop.show {
+  display: flex;
+}
+
+.toTop img {
+  transform: rotate(90deg);
+  width: 25px;
+}
+
 @media (max-width: 1440px) {
   
   .floating-inner {

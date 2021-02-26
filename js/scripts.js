@@ -478,6 +478,21 @@ $('#countplus').click(function () {
 		$('.cart-popup').hide();
 	});
 
+	var btnToTop = $('.toTop');
+
+	$(window).scroll(function() {
+	if ($(window).scrollTop() > 300) {
+		btnToTop.addClass('show');
+	} else {
+		btnToTop.removeClass('show');
+	}
+	});
+
+	btnToTop.on('click', function(e) {
+		e.preventDefault();
+		$('html, body').animate({scrollTop:0}, '300');
+	});
+
 mainObject.init();
 });
 /*
