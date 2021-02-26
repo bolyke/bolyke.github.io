@@ -9084,7 +9084,8 @@ li:last-child .filters .filter ul li a {
 
 .slider .lSSlideOuter .lslide img {
   width: 100%;
-  height: 100%;
+  height: auto;
+  max-height: 100%;
   object-fit: contain;
   object-position: center;
 }

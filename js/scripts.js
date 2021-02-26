@@ -365,28 +365,28 @@ $(document).ready(function(){
 	});
  
  
-$(".tab_item").not(":first").hide();
-$(".tab_wrapper .tab").click(function() {
-	$(".tab_wrapper .tab").removeClass("active").eq($(this).index()).addClass("active");
-	$(".tab_item").hide().eq($(this).index()).fadeIn()
-}).eq(0).addClass("active");
+	$(".tab_item").not(":first").hide();
+	$(".tab_wrapper .tab").click(function() {
+		$(".tab_wrapper .tab").removeClass("active").eq($(this).index()).addClass("active");
+		$(".tab_item").hide().eq($(this).index()).fadeIn()
+	}).eq(0).addClass("active");
 
-$('.fancy_buy1click').fancybox({autoSize:true,  padding:10});
+	$('.fancy_buy1click').fancybox({autoSize:true,  padding:10});
 
-$('#countminus').click(function () {
-	var $input = $('#count');
-	var count = parseInt($input.val()) - 1;
-	count = count < 1 ? 1 : count;
-	$input.val(count);
-	$input.change();
-	return false;
-});
-$('#countplus').click(function () {
-	var $input = $('#count');
-	$input.val(parseInt($input.val()) + 1);
-	$input.change();
-	return false;
-});
+	$('#countminus').click(function () {
+		var $input = $('#count');
+		var count = parseInt($input.val()) - 1;
+		count = count < 1 ? 1 : count;
+		$input.val(count);
+		$input.change();
+		return false;
+	});
+	$('#countplus').click(function () {
+		var $input = $('#count');
+		$input.val(parseInt($input.val()) + 1);
+		$input.change();
+		return false;
+	});
 			
 			
 	$("#buy_one").click(function() { 
@@ -493,7 +493,7 @@ $('#countplus').click(function () {
 		$('html, body').animate({scrollTop:0}, '300');
 	});
 
-mainObject.init();
+	mainObject.init();
 });
 /*
  function init2() { alert('2');
