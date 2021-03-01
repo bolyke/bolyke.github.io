@@ -9079,7 +9079,7 @@ li:last-child .filters .filter ul li a {
 }
 
 .slider .lSSlideOuter .lslide {
-  height: 100%;
+  /* height: 100%; */
 }
 
 .slider .lSSlideOuter .lslide img {
