@@ -9465,11 +9465,14 @@ a.button-black button.button-black {
   padding: 10px 15px;
   border: 0;
   border-radius: 13px;
+  transition: color .15s ease, background .15s ease;
 }
 
 .ui-tabs-vertical .tabs .tab.active span,
 .ui-tabs-vertical .tabs .tab:hover span {
   color: #fff;
+  transition: color .15s ease;
+
 }
 
 .ui-tabs-vertical .tabs .tab.active {
@@ -9483,6 +9486,7 @@ a.button-black button.button-black {
   background: #39AAE7;
   color: #fff;
   border: 0;
+  transition: color .15s ease, background .15s ease;
 }
 
 .ui-tabs-vertical .tab_content {
