@@ -9863,7 +9863,7 @@ a.button-black button.button-black {
   justify-content: space-between;
   align-items: stretch;
   margin: 30px 0;
-  height: auto !important;
+  /* height: auto !important; */
 }
 
 .recomend>li,
@@ -14605,7 +14605,8 @@ aside {
 }
 
 .vertical-tabs.loading .tab_content {
-  max-height: 200px;
+  max-height: 170px;
+  overflow: hidden;
 }
 
 @media (max-width: 1440px) {
