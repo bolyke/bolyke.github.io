@@ -192,6 +192,8 @@ var mainObject = {
 			
 							firstImgHeight = children.first().find('img').height();
 							container.find('img').height(firstImgHeight);
+
+							container.parents('.slider').removeClass('loading');
 						}
 					}
                 }
