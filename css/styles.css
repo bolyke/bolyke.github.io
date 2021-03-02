@@ -10610,12 +10610,7 @@ a.button-black button.button-black {
     max-width: initial;
     padding: 0;
   }
-
-  .our-shops .img-wrap img {
-    width: 100%;
-    height: auto;
-  }
-
+  
   .single-slider .col-2.block-6 {
     display: flex;
     flex-wrap: wrap;
@@ -13497,7 +13492,6 @@ aside {
 .tab_wrapper {
   margin-left: 10px;
   margin-right: 10px;
-  display: none;
 }
 
 .cart_block {
