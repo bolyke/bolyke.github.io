@@ -13714,6 +13714,7 @@ aside {
 
 .product-info-title img {
   width: 30px;
+  height: 30px;
   margin-right: 10px;
 }
 
@@ -13824,9 +13825,8 @@ aside {
 
 .product-together-item .img-wrap {
   max-width: 170px;
-  max-height: 170px; 
+  height: 170px; 
   width: 100%;
-  height: 100%;
 }
 
 .product-together-item img {
@@ -14658,7 +14658,7 @@ aside {
   }
   .product-together-item .img-wrap {
     max-width: 130px;
-    max-height: 130px;
+    height: 130px;
   }
   .product-together-item .img-wrap {
     align-self: center;
@@ -14771,7 +14771,7 @@ aside {
   }
   .product-together-item .img-wrap {
     max-width: 200px;
-    max-height: 200px;
+    height: 170px;
   }
   .product-together-desc {
     max-width: unset;
