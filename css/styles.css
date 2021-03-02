@@ -14586,7 +14586,12 @@ aside {
   transition: opacity 0.3s ease;
 }
 
-.slider.loading {
+.product-together, .product-slider {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.slider.loading, .product-together.loading, .product-slider.loading {
   opacity: 0;
   max-height: 500px;
   transition: opacity 0.3s ease;

@@ -444,6 +444,9 @@ $(document).ready(function(){
         loop:true,
 		easing: 'cubic-bezier(0.25, 0, 0.25, 1)',
         speed:600,
+		onSliderLoad: function (el) {
+			$(el).parents('.product-together').removeClass('loading');
+		},
 		responsive : [
             {
                 breakpoint:980,
@@ -460,6 +463,9 @@ $(document).ready(function(){
         loop:true,
 		easing: 'cubic-bezier(0.25, 0, 0.25, 1)',
         speed:600,
+		onSliderLoad: function (el) {
+			$(el).removeClass('loading');
+		},
 		responsive : [
             {
                 breakpoint:1024,
