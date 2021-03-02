@@ -9672,7 +9672,7 @@ a.button-black button.button-black {
 }
 
 .our-shops .img-wrap img {
-  height: 100%;
+  height: 233px;
   width: 100%;
   object-fit: cover;
   object-position: center;
@@ -10224,6 +10224,9 @@ a.button-black button.button-black {
   .our-shops .img-wrap {
     height: 220px;
   }
+  .our-shops .img-wrap img {
+    height: 220px;
+  }
 }
 
 
@@ -10610,10 +10613,6 @@ a.button-black button.button-black {
 
   .our-shops .img-wrap img {
     width: 100%;
-    height: auto;
-  }
-
-  .our-shops .img-wrap {
     height: auto;
   }
 
@@ -13498,6 +13497,7 @@ aside {
 .tab_wrapper {
   margin-left: 10px;
   margin-right: 10px;
+  display: none;
 }
 
 .cart_block {
