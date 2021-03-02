@@ -284,6 +284,19 @@ function add2basket1(ID) { var id = ID; var clv = 1; $.ajax({ type: 'POST', url:
  
 $(document).ready(function(){
     var width = $(window).width();
+
+	if ($('.desktop-product').length) {
+		if(width <= 1024) {
+			$('.mobile-product').append($('.desktop-product').contents());
+		}
+		$(window).resize(function () {
+			if(width <= 1024) {
+				$('.mobile-product').append($('.desktop-product').contents());
+			} else {
+				$('.desktop-product').append($('.mobile-product').contents());
+			}
+		});
+	}
     
     if(width < 768){
         $('.contacts-list .contact').each(function(){
@@ -512,21 +525,7 @@ $(document).ready(function(){
 		e.preventDefault();
 		$('html, body').animate({scrollTop:0}, '300');
 	});
-
-	if ($('.desktop-product').length) {
-		if($(window).width() <= 1024) {
-			$('.mobile-product').append($('.desktop-product').contents());
-		}
-		$(window).resize(function () {
-			if($(window).width() <= 1024) {
-				$('.mobile-product').append($('.desktop-product').contents());
-			} else {
-				$('.desktop-product').append($('.mobile-product').contents());
-			}
-		});
-	}
 	
-
 	mainObject.init();
 });
 /*
