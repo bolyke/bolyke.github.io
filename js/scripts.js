@@ -181,6 +181,9 @@ var mainObject = {
 			slideMargin:0,
 			slideEndAnimation:false,
 			controls: false,
+			onSliderLoad: function (el) {
+				$(el).parents('.slider').removeClass('loading');
+			},
             responsive : [
                 {
                     breakpoint:768,
@@ -194,6 +197,7 @@ var mainObject = {
 							container.find('img').height(firstImgHeight);
 
 							container.parents('.slider').removeClass('loading');
+							
 						}
 					}
                 }

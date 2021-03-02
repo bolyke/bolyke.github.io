@@ -14581,6 +14581,17 @@ aside {
   width: 25px;
 }
 
+.single-slider .slider {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.slider.loading {
+  opacity: 0;
+  max-height: 500px;
+  transition: opacity 0.3s ease;
+}
+
 @media (max-width: 1440px) {
   
   .floating-inner {
@@ -14647,13 +14658,6 @@ aside {
     max-width: 500px;
     margin: 0 auto;
     min-height: 480px;
-    opacity: 1;
-    transition: opacity 0.3s ease;
-  }
-  .slider.loading {
-    opacity: 0;
-    max-height: 500px;
-    transition: opacity 0.3s ease;
   }
 
   .attr-quantity {
