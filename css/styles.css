@@ -10610,7 +10610,7 @@ a.button-black button.button-black {
     max-width: initial;
     padding: 0;
   }
-  
+
   .single-slider .col-2.block-6 {
     display: flex;
     flex-wrap: wrap;
@@ -14603,6 +14603,10 @@ aside {
   height: 387px;
 }
 
+.vertical-tabs.loading .tab_content {
+  max-height: 200px;
+}
+
 @media (max-width: 1440px) {
   
   .floating-inner {
@@ -15002,13 +15006,13 @@ aside {
   footer .bottom_soc_logo img, footer .bottom_payment_logo img {
     width: 50px;
   }
-  .slider.loading {
+  .slider {
     height: 580px;
   }
-  .product-together.loading {
-    height: 550px;
+  .product-together {
+    height: 540px;
   }
-  .product-slider.loading {
+  .product-slider {
     height: 387px;
   }
 }

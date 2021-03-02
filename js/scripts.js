@@ -286,6 +286,7 @@ $(document).ready(function(){
     var width = $(window).width();
 
 	if ($('.desktop-product').length) {
+		$('.vertical-tabs.loading .tab_content').css('max-height', 'initial');
 		if(width > 1024) {
 			$('.desktop-product').append($('.mobile-product').contents());
 		}
@@ -493,7 +494,7 @@ $(document).ready(function(){
                   }
             },
             {
-                breakpoint:480,
+                breakpoint:600,
                 settings: {
                     item:1,
 					controls: false,
