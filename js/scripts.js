@@ -286,8 +286,8 @@ $(document).ready(function(){
     var width = $(window).width();
 
 	if ($('.desktop-product').length) {
-		if(width <= 1024) {
-			$('.mobile-product').append($('.desktop-product').contents());
+		if(width > 1024) {
+			$('.desktop-product').append($('.mobile-product').contents());
 		}
 		$(window).resize(function () {
 			if(width <= 1024) {
