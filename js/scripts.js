@@ -186,7 +186,7 @@ var mainObject = {
                     breakpoint:768,
                     settings: {
 						onSliderLoad: function (el) {
-							var firstImgHeight = 0,
+							var firstImgHeight = 500,
 							container = $(el),
 							children = container.children();
 			
@@ -500,6 +500,20 @@ $(document).ready(function(){
 		e.preventDefault();
 		$('html, body').animate({scrollTop:0}, '300');
 	});
+
+	if ($('.desktop-product').length) {
+		if($(window).width() <= 1024) {
+			$('.mobile-product').append($('.desktop-product').contents());
+		}
+		$(window).resize(function () {
+			if($(window).width() <= 1024) {
+				$('.mobile-product').append($('.desktop-product').contents());
+			} else {
+				$('.desktop-product').append($('.mobile-product').contents());
+			}
+		});
+	}
+	
 
 	mainObject.init();
 });
