@@ -913,7 +913,8 @@ $(document).ready(function() {
 	$( ".accordion" ).accordion({
 		collapsible: true,
 		heightStyle: "content",
-		animate: false
+		animate: false,
+		active: false
 	});
 
 	$('.buy-now-popover').hide();

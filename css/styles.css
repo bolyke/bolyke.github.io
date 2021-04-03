@@ -8158,6 +8158,7 @@ p {
   font-weight: 300;
   text-align: left;
   color: #000;
+  white-space: nowrap;
 }
 
 .rating .mc {
@@ -14012,6 +14013,10 @@ aside {
   flex-direction: row;
   align-items: center;
   margin-bottom: 15px;
+}
+
+.reviews-answer .reviews-item {
+  padding: 25px;
 }
 
 .btn-toggle {
