@@ -491,32 +491,28 @@
             </script>
 
             <div class="col-2 buy-now">
-              <button class="button_new_credit button-blue-credit buy-now-toggle">Купить в рассрочку</button>
-              <div class="buy-now-popover">
-                <button class="MfsCreditCalcWidgetButton"
-                  data-product-price="20422"
-                  data-product-link="https://mcstore.com.ua/catalog/iphone_11/apple_iphone_11_64gb_green/"
-                  data-product-name="Apple iPhone 11 64GB (Green) (MWLD2)" data-product-image=""
-                  data-product-id="9587"><img src="./img/buy-now-such.png">Сучасні фінансові рішення</button>
-                  <button class=""><img src="./img/buy-now-pozje.png">Плати позже</button>
-                  <script>
-                    (function (d, s, id) {
-                      var js, fjs = d.getElementsByTagName(s)[0];
-                      var loaded = false;
+              <button class="MfsCreditCalcWidgetButton button_new_credit button-blue-credit" style=""
+                data-product-price="20422"
+                data-product-link="https://mcstore.com.ua/catalog/iphone_11/apple_iphone_11_64gb_green/"
+                data-product-name="Apple iPhone 11 64GB (Green) (MWLD2)" data-product-image=""
+                data-product-id="9587">Купить в кредит</button>
+              <script>
+                (function (d, s, id) {
+                  var js, fjs = d.getElementsByTagName(s)[0];
+                  var loaded = false;
 
-                      if (d.getElementById(id)) return;
-                      js = d.createElement(s); js.id = id;
-                      js.src = "https://sfr.kiev.ua:9000/widget.min.js";
-                      fjs.parentNode.insertBefore(js, fjs);
-                      js.onload = s.onreadystatechange = function () {
-                        if (!loaded && !this.readyState || this.readyState == 'complete') {
-                          loaded = true;
-                          MfsCreditCalcWidget.init({ 'selector': '.MfsCreditCalcWidgetButton', 'rassrochkaEnabled': true, 'partner': 'mcstore.com.ua', 'banks': ['alpha', 'otp', 'creditmarket', 'factoring'] });
-                        }
-                      };
-                    }(document, 'script', 'calc-jswidget'))
-                  </script>
-              </div>
+                  if (d.getElementById(id)) return;
+                  js = d.createElement(s); js.id = id;
+                  js.src = "https://sfr.kiev.ua:9000/widget.min.js";
+                  fjs.parentNode.insertBefore(js, fjs);
+                  js.onload = s.onreadystatechange = function () {
+                    if (!loaded && !this.readyState || this.readyState == 'complete') {
+                      loaded = true;
+                      MfsCreditCalcWidget.init({ 'selector': '.MfsCreditCalcWidgetButton', 'rassrochkaEnabled': true, 'partner': 'mcstore.com.ua', 'banks': ['alpha', 'otp', 'creditmarket', 'factoring'] });
+                    }
+                  };
+                }(document, 'script', 'calc-jswidget'))
+              </script>
 
             </div>
 
@@ -578,6 +574,184 @@
         </div>
       </div>
 
+      <div class="wrapper">
+        <div class="product-together loading">
+          <div class="product-together-title">Вместе дешевле</div>
+          <ul id="product-together-slider">
+            <li>
+              <a href="" class="product-together-item">
+                <div class="img-wrap">
+                  <img loading="lazy" src="./img/apple-iphone-11-64gb-green-mhdg3cn-a-gallery.jpg" alt="">
+                </div>
+                <div class="product-together-desc">
+                  <div>Apple iPhone 11 64GB (Green)</div>
+                  <div><span class="price-old">20 722 грн.</span><span class="price-new">19 240 грн.</span></div>
+                </div>
+              </a>
+
+              <img loading="lazy"  class="img-middle" src="./img/icons/add.svg" alt="">
+
+              <a href="" class="product-together-item">
+                <div class="img-wrap">
+                  <img loading="lazy" src="./img/media_3372230.jpeg" alt="">
+                </div>
+                <div class="product-together-desc">
+                  <div>Зарядное устройство Apple 12W USB Power Adapter (MD836)</div>
+                  <div><span class="price-old">722 грн.</span><span class="price-new">640 грн.</span></div>
+                </div>
+              </a>
+
+              <img loading="lazy"  class="img-middle" src="./img/icons/equal.svg" alt="">
+
+              <div class="product-together-offer">
+                <div><span class="price-old">21 722 грн.</span><span class="price-new">19 880 грн.</span></div>
+                <div class="saving">Вы сэкономите <span>50 грн.</span></div>
+                <button class="button-blue">Купить комплект</button>
+              </div>
+
+            </li>
+
+            <li>
+              <a href="" class="product-together-item">
+                <div class="img-wrap">
+                  <img loading="lazy" src="./img/apple-iphone-11-64gb-green-mhdg3cn-a-gallery.jpg" alt="">
+                </div>
+                <div class="product-together-desc">
+                  <div>Apple iPhone 11 64GB (Green)</div>
+                  <div><span class="price-old">20 722 грн.</span><span class="price-new">19 240 грн.</span></div>
+                </div>
+              </a>
+
+              <img loading="lazy"  class="img-middle" src="./img/icons/add.svg" alt="">
+
+              <a href="" class="product-together-item">
+                <div class="img-wrap">
+                  <img loading="lazy" src="./img/media_3372230.jpeg" alt="">
+                </div>
+                <div class="product-together-desc">
+                  <div>Зарядное устройство Apple 12W USB Power Adapter (MD836)</div>
+                  <div><span class="price-old">722 грн.</span><span class="price-new">640 грн.</span></div>
+                </div>
+              </a>
+
+              <img loading="lazy"  class="img-middle" src="./img/icons/equal.svg" alt="">
+
+              <div class="product-together-offer">
+                <div><span class="price-old">21 722 грн.</span><span class="price-new">19 880 грн.</span></div>
+                <div>Вы сэкономите 50 грн.</div>
+                <button class="button-blue">Купить комплект</button>
+              </div>
+
+            </li>
+
+            <li>
+              <a href="" class="product-together-item">
+                <div class="img-wrap">
+                  <img loading="lazy" src="./img/apple-iphone-11-64gb-green-mhdg3cn-a-gallery.jpg" alt="">
+                </div>
+                <div class="product-together-desc">
+                  <div>Apple iPhone 11 64GB (Green)</div>
+                  <div><span class="price-old">20 722 грн.</span><span class="price-new">19 240 грн.</span></div>
+                </div>
+              </a>
+
+              <img loading="lazy"  class="img-middle" src="./img/icons/add.svg" alt="">
+
+              <a href="" class="product-together-item">
+                <div class="img-wrap">
+                  <img loading="lazy" src="./img/media_3372230.jpeg" alt="">
+                </div>
+                <div class="product-together-desc">
+                  <div>Зарядное устройство Apple 12W USB Power Adapter (MD836)</div>
+                  <div><span class="price-old">722 грн.</span><span class="price-new">640 грн.</span></div>
+                </div>
+              </a>
+
+              <img loading="lazy"  class="img-middle" src="./img/icons/equal.svg" alt="">
+
+              <div class="product-together-offer">
+                <div><span class="price-old">21 722 грн.</span><span class="price-new">19 880 грн.</span></div>
+                <div>Вы сэкономите 50 грн.</div>
+                <button class="button-blue">Купить комплект</button>
+              </div>
+
+            </li>
+
+          </ul>
+        </div>
+      </div>
+
+
+      <div class="wrapper">
+        <div class="recomend-wrap">
+          <div class="title-6">С этим товаром покупают</div>
+          <ul class="recomend product-slider loading">
+            <li>
+              <a href="https://mcstore.com.ua/catalog/iphone_11/apple_iphone_11_64gb_black/">
+                <div class="img-wrap"><img loading="lazy" 
+                   src="https://mcstore.com.ua/image/cache/iblock/073/073474098797d76de8a2b75366ba58ed-200x200.PNG"
+                    alt=""></div>
+                <p>Apple iPhone 11 64GB (Black) (MWLT2)</p>
+                <div>
+                  <span>19 240 грн.</span>
+                  <button class="button-blue">Купить</button>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="https://mcstore.com.ua/catalog/iphone_11/apple_iphone_11_64gb_product_red/">
+                <div class="img-wrap"><img loading="lazy" 
+                   src="https://mcstore.com.ua/image/cache/iblock/df7/df79fd8e5e85b1aa391567f117dcf862-200x200.PNG"
+                    alt=""></div>
+                <p>Apple iPhone 11 64GB (Product Red) (MWL92)</p>
+                <div>
+                  <span>19 450 грн.</span>
+                  <button class="button-blue">Купить</button>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="https://mcstore.com.ua/catalog/iphone_11/apple_iphone_11_64gb_white/">
+                <div class="img-wrap"><img loading="lazy" 
+                   src="https://mcstore.com.ua/image/cache/iblock/015/015652a127937936e6fc87aa71bc22a4-200x200.PNG"
+                    alt=""></div>
+                <p>Apple iPhone 11 64GB (White) (MWL82)</p>
+                <div>
+                  <span>19 510 грн.</span>
+                  <button class="button-blue">Купить</button>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="https://mcstore.com.ua/catalog/iphone_11/apple_iphone_11_128gb_black/">
+                <div class="img-wrap"><img loading="lazy" 
+                   src="https://mcstore.com.ua/image/cache/iblock/1c7/1c75d11f697e4a3dfc092cbcf5466e1f-200x200.PNG"
+                    alt=""></div>
+                <p>Apple iPhone 11 128GB (Black) (MWLE2)</p>
+                <div>
+                  <span class="price-old">21 690 грн.</span>
+                  <span class="price-new">20 690 грн.</span>
+                  <button class="button-blue">Купить</button>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="https://mcstore.com.ua/catalog/iphone_11/apple_iphone_11_128gb_white/">
+                <div class="img-wrap"><img loading="lazy" 
+                   src="https://mcstore.com.ua/image/cache/iblock/208/208664f1a90162df63e68e0a7f7defa8-200x200.PNG"
+                    alt=""></div>
+                <p>Apple iPhone 11 128GB (White) (MWLF2)</p>
+                <div>
+                  <span>21 630 грн.</span>
+                  <button class="button-blue">Купить</button>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+
 
       <div class="wrapper">
 
@@ -585,7 +759,7 @@
           <div class="tabs">
             <span class="tab"><span> Описание </span></span>
             <span class="tab"><span>Характеристики</span></span>
-            <span class="tab"><span>Отзывы</span><span class="reviews-badge">5</span></span>
+            <span class="tab"><span>Отзывы</span></span>
           </div>
           <div class="tab_content">
             <div class="tab_item">
@@ -625,38 +799,6 @@
                   Отзывы для  Apple iPhone 11 64GB (Green)
                 </div>
                 <div class="reviews-container">
-
-                  <div class="reviews-item-wrap">
-                    <div class="reviews-item">
-                      <div class="reviews-user">
-                        <div class="flex">
-                          <span>Андрей</span>
-                          <div class="rating">
-                            <span class="mc mc-star-fill"></span>
-                            <span class="mc mc-star-fill"></span>
-                            <span class="mc mc-star-half"></span>
-                            <span class="mc mc-star"></span>
-                            <span class="mc mc-star"></span>
-                          </div>
-                        </div>
-                        <div class="reviews-date">15.01.2021</div>
-                      </div>
-                      <div class="reviews-text">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lacus, magna cursus auctor ac platea pharetra sit euismod donec. Tellus in tellus, egestas eget felis, turpis semper elementum. Nisi mi aenean sed adipiscing ut. Dignissim praesent amet sit vel tempus vulputate aliquet. Lacus, magna cursus auctor ac platea pharetra sit euismod donec. Tellus in tellus, egestas eget felis, turpis semper elementum. Nisi mi aenean sed adipiscing ut.
-                      </div>
-                    </div>
-                    <div class="reviews-answer accordion">
-                      <div class=reviews-answer-toggle>
-                        <img src="./img/icons/back-arrow.svg" alt="">
-                        <button class="btn-toggle">Ответ представителя магазина</button>
-                      </div>
-                      <div class="reviews-item">
-                        <div class="reviews-text">
-                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lacus, magna cursus auctor ac platea pharetra sit euismod donec. Tellus in tellus, egestas eget felis, turpis semper elementum. Nisi mi aenean sed adipiscing ut. 
-                        </div>
-                      </div>
-                    </div>
-                  </div>
 
                   <div class="reviews-item">
                     <div class="reviews-user">
@@ -734,144 +876,125 @@
             </div>
           </div>
         </div>
+      </div>
 
 
-        <div class="wrapper flex wrap-2">
-          <div class="c-col-1" style="width: 100%">Левая колонка</div>
-          <div class="c-col-2">
-            <div class="products">
-              <div class="product">
-                <div class="image">
-                  <span class="top_sale_cat">Топ продаж</span>
-                  <a href="https://mcstore.com.ua/catalog/ipad/ipad_10_2_2020/apple_ipad_10_2_2020_32gb_wi_fi_space_gray_myl92/"><img
-                      src="https://mcstore.com.ua/image/cache/iblock/3d6/3d61676cd39b028bc296681003ce71b8-600x600.jpg"
-                      alt="Apple iPad 10.2&quot; 2020 32Gb Wi-Fi Space Gray (MYL92)" loading="lazy"></a>
+      <div class="wrapper">
+        <div class="viewed-wrap">
+          <div class="title-6">Просмотренные товары</div>
+          <ul class="viewed product-slider loading">
+            <li>
+              <a href="https://mcstore.com.ua/catalog/iphone_11/apple_iphone_11_64gb_black/">
+                <div class="img-wrap"><img loading="lazy" 
+                   src="https://mcstore.com.ua/image/cache/iblock/073/073474098797d76de8a2b75366ba58ed-200x200.PNG"
+                    alt=""></div>
+                <p>Apple iPhone 11 64GB (Black) (MWLT2)</p>
+                <div>
+                  <span class="notavailable">Нет в наличии</span>
                 </div>
-                <div class="info">
-                  <div class="title"><a
-                      href="https://mcstore.com.ua/catalog/ipad/ipad_10_2_2020/apple_ipad_10_2_2020_32gb_wi_fi_space_gray_myl92/">Apple
-                      iPad 10.2" 2020 32Gb Wi-Fi Space Gray (MYL92)</a></div>
-                  <div class="description">
-                    <span class="cat_art">Артикул: 10496</span>
-                    <span class="cat_nal">в наличии</span>
-                  </div>
-                  <div class="rating">
-                    <span class="mc mc-star-fill"></span>
-                    <span class="mc mc-star-fill"></span>
-                    <span class="mc mc-star-half"></span>
-                    <span class="mc mc-star"></span>
-                    <span class="mc mc-star"></span>
-                    <div>Отзывы (5)</div>
-                  </div>
-                  <div class="price">
-                    <span class="price__2">10638 ₴</span> <span class="price__1">10 180 ₴</span>
-                    <button type="submit" name="actionADD2BASKET" class="add2basket_link btn-7"
-                      onclick="add_cart2('816', '1', 'Apple iPad 10.2&quot; 2020 32Gb Wi-Fi Space Gray (MYL92)', 10180.0000);">Купить</button>
-                  </div>
+              </a>
+            </li>
+            <li>
+              <a href="https://mcstore.com.ua/catalog/iphone_11/apple_iphone_11_64gb_product_red/">
+                <div class="img-wrap"><img loading="lazy" 
+                   src="https://mcstore.com.ua/image/cache/iblock/df7/df79fd8e5e85b1aa391567f117dcf862-200x200.PNG"
+                    alt=""></div>
+                <p>Apple iPhone 11 64GB (Product Red) (MWL92)</p>
+                <div>
+                  <span class="notavailable">Нет в наличии</span>
                 </div>
-            
+              </a>
+            </li>
+            <li>
+              <a href="https://mcstore.com.ua/catalog/iphone_11/apple_iphone_11_64gb_white/">
+                <div class="img-wrap"><img loading="lazy" 
+                   src="https://mcstore.com.ua/image/cache/iblock/015/015652a127937936e6fc87aa71bc22a4-200x200.PNG"
+                    alt=""></div>
+                <p>Apple iPhone 11 64GB (White) (MWL82)</p>
+                <div>
+                  <span>19 510 грн.</span>
+                  <button class="button-blue">Купить</button>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="https://mcstore.com.ua/catalog/iphone_11/apple_iphone_11_128gb_black/">
+                <div class="img-wrap"><img loading="lazy" 
+                   src="https://mcstore.com.ua/image/cache/iblock/1c7/1c75d11f697e4a3dfc092cbcf5466e1f-200x200.PNG"
+                    alt=""></div>
+                <p>Apple iPhone 11 128GB (Black) (MWLE2)</p>
+                <div>
+                  <span class="price-old">21 690 грн.</span>
+                  <span class="price-new">20 690 грн.</span>
+                  <button class="button-blue">Купить</button>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="https://mcstore.com.ua/catalog/iphone_11/apple_iphone_11_128gb_white/">
+                <div class="img-wrap"><img loading="lazy" 
+                   src="https://mcstore.com.ua/image/cache/iblock/208/208664f1a90162df63e68e0a7f7defa8-200x200.PNG"
+                    alt=""></div>
+                <p>Apple iPhone 11 128GB (White) (MWLF2)</p>
+                <div>
+                  <span>21 630 грн.</span>
+                  <button class="button-blue">Купить</button>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+
+      <div class="wrapper">
+        <div class="our-shops" id="contacts">
+          <div class="title-6">Наши магазины</div>
+          <div class="flex-wrap">
+
+            <div class="block">
+              <a class="mxarkovskiy">
+                <div class="img-wrap">
+                  <img loading="lazy" src="img/grig3.jpg" alt="">
+                </div>
+              </a>
+              <div class="street"><img loading="lazy" src="/img/icons/pin.svg">Киев, Позняки, пр-т Петра Григоренка 20</div>
+              <div class="phone"><img loading="lazy" src="/img/icons/telephone.svg">
+                <a class="phone binct-phone-number-1" href="tel:+380672172233">+38 067 217 22 33</a>
               </div>
-              <div class="product">
-                <div class="image">
-            
-                  <a
-                    href="https://mcstore.com.ua/catalog/ipad/ipad_10_2_2020/apple-ipad-10-2%26quot-2020-128gb-wi-fi-%2B-cellular-gold-mymn2-%D1%83%D1%86%D0%B5%D0%BD%D0%BA%D0%B0-11026/"><img
-                      src="https://mcstore.com.ua/img/noimg.png"
-                      alt="Apple iPad 10.2&quot; 2020 128Gb Wi-Fi + Cellular Gold (MYMN2) (уценка)" loading="lazy"></a>
-                </div>
-                <div class="info">
-                  <div class="title"><a
-                      href="https://mcstore.com.ua/catalog/ipad/ipad_10_2_2020/apple-ipad-10-2%26quot-2020-128gb-wi-fi-%2B-cellular-gold-mymn2-%D1%83%D1%86%D0%B5%D0%BD%D0%BA%D0%B0-11026/">Apple
-                      iPad 10.2" 2020 128Gb Wi-Fi + Cellular Gold (MYMN2) (уценка)</a></div>
-                  <div class="description">
-                    <span class="cat_art">Артикул: 11536</span>
-                    <span class="cat_nal">Нет в наличии</span>
-                  </div>
-                  <div class="rating">
-                    <span class="mc mc-star-fill"></span>
-                    <span class="mc mc-star-fill"></span>
-                    <span class="mc mc-star-half"></span>
-                    <span class="mc mc-star"></span>
-                    <span class="mc mc-star"></span>
-                    <div>Отзывы (5)</div>
-                  </div>
-                </div>
-            
-              </div>
-              <div class="product">
-                <div class="image">
-            
-                  <a href="https://mcstore.com.ua/catalog/ipad/ipad_10_2_2020/apple_ipad_10_2_2020_32gb_wi_fi_gold_mylc2/"><img
-                      src="https://mcstore.com.ua/image/cache/iblock/678/678d877ee8eb813fbc4e0934f70dd524-600x600.jpg"
-                      alt="Apple iPad 10.2&quot; 2020 32Gb Wi-Fi Gold (MYLC2)" loading="lazy"></a>
-                </div>
-                <div class="info">
-                  <div class="title"><a
-                      href="https://mcstore.com.ua/catalog/ipad/ipad_10_2_2020/apple_ipad_10_2_2020_32gb_wi_fi_gold_mylc2/">Apple
-                      iPad 10.2" 2020 32Gb Wi-Fi Gold (MYLC2)</a></div>
-                  <div class="description">
-                    <span class="cat_art">Артикул: 10495</span>
-                    <span class="cat_nal">в наличии</span>
-                  </div>
-                  <div class="rating">
-                    <span class="mc mc-star-fill"></span>
-                    <span class="mc mc-star-fill"></span>
-                    <span class="mc mc-star-half"></span>
-                    <span class="mc mc-star"></span>
-                    <span class="mc mc-star"></span>
-                    <div>Отзывы (5)</div>
-                  </div>
-                  <div class="price">
-                    <span class="price__2">10617 ₴</span> <span class="price__1">10 160 ₴</span>
-                    <button type="submit" name="actionADD2BASKET" class="add2basket_link btn-7"
-                      onclick="add_cart2('815', '1', 'Apple iPad 10.2&quot; 2020 32Gb Wi-Fi Gold (MYLC2)', 10160.0000);">Купить</button>
-                  </div>
-                </div>
-            
-              </div>
-              <div class="product">
-                <div class="image">
-            
-                  <a href="https://mcstore.com.ua/catalog/ipad/ipad_10_2_2020/apple_ipad_10_2_2020_32gb_wi_fi_silver_myla2/"><img
-                      src="https://mcstore.com.ua/image/cache/iblock/39c/39c4e34ba31496d579032918814efb7f-600x600.jpg"
-                      alt="Apple iPad 10.2&quot; 2020 32Gb Wi-Fi Silver (MYLA2)" loading="lazy"></a>
-                </div>
-                <div class="info">
-                  <div class="title"><a
-                      href="https://mcstore.com.ua/catalog/ipad/ipad_10_2_2020/apple_ipad_10_2_2020_32gb_wi_fi_silver_myla2/">Apple
-                      iPad 10.2" 2020 32Gb Wi-Fi Silver (MYLA2)</a></div>
-                  <div class="description">
-                    <span class="cat_art">Артикул: 10497</span>
-                    <span class="cat_nal">в наличии</span>
-                  </div>
-                  <div class="rating">
-                    <span class="mc mc-star-fill"></span>
-                    <span class="mc mc-star-fill"></span>
-                    <span class="mc mc-star-half"></span>
-                    <span class="mc mc-star"></span>
-                    <span class="mc mc-star"></span>
-                    <div>Отзывы (5)</div>
-                  </div>
-                  <div class="price">
-                    <span class="price__2">10617 ₴</span> <span class="price__1">10 160 ₴</span>
-                    <button type="submit" name="actionADD2BASKET" class="add2basket_link btn-7"
-                      onclick="add_cart2('817', '1', 'Apple iPad 10.2&quot; 2020 32Gb Wi-Fi Silver (MYLA2)', 10160.0000);">Купить</button>
-                  </div>
-                </div>
-            
-              </div>
-            
             </div>
+
+
+            <div class="block">
+              <a class="mmix">
+                <div class="img-wrap">
+                  <img loading="lazy" src="img/mix1.jpg" alt="">
+                </div>
+              </a>
+              <div class="street"><img loading="lazy" src="/img/icons/pin.svg">Киев, Площадь Независимости, ул. Михайловская 18</div>
+              <div class="phone"><img loading="lazy" src="/img/icons/telephone.svg">
+                <a class="phone binct-phone-number-3" href="tel:+380672462233">+38 067 246 22 33</a>
+              </div>
+            </div>
+
+            <div class="block">
+              <a class="mcenter">
+                <div class="img-wrap">
+                  <img loading="lazy" src="img/L.jpg" alt="">
+                </div>
+              </a>
+              <div class="street"><img loading="lazy" src="/img/icons/pin.svg">Киев, Центр, ул. Антоновича (Горького) 10</div>
+              <div class="phone"><img loading="lazy" src="/img/icons/telephone.svg">
+                <a class="phone binct-phone-number-2" href="tel:+380672102233">+38 067 210 22 33</a>
+              </div>
+            </div>
+
           </div>
         </div>
-
       </div>
+
     </div>
 
-
-
-
-    
     <footer class="flex center">
       <div class="wrapper wrap-1 flex space-between">
         <div class="flex column col-4 logo">

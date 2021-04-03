@@ -309,8 +309,8 @@ $(document).ready(function(){
         $('#tabs').before($('.guarantee'));
     }
     
-    $('.search .icon img').click(function(){
-        $('.search .icon').toggleClass('open');
+    $('.header-padding .search .icon img').click(function(){
+        $('.header-padding .search .icon').toggleClass('open');
     });
     
     $("#form_zayavka").submit(function() { //устанавливаем событие отправки для формы с id=form
@@ -666,8 +666,6 @@ function initializemap(){
 }
 
 $(document).ready(function(){
-	
-	
 	var mm=false;
 	$('.back-black').click(function(){
 		$('.back-black').removeClass('open');
@@ -833,6 +831,7 @@ var cart = {
 
 					$('#cart > ul').load('index.php?route=common/cart/info ul li');
 				}
+				document.location.reload();
 			},
 			error: function(xhr, ajaxOptions, thrownError) {
 				alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
@@ -862,6 +861,7 @@ var cart = {
 				} else {
 					$('#cart > ul').load('index.php?route=common/cart/info ul li');
 				}
+				document.location.reload();
 			},
 			error: function(xhr, ajaxOptions, thrownError) {
 				alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
@@ -893,41 +893,7 @@ var cart = {
 				} else {
 					$('#cart > ul').load('index.php?route=common/cart/info ul li');
 				}
-			},
-			error: function(xhr, ajaxOptions, thrownError) {
-				alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
-			}
-		});
-	}
-}
-
-var voucher = {
-	'add': function() {
-
-	},
-	'remove': function(key) {
-		$.ajax({
-			url: 'index.php?route=checkout/cart/remove',
-			type: 'post',
-			data: 'key=' + key,
-			dataType: 'json',
-			beforeSend: function() {
-				$('#cart > button').button('loading');
-			},
-			complete: function() {
-				$('#cart > button').button('reset');
-			},
-			success: function(json) {
-				// Need to set timeout otherwise it wont update the total
-				setTimeout(function () {
-					$('#cart > button').html('<span id="cart-total"><i class="fa fa-shopping-cart"></i> ' + json['total'] + '</span>');
-				}, 100);
-
-				if (getURLVar('route') == 'checkout/cart' || getURLVar('route') == 'checkout/checkout') {
-					location = 'index.php?route=checkout/cart';
-				} else {
-					$('#cart > ul').load('index.php?route=common/cart/info ul li');
-				}
+				document.location.reload();
 			},
 			error: function(xhr, ajaxOptions, thrownError) {
 				alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
@@ -943,6 +909,26 @@ $(document).ready(function() {
 			return $(this).prop('title');
 		}
 	});
+
+	$( ".accordion" ).accordion({
+		collapsible: true,
+		heightStyle: "content",
+		animate: false
+	});
+
+	$('.buy-now-popover').hide();
+
+	$('.buy-now-toggle').on('click', function() {
+		var popover = $('.buy-now-popover');
+		popover.toggle();
+		$(document).on('click', function (e) {
+			if (!(popover.css('display') == 'none') && !$(e.target).is('.buy-now-popover, .buy-now-toggle')) {
+				popover.hide();
+			}
+		})
+	});
+
+
 	/* Search */
 	
 	$('#search input[name=\'search\']').parent().find('a.open img').on('click', function() {
@@ -953,7 +939,7 @@ $(document).ready(function() {
 		if (value) {
 			url += '&search=' + encodeURIComponent(value);
 		}
-console.log(url);
+//console.log(url);
 		//location = url;
 	});/**/ 
 
@@ -1015,15 +1001,12 @@ function add_cart(ID,clv=1){
 
 					if (json['success']) {
 						//console.log($.param(data_arr)); 
-						console.log(json);
-					
-						//$('.breadcrumbs').after('<div class="alert alert-success">' + json['success'] + '<button type="button" class="close" data-dismiss="alert">&times;</button></div>');
-					
-  					    $('.cart_a').html(json['total']);
-						$('html, body').animate({ scrollTop: 0 }, 'slow');
-
+						//console.log(json);							
+  					    //$('.cart_a').html(json['total']);
+						//$('html, body').animate({ scrollTop: 0 }, 'slow');
 						//$('.cart_desc').load('index.php?route=common/cart/info ul li');						
 					}
+					document.location.reload();
 				},
 				error: function(xhr, ajaxOptions, thrownError) {
 					alert('error'+thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
