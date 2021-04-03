@@ -13919,6 +13919,7 @@ aside {
   line-height: 18px;
   color: #000000;
   border: 0.7px solid #39AAE7;
+  border-radius: 13px;
   box-sizing: border-box;
   text-align: center;
 }
