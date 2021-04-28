@@ -2045,7 +2045,7 @@ input:checked~.tab-content {
     }
     .card-text {
         width: 100%;
-        padding: 0 20px 10px;
+        padding: 0 20px;
     }
     .card-date {
         width: 50%;
