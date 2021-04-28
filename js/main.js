@@ -72,6 +72,12 @@ document.addEventListener('DOMContentLoaded', function () {
         document.querySelector('.search-result').classList.add('active');
     })
 
+    document.body.addEventListener('click', function (e) {
+        if (document.querySelector('.search-result.active')) {
+            document.querySelector('.search-result').classList.remove('active');
+        }
+    }, true);
+
     
 
 });

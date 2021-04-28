@@ -274,6 +274,10 @@ a:hover {
     transform: translateY(-50%);
 }
 
+.dropdown:hover::before {
+    transform: translateY(-50%) rotate(180deg);
+}
+
 .dropdown-menu {
     display: none;
     position: absolute;
@@ -460,6 +464,7 @@ a:hover {
 /* --- header  --- */
 .header {
     position: relative;
+    font-weight: 500;
     border-bottom: 1px solid #ECEFF7;
 
 }
@@ -543,19 +548,24 @@ a:hover {
 }
 
 .header-menu .menu-collapse > div {
-    display: none;
     position: absolute;
     top: 100%;
     left: 0px;
-    z-index: 3;
+    z-index: -1;
+    display: flex;
+    justify-content: center;
     padding: 30px 0 0 0;
     width: 100%;
     background: #fff;
+    visibility: hidden;
+    opacity: 0;
+    transition: all .3s ease-in-out;
 }
 
 .header-menu .menu-collapse:hover>div {
-    display: flex;
-    justify-content: center;
+    z-index: 3;
+    visibility: visible;
+    opacity: 1;
 }
 
 .header-menu .menu-collapse > div > ul {
@@ -648,6 +658,9 @@ a:hover {
     color: #636679;
 }
 
+.header-menu .menu-collapse-2 > ul > li a:hover {
+    color: #2858FF;
+}
 
 /* --- header .header-menu end --- */
 /*   
@@ -694,7 +707,7 @@ a:hover {
 }
 
 .main-inner {
-    min-height: calc(100vh - 72px);
+    padding: 100px 0;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -824,10 +837,10 @@ a:hover {
     left: 0;
     padding-top: 14px;
     width: 100%;
-    max-height: 200px;
     background:  #FFFFFF;
     border-radius: 14px;
     transform: translateY(-15px);
+    box-sizing: border-box;
 }
 
 .search-result.active {
@@ -879,6 +892,7 @@ a:hover {
   
 .search-result ::-webkit-scrollbar-track {
     background: #fff;
+    border-radius: 4px;
 }
 
 .search-result ::-webkit-scrollbar-thumb {
@@ -1275,7 +1289,7 @@ a:hover {
     justify-content: space-between;
     padding: 24px;
     background: #fff;
-    font-weight: bold;
+    font-size: 20px;
     cursor: pointer;
     transition: all 0.35s;
 }
@@ -1303,7 +1317,7 @@ a:hover {
     color: #636679;
     background: #fff;
     border-top: 0px solid transparent;
-    transition: all 0.35s;
+    transition: all .7s ease, padding 1s ease;
     box-sizing: border-box;
 }
 
@@ -1315,6 +1329,7 @@ input:checked~.tab-content {
     max-height: 100vh;
     padding: 24px;
     border-top: 1px solid #D9E0ED;
+    transition: all 1s ease, padding .7s ease;
 }
 /* --- tabs end --- */
 /* ----------------- */
@@ -1350,6 +1365,14 @@ input:checked~.tab-content {
 .latest .card {
     width: calc(33.3% - 10px);
     margin-bottom: 20px;
+}
+
+.latest .card-text {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .latest .btn-primary {
@@ -1390,7 +1413,8 @@ input:checked~.tab-content {
 }
 
 .card-text {
-    padding: 0 40px 10px;
+    padding: 0 40px;
+    margin-bottom: 10px;
     color: #636679;
 }
 
@@ -1465,6 +1489,15 @@ input:checked~.tab-content {
 
 .footer-social a {
     margin-right: 25px;
+}
+
+.footer-social a img {
+    opacity: 0.3;
+    transition: all .2s ease-in;
+}
+
+.footer-social a:hover img {
+    opacity: 1;
 }
 
 .footer-lang .dropdown-toggle {
@@ -1807,7 +1840,7 @@ input:checked~.tab-content {
         margin: 0 auto;
     }
     .main-inner {
-        padding-bottom: 40px;
+        padding: 0 0 100px;
     }
     .main-title {
         margin-bottom: 30px;
@@ -1971,7 +2004,6 @@ input:checked~.tab-content {
         padding: 10px 16px;
         font-size: 16px;
         line-height: 26px;
-        font-weight: 400;
     }
     .tab-label::after {
         width: 16px;
@@ -2100,5 +2132,14 @@ input:checked~.tab-content {
     }
     .review-user span {
         font-size: 16px;
+    }
+}
+
+@media (max-width: 600px) {
+    .card-date {
+        width: 40%;
+    }
+    .card-link {
+        width: 60%;
     }
 }
