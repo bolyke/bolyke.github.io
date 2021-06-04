@@ -62,22 +62,39 @@ document.addEventListener('DOMContentLoaded', function () {
        
     })
 
-    var reviewSlider = new Flickity( '.review-slider', {
-        wrapAround: true,
-        pageDots: false,
-        watchCSS: true
-    });
+    if (document.querySelector('.review-slider')) {
+        var reviewSlider = new Flickity( '.review-slider', {
+            wrapAround: true,
+            pageDots: false,
+            watchCSS: true
+        });
+    }
 
-    document.querySelector('.search input').addEventListener('input', function () {
-        document.querySelector('.search-result').classList.add('active');
-    })
+    if (document.querySelector('.search')) {
+        document.querySelector('.search input').addEventListener('input', function () {
+            document.querySelector('.search-result').classList.add('active');
+        })
 
-    document.body.addEventListener('click', function (e) {
-        if (document.querySelector('.search-result.active')) {
-            document.querySelector('.search-result').classList.remove('active');
-        }
-    }, true);
+        document.body.addEventListener('click', function (e) {
+            if (document.querySelector('.search-result.active')) {
+                document.querySelector('.search-result').classList.remove('active');
+            }
+        }, true);
+    }
 
+    //sticky company info
+    if (document.querySelector('.company-sticky')) {
+        document.addEventListener('scroll', function () {
+            var infoBlock = document.querySelector('.company-info');
+            var sticky = infoBlock.offsetTop + infoBlock.offsetHeight - 73;
+            if (window.pageYOffset > sticky) {
+                document.querySelector('.company-sticky').classList.add("sticky");
+              } else {
+                document.querySelector('.company-sticky').classList.remove("sticky");
+              }
+        });
+       
+    } 
     
 
 });
