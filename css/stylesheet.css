@@ -3441,6 +3441,9 @@ input:checked~.tab-content {
 .most-recent .card-flat:not(:last-child) {
     border-bottom: 1px solid #E7EAF2;
 }
+.most-read .card-flat .card-img {
+    height: 140px;
+}
 /* ----- recent end ----- */ 
 /* ----- categories ----- */ 
 .categories .card-flat {
