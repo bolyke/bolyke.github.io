@@ -1,3 +1,7 @@
+h1, h2, h3, h4, h5 {
+    margin: 0;
+}
+
 .d-none {display: none !important;}
 .d-flex {display: flex !important;}
 .flex-row {flex-direction: row;}
@@ -3883,6 +3887,9 @@ input:checked~.tab-content {
     }
     .title-3 {
         font-size: 16px;
+    }
+    .page-heading {
+        padding: 20px 0;
     }
     .dropdown .dropdown-menu {
         top: unset;
