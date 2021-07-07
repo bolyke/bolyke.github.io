@@ -3190,8 +3190,28 @@ input:checked~.tab-content {
 
 /* ----- related reviews end ----- */ 
 /* ----- action table ----- */ 
-.action-table-wrap {
-
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.table th {
+    font-weight: 400;
+    text-align: left;
+}
+.table tr td {
+    border-bottom: 1px solid #E3E5E6;
+}
+.table tr th {
+    border-bottom: 2px solid #E3E5E6;
+}
+.table tr:last-child td {
+    border-bottom: 0;
+}
+.table td, .table th {
+    padding: 7px 20px 8px 0;
+    font-size: 16px;
+    line-height: 26px;
+    color: #030D2F;
 }
 .action-table {
     width: calc(50% - 10px);
@@ -3207,32 +3227,10 @@ input:checked~.tab-content {
     line-height: 26px;
     color: #030D2F; 
 }
-.action-row {
-    display: flex;
-    flex-direction: row;
-    border-bottom: 1px solid #E3E5E6;
-}
-.action-row:last-child {
-    border-bottom: 0;
-}
-.action-row.action-heading-row {
-    border-bottom: 2px solid #E3E5E6;
-}
-.action-col {
-    padding: 7px 20px 7px 0;
-    font-size: 16px;
-    line-height: 26px;
-    display: flex;
-    align-items: center;
-    color: #030D2F;
-}
-.action-col:last-child {
+.action-table td:last-child, .action-table th:last-child {
     padding-right: 0;
 }
-.action-col:first-child {
-    flex: 1 1;
-}
-.action-col:not(:first-child) {
+.action-table td:not(:first-child), .action-table th:not(:first-child) {
     justify-content: flex-end;
     max-width: 118px;
     min-width: 70px;
