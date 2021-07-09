@@ -3749,6 +3749,12 @@ input:checked~.tab-content {
 .error-page .btn-default {
     max-width: 214px;
 }
+.error-500 {
+    padding: 0;
+}
+.error-500 .error-page {
+    height: 100vh;
+}
 /* ----- error page end ----- */ 
 
 @media (max-width: 1300px) and (min-width: 1024px) {
