@@ -556,6 +556,14 @@ h1, h2, h3, h4, h5 {
     font-weight: 400;
     font-style: italic;
 }
+@font-face {
+    font-family: 'Roboto';
+    src: url('./fonts/Roboto/Roboto-Bold.ttf');
+    src: local('Roboto Bold'), local('Roboto'),
+    url('./fonts/Roboto/Roboto-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
 body {
     margin: 0;
     padding-top: 73px;
@@ -3713,10 +3721,35 @@ input:checked~.tab-content {
 .contact-right a {
     line-height: 32px;
 }
-
-
 /* ----- contact page end ----- */ 
-
+/* ----- error page ----- */ 
+.error-page {
+    padding: 40px 0;
+    min-height: calc(100vh - 70px);
+    box-sizing: border-box;
+}
+.error-title {
+    font-weight: bold;
+    font-size: 60px;
+    line-height: 76px;
+    display: flex;
+    align-items: center;
+    color: #36353A;
+}
+.error-left {
+    max-width: 360px;
+}
+.error-code {
+    font-family: Roboto;
+    font-weight: bold;
+    font-size: 357px;
+    line-height: 357px;
+    color: #EDF0F2;
+}
+.error-page .btn-default {
+    max-width: 214px;
+}
+/* ----- error page end ----- */ 
 
 @media (max-width: 1300px) and (min-width: 1024px) {
     .main-title {
@@ -3784,6 +3817,10 @@ input:checked~.tab-content {
     .company-sticky .company-controls a:first-child {
         margin-right: 0;
         margin-bottom: 15px;
+    }
+    .error-code {
+        font-size: 300px;
+        line-height: 300px;
     }
 }
 
@@ -3991,6 +4028,10 @@ input:checked~.tab-content {
     .single-review .review-grid-item:first-child {
         width: 100%;
         padding-right: 0%;
+    }
+    .error-code {
+        font-size: 200px;
+        line-height: 200px;
     }
 }
 
@@ -4833,6 +4874,23 @@ input:checked~.tab-content {
     .contact-right {
         width: 100%;
         padding: 16px;
+    }
+    .error-page {
+        padding-top: 0;
+    }
+    .error-code {
+        font-size: 110px;
+        line-height: 110px;
+    }
+    .error-left {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .error-title {
+        font-size: 32px;
+        line-height: 40px;
     }
 }
 
