@@ -1,5 +1,47 @@
 document.addEventListener('DOMContentLoaded', function () {
 
+    // scroll to top
+    if (document.querySelector('.totop')) {
+        document.querySelector('.totop').addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        })
+        window.addEventListener('scroll', () => {
+            let y = window.scrollY;
+            if (y >= 800) {
+                document.querySelector('.totop').className = "totop show"
+            } else {
+                document.querySelector('.totop').className = "totop"
+            }
+        });
+    }
+   
+
+    //scroll to anchor 
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                block: 'center',
+                behavior: 'smooth'
+            });
+        });
+    });
+
+    if (document.querySelector('.notification-toggle')) {
+        document.querySelector('.notification-toggle').addEventListener('click', (toggler) => {
+            let notifParent = document.querySelector('.header-notification')
+            notifParent.classList.toggle('active');
+            document.addEventListener('click', (e) => {
+                if (!e.target.classList.contains('notification') && notifParent.classList.contains('active') && e.target != toggler.target) {
+                    notifParent.classList.remove('active');
+                }
+            })
+        })
+    }
+
     document.querySelector('.menu-toggle').addEventListener('click', function () {
         document.querySelector('.header-nav').classList.toggle('active');
         document.querySelector('body').classList.toggle('unscroll');
@@ -62,6 +104,14 @@ document.addEventListener('DOMContentLoaded', function () {
        
     })
 
+    //header search 
+    document.querySelector('.search-open').addEventListener('click', () => {
+        document.querySelector('.header-search').classList.add('active');
+    })
+    document.querySelector('.search-close').addEventListener('click', () => {
+        document.querySelector('.header-search').classList.remove('active');
+    })
+
     if (document.querySelector('.review-slider')) {
         var reviewSlider = new Flickity( '.review-slider', {
             wrapAround: true,
@@ -71,13 +121,15 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     if (document.querySelector('.search')) {
-        document.querySelector('.search input').addEventListener('input', function () {
-            document.querySelector('.search-result').classList.add('active');
+        document.querySelectorAll('.search input').forEach((item) => {
+            item.addEventListener('input', () => {
+                item.parentNode.parentNode.querySelector('.search-result').classList.add('active');
+            })
         })
 
         document.body.addEventListener('click', function (e) {
             if (document.querySelector('.search-result.active')) {
-                document.querySelector('.search-result').classList.remove('active');
+                document.querySelector('.search-result.active').classList.remove('active');
             }
         }, true);
     }
@@ -96,8 +148,89 @@ document.addEventListener('DOMContentLoaded', function () {
        
     } 
     
+    //subscribe home 
+    if (document.querySelector('.form-step-btn')) {
+        document.querySelector('.form-step-btn').addEventListener('click', () => {
+            document.querySelector('[data-form-step="1"]').classList.add('hide');
+            document.querySelector('[data-form-step="2"]').classList.add('d-flex');
+        })
+    }
+
+    //file field
+    let fileInput  = document.querySelector(".file-field input"),  
+        button = document.querySelector(".file-field label"),
+        the_return = document.querySelector(".file-return");
+        
+    button.addEventListener("keydown", function( event ) {  
+        if ( event.keyCode == 13 || event.keyCode == 32 ) {  
+            fileInput.focus();  
+        }  
+    });
+    button.addEventListener("click", function( event ) {
+        fileInput.focus();
+        return false;
+    });  
+    fileInput.addEventListener("change", function( event ) {  
+        the_return.innerHTML = '<span class="file"><span class="file-name"><span class="ellipsis">' + this.value + '</span>.' + this.value.split('.').pop() + '</span><span class="file-remove"></span></span>';  
+    });  
 
 });
+
+(function() {
+    /* Opening modal window function */
+    function openModal() {
+        /* Get trigger element */
+        var modalTrigger = document.getElementsByClassName('jsModalTrigger');
+  
+        /* Set onclick event handler for all trigger elements */
+        for(var i = 0; i < modalTrigger.length; i++) {
+            modalTrigger[i].onclick = function() {
+              var target = this.getAttribute('href').substr(1);
+              var modalWindow = document.getElementById(target);
+  
+              modalWindow.classList ? modalWindow.classList.add('open') : modalWindow.className += ' ' + 'open'; 
+            }
+        }   
+    }
+  
+    function closeModal(){
+      /* Get close button */
+      var closeButton = document.getElementsByClassName('jsModalClose');
+      var closeOverlay = document.getElementsByClassName('jsOverlay');
+  
+      /* Set onclick event handler for close buttons */
+        for(var i = 0; i < closeButton.length; i++) {
+          closeButton[i].onclick = function() {
+            var modalWindow = this.parentNode.parentNode;
+  
+            modalWindow.classList ? modalWindow.classList.remove('open') : modalWindow.className = modalWindow.className.replace(new RegExp('(^|\\b)' + 'open'.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
+          }
+        }   
+  
+      /* Set onclick event handler for modal overlay */
+        for(var i = 0; i < closeOverlay.length; i++) {
+          closeOverlay[i].onclick = function() {
+            var modalWindow = this.parentNode;
+  
+            modalWindow.classList ? modalWindow.classList.remove('open') : modalWindow.className = modalWindow.className.replace(new RegExp('(^|\\b)' + 'open'.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
+          }
+        }  
+  
+    }
+  
+    /* Handling domready event IE9+ */
+    function ready(fn) {
+      if (document.readyState != 'loading'){
+        fn();
+      } else {
+        document.addEventListener('DOMContentLoaded', fn);
+      }
+    }
+  
+    /* Triggering modal window function after dom ready */
+    ready(openModal);
+    ready(closeModal);
+}());
 
 function resetMobMenu () {
     if (document.querySelector('.menu-collapse.active')) {
