@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="apple-touch-icon" href="./apple-touch-icon.png">
+  <link rel="icon" type="image/svg" href="./favicon.svg">
+  <link rel="icon" href="./favicon.ico">
+  <link rel="manifest" href="./manifest.json">
+  <!-- <link rel="mask-icon" href="./images/mask-icon.svg" color="#79f7d1"> -->
+  <meta name="theme-color" content="#fff">
+
+  <meta name="description"
+    content="Playnance is ready-to-operate Web3 trading game that you can activate out of the box, drive users on it, and receive profit in 2 hours. All transactions are transparent and automated by smart-contract.">
+  <title>Playnance</title>
+
+  <link rel='stylesheet' href='./css/stylesheet.css'>
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="header-logo">
+        <a href="/">
+          <img srcset="./images/logo.svg" alt="">
+        </a>
+      </div>
+      <div class="nav-toggle"></div>
+      <div class="header-nav">
+        <ul>
+          <li class="dropdown">
+            <a href="javascript:;" class="dropdown-toggle">Main</a>
+            <ul class="dropdown-menu">
+              <li><a href="#calculator">Calculator</a></li>
+              <li><a href="#automated">Features</a></li>
+              <li><a href="#best">For Whom</a></li>
+              <li><a href="#packages">Pricing</a></li>
+              <li><a href="#case">Cases</a></li>
+              <li><a href="#security">Security</a></li>
+              <!-- <li><a href="#launch">How to start</a></li> -->
+            </ul>
+          </li>
+          <!-- <li>
+            <a href="/">Cases & Guides</a>
+          </li>
+          <li>
+            <a href="/">Game</a>
+          </li>
+          <li>
+            <a href="/">Company</a>
+          </li> -->
+          <li>
+            <a href="/">Contact us</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <!-- <a href="/" class="floationg-button"><i class="pn pn-telegram-dark"></i></a> -->
+
+  <div class="main">
+    <div class="container">
+      <div class="main-left">
+        <div class="main-title title-1">
+          Start
+          <span class="text-nowrap">Plug-<i class="text-light">and</i>-Play</span>
+          Web3 Trading
+          <span class="text-right">Business</span>
+        </div>
+        <div class="main-image d-none d-xs-flex">
+          <img src="images/main-hero.png" alt="">
+        </div>
+        <div class="main-description">
+          <div class="main-description-content">
+            <div class="caption">
+              Playnance is ready-to-operate Web3 trading game that you can activate out of the box, drive users on it,
+              and receive profit in 2 hours. All transactions are transparent and automated by smart-contract.
+            </div>
+            <a href="/" class="btn-primary">Launch now</a>
+          </div>
+        </div>
+      </div>
+      <div class="main-right d-xs-none">
+        <img src="images/main-hero.png" alt="">
+      </div>
+    </div>
+  </div>
+<!-- 
+  <div class="promo">
+    <div class="container">
+      <div class="promo-left">
+        <div class="promo-title title-3">
+          2 hours from launch to
+          <i class="text-light text-primary">profit</i>
+        </div>
+        <div class="promo-steps">
+          <span>Activate</span>
+          <span>Drive traffic</span>
+          <span>Earn</span>
+        </div>
+      </div>
+      <div class="promo-right">
+        <div class="promo-video">
+
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+  <div id="calculator" class="calculator">
+    <div class="calculator-heading">
+      <div class="container">
+        <div class="calculator-title title-2">
+          profit <span class="text-primary">calculator</span>
+        </div>
+        <div class="calculator-text">
+          All payments are made automatically every day
+        </div>
+      </div>
+    </div>
+    <div class="calculator-content">
+      <div class="container">
+        <div class="calculator-form-wrap">
+          <form id="calculator-form" class="calculator-form">
+            <div class="form-input">
+              <label for="players-number">Number of daily players</label>
+              <input type="text" id="players-number" name="players-number" placeholder="100">
+            </div>
+            <label class="form-check-label">Players' region</label>
+            <div id="players-region_radio_group" class="check-group check-players-region">
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="players-region" id="players-region-3" value="30" checked>
+                <label class="form-check-label" for="players-region-3">
+                  Tier 3
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="players-region" id="players-region-2" value="20">
+                <label class="form-check-label" for="players-region-2">
+                  Tier 2
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="players-region" id="players-region-1" value="10">
+                <label class="form-check-label" for="players-region-1">
+                  Tier 1
+                </label>
+              </div>
+            </div>
+            <label class="form-check-label">Select the partner package</label>
+            <div id="partner-package_radio_group" class="check-group">
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="partner-package" id="partner-package-1" value="35" checked>
+                <label class="form-check-label" for="partner-package-1">
+                  35%
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="partner-package" id="partner-package-2" value="50">
+                <label class="form-check-label" for="partner-package-2">
+                  50%
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="partner-package" id="partner-package-3" value="60">
+                <label class="form-check-label" for="partner-package-3">
+                  60%
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="partner-package" id="partner-package-4" value="70">
+                <label class="form-check-label" for="partner-package-4">
+                  70%
+                </label>
+              </div>
+            </div>
+            <button class="btn-primary" type="submit" id="submit-btn" form="calculator-form">Launch Now</button>
+          </form>
+        </div>
+        <div class="calculator-earnings">
+          <div class="calculator-daily">
+            <span class="caption pb-4">Your daily earnings</span>
+            <b class="calculator-daily-profit">$1,250</b>
+          </div>
+          <div class="calculator-monthly">
+            <span class="caption pb-4">Your monthly earnings</span>
+            <b class="calculator-monthly-profit">$37,500</b>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="best" class="best-for">
+    <div class="best-heading">
+      <div class="container">
+        <div class="best-title title-2">Best for</div>
+      </div>
+    </div>
+    <div class="best-content">
+      <div class="container">
+        <div class="best-owners">
+          <div class="best-subtitle">Traffic Owners</div>
+          <div class="best-text">If you have the traffic, it can be monitized.</div>
+          <div class="best-chips">
+            <span class="chip">Affiliate Firms</span>
+            <span class="chip">Media Buyers</span>
+            <span class="chip">Influencers</span>
+            <span class="chip">Media</span>
+            <span class="chip">Exchanges</span>
+          </div>
+        </div>
+        <div class="best-entrepreneurs">
+          <div class="best-subtitle">Entrepreneurs</div>
+          <div class="best-text">If you want to focus on sales and earnings rather than product management or technology development.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="automated" class="automated">
+    <div class="automated-heading">
+      <div class="container">
+        <div class="automated-title title-3">
+          The platform is <i class="text-light">fully</i>
+          automated — <span class="text-primary">focus
+            on sales and growth</span>, not products and technology.
+        </div>
+      </div>
+    </div>
+    <div class="automated-content">
+      <div class="container">
+        <div class="automated-left">
+          <div class="title-5">Ready out of the box</div>
+          <div class="caption">No additional product management or development necessary.</div>
+        </div>
+        <div class="automated-right">
+          <div class="automated-item">
+            <div class="title-5">100% automated</div>
+            <div class="caption">No need for team or operational expenses.</div>
+          </div>
+          <div class="automated-item">
+            <div class="title-5">No bureaucracy</div>
+            <div class="caption">License, regulation, and taxation free.</div>
+          </div>
+          <div class="automated-item">
+            <div class="title-5">Operates 24/7</div>
+            <div class="caption">We provide liquidity management and user support all day, every day.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="game">
+    <div class="container">
+      <div class="game-left">
+        <div class="game-heading">
+          <div class="game-title title-2">The game</div>
+          <div class="game-text">
+            A P2P trading game where users bet on if Bitcoin will rise or fall. Each round lasts 45 seconds, making it super addictive.
+          </div>
+        </div>
+        <div class="game-list">
+          <ul>
+            <li>Earn fees from every round</li>
+            <li>No user limit. Grow your audience as much as you like</li>
+            <li>One-time setup, lifetime passive income</li>
+            <li>Embedded referral system manager to boost cash flow.</li>
+          </ul>
+          <!-- <a href="/" class="btn-default">Discover Game</a> -->
+        </div>
+      </div>
+      <div class="game-right">
+        <div class="game-image">
+          <span class="game-chip-1">#1 Polygon game by number of transactions</span>
+          <span class="game-chip-2">2,500 monthly users</span>
+          <img src="/images/game-screen.png" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="lifetime">
+    <div class="container">
+      <div class="lifetime-title title-2">
+        Lifetime Daily
+        <i class="text-light">Earnings</i>
+      </div>
+      <div class="lifetime-text">
+        Activate Playnance, and receieve passive income all day, everyday.
+      </div>
+    </div>
+  </div>
+
+  <div id="packages" class="packages">
+    <div class="packages-heading">
+      <div class="container">
+        <div class="packages-title title-2">
+          WHITE-LABEL PACKAGES
+          <span class="packages-chip">Own your platform</span>
+        </div>
+      </div>
+    </div>
+    <div class="packages-content">
+      <div class="container">
+        <div class="packages-item">
+          <div class="package-name">Gold Partner</div>
+          <div class="package-middle">
+            <span>Revenue share</span>
+            <span class="package-revenue">50%</span>
+          </div>
+          <div class="package-bottom">
+            <div class="caption">Entry fee</div>
+            <div class="package-fee">$10,000</div>
+            <a href="/" class="btn-default">Choose</a>
+          </div>
+        </div>
+        <div class="packages-item">
+          <div class="package-name">Diamond Partner</div>
+          <div class="package-middle">
+            <span>Revenue share</span>
+            <span class="package-revenue">60%</span>
+          </div>
+          <div class="package-bottom">
+            <div class="caption">Entry fee</div>
+            <div class="package-fee">$25,000</div>
+            <a href="/" class="btn-default">Choose</a>
+          </div>
+        </div>
+        <div class="packages-item">
+          <div class="package-name">Platinum Partner</div>
+          <div class="package-middle">
+            <span>Revenue share</span>
+            <span class="package-revenue">70%</span>
+          </div>
+          <div class="package-bottom">
+            <div class="caption">Entry fee</div>
+            <div class="package-fee">$50,000</div>
+            <a href="/" class="btn-default">Choose</a>
+          </div>
+        </div>
+        <div class="packages-item">
+          <div class="package-name">Enterprise Partner</div>
+          <div class="package-middle">
+            <div class="caption">Custom revenue share and fee option.</div>
+          </div>
+          <div class="package-bottom">
+            <a href="/" class="btn-default">Contact us</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="package-media">
+    <div class="packages-heading">
+      <div class="container">
+        <div class="packages-title title-2">
+          MEDIA PACKAGE
+          <span class="packages-chip">Start with $0</span>
+        </div>
+      </div>
+    </div>
+    <div class="packages-content">
+      <div class="container">
+        <div class="media-left">
+          <div class="packages-item">
+            <div class="package-name">Media Partner</div>
+            <div class="package-middle">
+              <span>Revenue share</span>
+              <span class="package-revenue">35%</span>
+            </div>
+            <div class="package-bottom">
+              <div class="">Entry fee</div>
+              <div class="package-fee">$0</div>
+            </div>
+          </div>
+        </div>
+        <div class="media-right">
+          <div class="media-text">
+            Become a Media Partner, bring players to Playnance with an affiliate link, and earn 35% of all earnings.
+          </div>
+          <a href="/" class="btn-default">Become an Affiliate</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="case" class="case">
+    <div class="container">
+      <div class="case-title title-2">
+        Case Example
+      </div>
+      <div class="case-content">
+        <div class="case-left">
+          <div class="case-logo">
+            <img src="/images/cryptofights_pro-logo.png" alt="Cryptofights Pro">
+          </div>
+          <div class="case-table">
+            <table>
+              <tr>
+                <td>Partner type:</td>
+                <td class="text-primary">Influencer</td>
+              </tr>
+              <tr>
+                <td>Players attracted:</td>
+                <td class="text-primary">7000+</td>
+              </tr>
+              <tr>
+                <td>Revenue per player:</td>
+                <td class="text-primary">115 MATIC ($62)</td>
+              </tr>
+              <tr>
+                <td>Total Revenue:</td>
+                <td class="text-primary">$434,000</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <div class="case-right">
+          <img src="/images/case-chart.png" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <div id="security" class="security">
+    <div class="container">
+      <div class="security-left">
+        <div class="security-title title-2">
+          Transparency & Security
+          <span class="security-chip">DeFi powered</span>
+        </div>
+      </div>
+      <div class="security-right">
+        <div class="security-item">
+          <div class="security-icon">
+            <img src="/images/icons/security-1.svg" alt="">
+          </div>
+          <div class="security-text">
+            All rules and transactions are powered by smart-contracts, which stops fraud and prevents risk for partners and players.
+          </div>
+        </div>
+        <div class="security-item">
+          <div class="security-icon">
+            <img src="/images/icons/security-2.svg" alt="">
+          </div>
+          <div class="security-text">
+            Playnance is 100% non-custodial.<br>
+            No deposits and no KYC.
+          </div>
+        </div>
+        <div class="security-item">
+          <div class="security-icon">
+            <img src="/images/icons/security-3.svg" alt="">
+          </div>
+          <div class="security-text">
+            Playnance has completed an CertiK audit
+            with results in the TOP-10%.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <!-- <div id="launch" class="launch">
+    <div class="launch-heading">
+      <div class="container">
+        <div class="launch-title title-3">
+          Fully <i class="text-light">automated</i> launch – <span class="text-primary">receive income</span> in just 2
+          hours, all
+          on your own
+        </div>
+      </div>
+    </div>
+    <div class="launch-content">
+      <div class="container">
+        <div class="launch-left">
+          <div class="launch-video">
+
+          </div>
+        </div>
+        <div class="launch-right">
+          <ol>
+            <li>
+              Sign in with email and crypto wallet
+            </li>
+            <li>
+              Customize your platform with name, branding, and domain
+            </li>
+            <li>
+              Select a partnership package
+            </li>
+            <li>
+              Activate platform
+            </li>
+            <li>
+              Use marketing channels to direct traffic.
+            </li>
+          </ol>
+          <a href="/" class="btn-primary">Launch Now</a>
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+  <div id="faq" class="faq">
+    <div class="container">
+      <div class="faq-left">
+        <div class="faq-title title-2">
+          FAQ
+        </div>
+        <div class="faq-text">
+          Didn't find an answer to our question?<br>
+          Drop us a line here
+        </div>
+        <a href="/" class="btn-default">
+          Ask a question
+        </a>
+      </div>
+      <div class="faq-right accordion">
+        <div class="accordion-content">
+          <div class="accordion-item">
+            <span class="accordion-heading">How does the game work?</span>
+            <p class="accordion-text">
+              It’s P2P trading game where users bet on Bitcoin rise or fall. Every round longs 45 seconds that makes the game super addictive.
+            </p>
+          </div>
+          <div class="accordion-item">
+            <span class="accordion-heading">Is the game ready for scalabilty?</span>
+            <p class="accordion-text">
+              It’s P2P trading game where users bet on Bitcoin rise or fall. Every round longs 45 seconds that makes the game super addictive.
+              It’s P2P trading game where users bet on Bitcoin rise or fall. Every round longs 45 seconds that makes the game super addictive.
+            </p>
+          </div>
+          <div class="accordion-item">
+            <span class="accordion-heading">What does plag-and-play includes?</span>
+            <p class="accordion-text">
+              It’s P2P trading game where users bet on Bitcoin rise or fall. Every round longs 45 seconds that makes the game super addictive.
+              It’s P2P trading game where users bet on Bitcoin rise or fall. Every round longs 45 seconds that makes the game super addictive.
+              It’s P2P trading game where users bet on Bitcoin rise or fall. Every round longs 45 seconds that makes the game super addictive.
+            </p>
+          </div>
+          <div class="accordion-item">
+            <span class="accordion-heading">What skills do I need to run Web3 Trading Game?</span>
+            <p class="accordion-text">
+              It’s P2P trading game where users bet on Bitcoin rise or fall. Every round longs 45 seconds that makes the game super addictive.
+            </p>
+          </div>
+          <div class="accordion-item">
+            <span class="accordion-heading">What should I do to increase earnings?</span>
+            <p class="accordion-text">
+              It’s P2P trading game where users bet on Bitcoin rise or fall. Every round longs 45 seconds that makes the game super addictive.
+            </p>
+          </div>
+          <div class="accordion-item">
+            <span class="accordion-heading">How Playnance will support me in growth?</span>
+            <p class="accordion-text">
+              It’s P2P trading game where users bet on Bitcoin rise or fall. Every round longs 45 seconds that makes the game super addictive.
+            </p>
+          </div>
+          <div class="accordion-item">
+            <span class="accordion-heading">How long can I receive income from the game?</span>
+            <p class="accordion-text">
+              It’s P2P trading game where users bet on Bitcoin rise or fall. Every round longs 45 seconds that makes the game super addictive.
+            </p>
+          </div>
+          <div class="accordion-item">
+            <span class="accordion-heading">How can I be sure that I will receive game ownership and earnings?</span>
+            <p class="accordion-text">
+              It’s P2P trading game where users bet on Bitcoin rise or fall. Every round longs 45 seconds that makes the game super addictive.
+            </p>
+          </div>
+          <div class="accordion-item">
+            <span class="accordion-heading">Does the game have no fraud backdoors inside?</span>
+            <p class="accordion-text">
+              It’s P2P trading game where users bet on Bitcoin rise or fall. Every round longs 45 seconds that makes the game super addictive.
+            </p>
+          </div>
+          <div class="accordion-item">
+            <span class="accordion-heading">Can I change my package to another?</span>
+            <p class="accordion-text">
+              It’s P2P trading game where users bet on Bitcoin rise or fall. Every round longs 45 seconds that makes the game super addictive.
+            </p>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="kit">
+    <div class="container">
+      <div class="kit-left">
+          <div class="kit-title title-2 d-xs-none">
+            Buy now TO 
+            <i class="text-light text-primary">Receive YOUR Free Advertising Kit</i>
+            <span class="kit-chip">Proven Efficiency</span>
+          </div>
+          <div class="kit-title title-2 d-xs-block d-none">
+            Buy now TO — 
+            <i class="text-light text-primary">Receive<br> YOUR Free<br> Advertising Kit</i>
+            <span class="kit-chip">Proven Efficiency</span>
+          </div>
+      </div>
+      <div class="kit-right">
+        <img src="/images/buy-kit.png" alt="">
+        <div class="title-5">Get a media kit with advertising and banners that drive traffic</div>
+        <a href="/" class="btn-primary">Receive Now</a>
+      </div>
+    </div>
+  </div>
+
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-logo">
+        <a href="/"><img src="images/logo.svg" alt=""></a>
+      </div>
+      <div class="footer-menu">
+        <ul>
+          <li>
+            <a href="/">Main</a>
+          </li>
+          <!-- <li>
+            <a href="/">Cases & Guides</a>
+          </li>
+          <li>
+            <a href="/">Game</a>
+          </li>
+          <li>
+            <a href="/">Company</a>
+          </li> -->
+          <li>
+            <a href="/">Contact us</a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer-social">
+        <a href="/"><i class="pn pn-sm pn-instagram"></i></a>
+        <a href="/"><i class="pn pn-sm pn-linkedin"></i></a>
+        <a href="/"><i class="pn pn-sm pn-twitter"></i></a>
+        <a href="/"><i class="pn pn-sm pn-facebook"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <div class="footer-rights">
+    <div class="container">
+      <div>
+        2023 Playnance All rights Reserved
+      </div>
+      <div class="footer-rights_links">
+        <a href="/" target="_blank">Privacy Policy</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+  <script src="js/just-validate.min.js"></script>
+  <script src="js/home.js"></script>
+
+</body>
+
+</html>
