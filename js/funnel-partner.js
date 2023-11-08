@@ -164,13 +164,19 @@ document.addEventListener('DOMContentLoaded', function () {
     stepButtons.forEach((button) => {
         button.addEventListener('click', (e) => {
             let stepItem = button.closest('.form-step.current-step');
-            document.querySelector('#submit-funnel-btn').click();
-            validation.revalidate().then(isValid => {
+            // document.querySelector('#submit-funnel-btn').click();
+            const promises = [];
+            stepItem.querySelectorAll('input').forEach((field) => {
+                let promise = validation.revalidateField(`#${field.id}`)
+                promises.push(promise);
+            });
+            
+            Promise.all(promises).then(() => {
                 if (!stepItem.querySelector('.just-validate-error-label')) {
                     stepItem.classList.remove('current-step');
                     stepItem.nextElementSibling.classList.add('current-step');
                 }
-            })
+            });
         })
     })
 
