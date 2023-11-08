@@ -735,6 +735,10 @@ input:hover, textarea:hover, select:hover {
     border: 1px solid #848489;
 }
 
+input:disabled:hover, textarea:disabled:hover, select:disabled:hover {
+    border-color: #252533;
+}
+
 .form-input {
     margin-bottom: 32px;
 }
@@ -743,16 +747,18 @@ input[type="checkbox"] {
     position: relative;
     width: 16px;
     height: 16px;
-    margin: 0;
+    margin: 3px 16px 0 0;
+    padding: 0;
     -webkit-appearance: none;
     appearance: none;
-    background: #0A0A0E;
+    background-color: #0A0A0E;
+    background-size: 16px;
+    background-position: center;
     border: 1px solid #fff;
     outline: none;
     border-radius: 0;
     cursor: pointer;
     box-shadow: none !important;
-    border: 0;
 }
 input[type="checkbox"]:checked {
     background: #DC000C;
@@ -781,6 +787,17 @@ input[type="radio"]:checked {
     background-color: #DC000C;
 }
 
+.form-check {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-bottom: 32px;
+}
+.form-check ~ label {
+    max-width: calc(100% - 32px);
+    margin-bottom: 0;
+}
 
 .switch {
     display: inline-block;
@@ -859,12 +876,10 @@ input:checked+.slider::before {
     margin: 0 auto;
     box-sizing: border-box;
 }
-
 button {
     font-family: 'HelveticaNeue', sans-serif;
     -webkit-tap-highlight-color: transparent;
 }
-
 .btn-primary {
     display: flex;
     flex-direction: row;
@@ -884,26 +899,37 @@ button {
     cursor: pointer;
     box-sizing: border-box;
 }
-
 .btn-primary:hover {
     color: #fff;
     background: #DC000C;
     box-shadow: 0px 12px 24px hsla(357, 100%, 43%, 0.35);
 }
-
 .btn-primary:focus, .btn-primary:active, .btn-primary:target {
     color: #fff;
     background: #DC000C;
     box-shadow: 0px 12px 18px hsla(357, 100%, 43%, 0.35);
 }
-
+.btn-text {
+    padding: 0;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14px;
+    color: #848489;
+    border: 0;
+    background: transparent;
+    outline: none;
+    cursor: pointer;
+}
+.btn-text:hover {
+    text-decoration: underline;
+}
 .btn-default {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     gap: 8px;
-    padding: 12px 32px;
+    padding: 11px 32px;
     color: #fff;
     font-size: 16px;
     font-weight: 700;
@@ -1191,7 +1217,7 @@ a:hover .pn {
 /* dropdown */
 .dropdown {
     position: relative;
-    padding-right: 15px;
+    padding-right: 15px !important;
 }
 .dropdown::before {
     content: '';
@@ -1227,11 +1253,11 @@ a:hover .pn {
     padding: 0;
     /* overflow: hidden; */
 }
-.dropdown-menu.dropdown-left {
+.dropdown.dropdown-left .dropdown-menu {
     right: unset;
     left: 0;
 }
-.dropdown-menu.dropdown-bottom {
+.dropdown.dropdown-bottom .dropdown-menu {
     top: unset;
     bottom: 100%;
 }
@@ -1248,6 +1274,10 @@ a:hover .pn {
     min-width: 70px;
     height: 25px;
     display: none;
+}
+.dropdown.dropdown-bottom .dropdown-toggle::before {
+    top: unset;
+    bottom: 100%;
 }
 .dropdown:hover .dropdown-menu, .dropdown:hover .dropdown-toggle::before {
     display: block;
@@ -1560,13 +1590,13 @@ a:hover .pn {
     left: 0;
     top: 100% 
 }
-.calculator-form-wrap .check-players-region .form-check label {
+.calculator-form-wrap .check-players-region .form-radio label {
     padding: 6px 24px;
 }
-.calculator-form-wrap .form-check {
+.calculator-form-wrap .form-radio {
     position: relative;
 }
-.calculator-form-wrap .form-check label {
+.calculator-form-wrap .form-radio label {
     padding: 6px 13px;
     margin: 0;
     font-size: 16px;
@@ -1575,13 +1605,13 @@ a:hover .pn {
     border-radius: 4px;
     transition: all .2s ease-in;
 }
-.calculator-form-wrap .form-check input {
+.calculator-form-wrap .form-radio input {
     position: absolute;
     width: 100%;
     height: 100%;
     opacity: 0;
 }
-.calculator-form-wrap .form-check input:checked + label {
+.calculator-form-wrap .form-radio input:checked + label {
     background: #DC000C;
 }
 .calculator-earnings {
@@ -2379,7 +2409,7 @@ a:hover .pn {
     max-width: 125px;
     vertical-align: middle;
 }
-.footer-menu ul {
+.footer-menu > ul {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -2388,8 +2418,11 @@ a:hover .pn {
     padding-left: 0;
     margin: 0;
 }
-.footer-menu li {
+.footer-menu > ul > li {
     padding: 0 16px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
 }
 .footer-social {
     display: flex;
@@ -2424,7 +2457,244 @@ a:hover .pn {
 
 /* ----------------------- footer end ----------------------- */
 /* ---------------------------------------------------------- */
+/* ------------------------- funnel ------------------------- */
+.funnel {
+    border-bottom: 1px solid #252533;
+}
+.funnel .container {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+}
+.funnel-title {
+    margin-bottom: 40px;
+}
+.funnel-left {
+    width: 55%;
+    padding: 64px 40px 64px 0;
+}
+.form-step {
+    max-height: 0;
+    opacity: 0;
+    visibility: hidden;
+    overflow: hidden;
+    transition: opacity .5s ease;
+}
+.current-step {
+    max-height: 100%;
+    opacity: 1;
+    visibility: visible;
+    overflow: unset;
+    transition: opacity .5s ease;
+}
+.code-group-wrap .error-container > div {
+    display: none;
+}
+.code-group-wrap .error-container > div:last-child {
+    display: block;
+}
+.code-group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.code-group input {
+    width: calc(16.66% - 7px) !important;
+    padding: 12px;
+    text-align: center;
 
+}
+.code-group .btn-text {
+    margin-top: 8px;
+    margin-left: auto;
+}
+.confirmation-code .error-container {
+    min-width: 45px;
+}
+.confirmation-code .code-group-wrap:not(.d-none) + .btn-send-code {
+    display: none;
+}
+.form-step .btn-default.btn-full {
+    width: 100%;
+    max-width: 366px;
+    margin-bottom: 24px;
+}
+.form-step .form-input + .btn-default.btn-full {
+    margin: -20px 0 24px;
+}
+.funnel-form .form-input {
+    max-width: 366px;
+}
+.funnel-form .form-input input {
+    width: 100%;
+}
+.funnel-form .button-group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    max-width: 366px;
+}
+.funnel-form .button-group button:not(:last-child) {
+    margin-right: 16px;
+}
+.funnel .form-social-media .form-input {
+    display: none;
+}
+.funnel .form-social-media.show-fields .form-input {
+    display: block;
+}
+.funnel .form-social-media.show-fields .btn-default {
+    display: none;
+}
+.funnel .form-check .just-validate-error-label {
+    width: 100%;
+}
+.funnel .form-check a {
+    text-decoration: underline;
+}
+.file-group-wrap {
+    max-width: 366px;
+    margin-bottom: 24px;
+}
+.file-group {
+    max-width: 366px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.file-field {
+    position: relative;
+    width: calc(50% - 7px);
+    max-width: calc(50% - 7px);
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    box-sizing: border-box;
+}
+.file-field ::-webkit-file-upload-button {
+    cursor: pointer;
+}
+.file-field label {
+    position: relative;
+    z-index: 0;
+    margin-bottom: 0;
+    width: 100%;
+    padding: 12px 32px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px; 
+    text-align: center;
+    color: #FFFFFF;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    background: transparent;
+    white-space: nowrap;
+}
+.file-field .field-error ~ label {
+    border: 1px solid #DC000C;
+}
+.file-field:hover  {
+    background: #17171C;
+}
+.file-field input {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+.file-field .file {
+    display: block;
+    padding-right: 12px;
+}
+.file-field .file-name {
+    position: relative;
+    z-index: 0;
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    color: #FFFFFF;
+}
+.file-field .file-name .ellipsis {
+    max-width: 100%;
+    display: inline-block;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.file-remove {
+    position: absolute;
+    top: 11px;
+    right: 12px;
+    width: 24px;
+    height: 24px;
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M18 6L6 18' stroke='%23999999' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M6 6L18 18' stroke='%23999999' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    cursor: pointer;
+}
+
+.file-rules {
+    color: #848489;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14px;
+}
+.file-rules > div {
+    display: none;
+    padding-top: 16px;
+}
+.file-rules > div:last-child {
+    display: block;
+}
+.funnel-right {
+    width: 45%;
+    padding: 64px 0 40px 80px;
+    border-left: 1px solid #252533;
+}
+.funnel ol {
+    padding-left: 20px;
+    margin: 0;
+}
+.funnel li {
+    margin-bottom: 16px;
+}
+.funnel-video {
+    margin-top: 40px;
+}
+.packages-step .funnel-title {
+    padding: 46px 0;
+    margin: 0;
+    border-bottom: 1px solid #252533;
+}
+
+
+/* --------------------- funnel partner --------------------- */
+.funnel-partner {
+
+}
+/* ------------------- funnel partner end ------------------- */
+
+/* ----------------------- funnel end ----------------------- */
 
 /* ---------------------------------------------------------- */
 /* -------------------------- media ------------------------- */
@@ -2704,14 +2974,14 @@ a:hover .pn {
     .footer-logo {
         margin-bottom: 24px;
     }
-    .footer-menu ul {
+    .footer-menu > ul {
         flex-direction: column;
         margin-bottom: 24px;
     }
-    .footer-menu li {
+    .footer-menu > ul > li {
         padding: 8px 0;
     }
-    .footer-menu li a {
+    .footer-menu > ul > li a {
         font-size: 14px;
         font-weight: 400;
         line-height: 20px;
@@ -2725,6 +2995,13 @@ a:hover .pn {
     }
     .footer-rights_links {
         margin-top: 16px;
+    }
+    .funnel-left {
+        width: 50%;
+    }
+    .funnel-right {
+        width: 50%;
+        padding: 64px 0 40px 40px;
     }
 }
 
@@ -3314,9 +3591,68 @@ a:hover .pn {
     }
 
 
-
-
-
+    .funnel .container {
+        flex-direction: column;
+    }
+    .funnel-left {
+        width: 100%;
+        padding: 48px 0;
+    }
+    .funnel-right {
+        position: relative;
+        width: 100%;
+        padding: 48px 0;
+        border-left: 0;
+    }
+    .funnel-right::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -20px;
+        width: 100vw;
+        border-bottom: 1px solid #252533;
+    }
+    .funnel-right .funnel-title {
+        margin-bottom: 24px;
+    }
+    .funnel .form-input {
+        margin-bottom: 24px;
+    }
+    .form-step .btn-default.btn-full {
+        max-width: 420px;
+    }
+    .form-step .form-input + .btn-default.btn-full {
+        margin: -12px 0 24px;
+    }
+    .funnel-form .form-input {
+        max-width: 420px;
+    }
+    .funnel-form .button-group {
+        max-width: 420px;
+    }
+    .file-group-wrap {
+        max-width: 420px;
+    }
+    .file-group {
+        max-width: 420px;
+    }
+    .funnel li {
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 24px;
+    }
+    .file-field label {
+        padding: 12px 16px;
+    }
+    .file-field .file {
+        padding-right: 18px;
+    }
+    .file-remove {
+        right: 7px;
+    }
+    .btn-next-step, .btn-skip-step {
+        width: 100%;
+    }
 }
 
 @media (max-width: 768px) {

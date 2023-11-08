@@ -10,59 +10,52 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     validation
-    .addField('#players-number', [
-        {
-            rule: 'required',
-            errorMessage: 'Enter players number',
-        },
-        {
-            rule: 'number',
-        },
-        {
-            rule: 'minNumber',
-            value: 1,
-          },
-          {
-            rule: 'maxNumber',
-            value: 100000,
-          },
-    ])
-    .addRequiredGroup('#players-region_radio_group')
-    .addRequiredGroup('#partner-package_radio_group')
-    .onValidate((event) => {
-        if (event.fields['#players-number'].touched && document.querySelector('#players-number').getAttribute('placeholder') != 0) {
-            document.querySelector('#players-number').setAttribute('placeholder', 0);
-        }
-        if (event.fields['#players-number'].isValid || document.querySelector('#players-number').value == '') {
-            calculateProfit();
-        }
-    
-        // console.log(event.isValid)
-        // console.log(event.isSubmitted)
-        // console.log(event.fields)
-        // console.log(event.groups)
-
-    })
+        .addField('#players-number', [
+            {
+                rule: 'required',
+                errorMessage: 'Enter players number',
+            },
+            {
+                rule: 'number',
+            },
+            {
+                rule: 'minNumber',
+                value: 1,
+            },
+            {
+                rule: 'maxNumber',
+                value: 100000,
+            },
+        ])
+        .addRequiredGroup('#players-region_radio_group')
+        .addRequiredGroup('#partner-package_radio_group')
+        .onValidate((event) => {
+            if (event.fields['#players-number'].touched && document.querySelector('#players-number').getAttribute('placeholder') != 0) {
+                document.querySelector('#players-number').setAttribute('placeholder', 0);
+            }
+            if (event.fields['#players-number'].isValid || document.querySelector('#players-number').value == '') {
+                calculateProfit();
+            }
+        })
     // .onFail((fields) => {
 
     // })
     // .onSuccess((event) => {
-   
+
     // })
-   
-    function calculateProfit () {
-        let dailyProfit, 
-            monthlyProfit, 
+
+    function calculateProfit() {
+        let dailyProfit,
+            monthlyProfit,
             players = document.querySelector('#players-number').value || document.querySelector('#players-number').getAttribute('placeholder'),
             region = document.querySelector('input[name="players-region"]:checked').value,
             package = document.querySelector('input[name="partner-package"]:checked').value;
 
-        dailyProfit = Math.floor(players * region * (package / 100));
+        dailyProfit = Math.floor(players * region * (package / 100) * 0.8);
         monthlyProfit = Math.floor(dailyProfit * 30);
 
         document.querySelector('.calculator-daily-profit').textContent = `$${dailyProfit.toLocaleString("en-US")}`;
         document.querySelector('.calculator-monthly-profit').textContent = `$${monthlyProfit.toLocaleString("en-US")}`;
     }
-
 
 });
