@@ -692,6 +692,18 @@ input, textarea {
     transition: all .2s ease;
 }
 
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
 select {
     position: relative;
     display: block;
@@ -794,7 +806,7 @@ input[type="radio"]:checked {
     flex-wrap: wrap;
     margin-bottom: 32px;
 }
-.form-check ~ label {
+.form-check label {
     max-width: calc(100% - 32px);
     margin-bottom: 0;
 }
@@ -1299,6 +1311,19 @@ a:hover .pn {
 .dropdown-menu a.active,
 .dropdown-menu button.active {
     text-decoration: underline;
+}
+
+/* Toast */
+.toast {
+    position: fixed;
+    top: 10%;
+    left: 50%;
+    padding: 16px 32px;
+    background: #17171C;
+    border: 1px solid #252533;
+    border-radius: 4px;
+    transform: translateX(-50%);
+    cursor: default;
 }
 
 /* ---------------------------------------------------------- */
@@ -2553,6 +2578,9 @@ a:hover .pn {
 .funnel .form-check .just-validate-error-label {
     width: 100%;
 }
+.funnel .form-check label {
+    margin-bottom: 0;
+}
 .funnel .form-check a {
     text-decoration: underline;
 }
@@ -2686,14 +2714,18 @@ a:hover .pn {
     margin: 0;
     border-bottom: 1px solid #252533;
 }
-
-
 /* --------------------- funnel partner --------------------- */
 .funnel-partner {
 
 }
 /* ------------------- funnel partner end ------------------- */
+/* ---------------------------------------------------------- */
+/* -------------------- funnel affiliate -------------------- */
+.funnel-affiliate .button-group {
 
+}
+/* ------------------ funnel affiliate end ------------------ */
+/* ---------------------------------------------------------- */
 /* ----------------------- funnel end ----------------------- */
 
 /* ---------------------------------------------------------- */
@@ -3652,6 +3684,14 @@ a:hover .pn {
     }
     .btn-next-step, .btn-skip-step {
         width: 100%;
+    }
+    .funnel-affiliate .button-group {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .funnel-affiliate .button-group button:not(:last-child) {
+        margin-right: 0;
+        margin-bottom: 16px;
     }
 }
 
