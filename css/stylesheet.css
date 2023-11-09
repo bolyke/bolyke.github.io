@@ -2484,9 +2484,23 @@ a:hover .pn {
 /* ---------------------------------------------------------- */
 /* ------------------------- funnel ------------------------- */
 .funnel {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    min-height: calc(100% - 273px);
     border-bottom: 1px solid #252533;
 }
+.form-steps {
+    width: 100%;
+}
+.funnel-form {
+    height: 100%;
+}
+.form-step {
+    height: 100%;
+}
 .funnel .container {
+    height: 100%;
     display: flex;
     flex-direction: row;
     align-items: stretch;
@@ -2680,7 +2694,6 @@ a:hover .pn {
     background-position: center;
     cursor: pointer;
 }
-
 .file-rules {
     color: #848489;
     font-size: 12px;
@@ -2708,6 +2721,9 @@ a:hover .pn {
 }
 .funnel-video {
     margin-top: 40px;
+}
+.packages-step .packages-content {
+    border-bottom: 1px solid #252533;
 }
 .packages-step .funnel-title {
     padding: 46px 0;
