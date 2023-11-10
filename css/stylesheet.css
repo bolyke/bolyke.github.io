@@ -2743,6 +2743,60 @@ a:hover .pn {
 /* ------------------ funnel affiliate end ------------------ */
 /* ---------------------------------------------------------- */
 /* ----------------------- funnel end ----------------------- */
+/* ---------------------------------------------------------- */
+/* ------------------------- contact ------------------------ */
+.contact {
+    min-height: calc(100% - 273px);
+    padding: 64px 0;
+    border-bottom: 1px solid #252533;
+}
+.contact .container {
+    height: 100%;
+}
+
+.contact-title {
+    margin-bottom: 40px;
+}
+.contact-form {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: space-between;
+}
+.contact-left {
+    width: calc(40% - 100px);
+}
+.contact-left input {
+    width: 100%;
+}
+.contact-center {
+    padding: 0 32px;
+    width: calc(60% - 100px);
+}
+.contact-center .form-input {
+    height: 100%;
+    margin-bottom: 0;
+    padding-bottom: 32px;
+}
+.contact-center textarea {
+    width: 100%;
+    height: calc(100% - 36px);
+}
+.contact-right {
+    padding-top: 36px;
+    width: 200px;
+}
+.contact-right .button-group .btn-primary {
+    width: 100%;
+    margin-bottom: 19px;
+    white-space: nowrap;
+}
+.contact-right .button-group .btn-default {
+    padding: 11px 16px;
+    width: 100%;
+    white-space: nowrap;
+}
+/* ----------------------- contact end ---------------------- */
 
 /* ---------------------------------------------------------- */
 /* -------------------------- media ------------------------- */
@@ -3050,6 +3104,34 @@ a:hover .pn {
     .funnel-right {
         width: 50%;
         padding: 64px 0 40px 40px;
+    }
+    .contact {
+        padding: 48px 0 60px;
+    }
+    .contact-form {
+        flex-direction: column;
+    }
+    .contact-left {
+        width: 100%;
+    }
+    .contact-center {
+        padding: 0;
+        width: 100%;
+    }
+    .contact-center textarea {
+        height: auto;
+        min-height: 280px;
+    }
+    .contact-right {
+        padding-top: 0;
+        width: 100%;
+    }
+    .contact-right .button-group .btn-primary {
+        margin-bottom: 24px;
+    }
+    .contact .form-input {
+        margin-bottom: 24px;
+        padding-bottom: 0;
     }
 }
 
