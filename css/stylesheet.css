@@ -1372,7 +1372,9 @@ a.btn-default {
 .text-center {
     text-align: center;
 }
-
+.text-justify {
+    text-align: justify;
+}
 .text-uppercase {
     text-transform: uppercase;
 }
@@ -3119,6 +3121,257 @@ a:hover .pn {
     white-space: nowrap;
 }
 /* ----------------------- contact end ---------------------- */
+/* ---------------------------------------------------------- */
+/* ------------------------ company ------------------------- */
+.company-main {
+    border-bottom: 1px solid #252533;
+    overflow: hidden;
+}
+.company-main .container {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: space-between; 
+}
+.company-left {
+    width: 55%;
+    border-right: 1px solid #252533;
+}
+.company-title {
+    position: relative;
+    max-width: 520px;
+    padding: 80px 50px 80px 0;
+}
+.company-title .text-right {
+    display: inline-block;
+    width: 100%;
+}
+.company-description {
+    position: relative;
+    padding: 108px 50px 108px 0;
+    text-align: center;
+    border-top: 1px solid #252533;
+}
+.company-description::before {
+    content: '';
+    position: absolute;
+    right: 100%;
+    top: -1px;
+    width: 100vw;
+    border-top: 1px solid #252533;
+}
+.company-description::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    width: 942px;
+    height: 100%;
+    background: url('/images/company/company-main-shadow-bg.png') no-repeat;
+    background-position: right bottom;
+    background-size: auto 287px;
+}
+.company-description-text {
+    max-width: 450px;
+    margin: 0 auto;
+}
+.company-right {
+    width: 45%;
+    padding: 40px 0;
+}
+.company-right img {
+    width: 100%;
+    height: auto;
+}
+.company-stats {
+    border-bottom: 1px solid #252533;
+    overflow: hidden;
+}
+.company-stats .container {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: space-between; 
+}
+.company-stats .company-left {
+    width: 55%;
+    border-right: 1px solid #252533;
+}
+.company-stats .company-left .company-text {
+    padding: 56px 50px 56px 0;
+    max-width: 500px;
+}
+.company-stats .company-left .company-text.title-5 {
+    max-width: unset;
+    position: relative;
+    padding: 80px 50px 80px 0;
+}
+.company-stats .company-left .company-text.title-5 span {
+    display: block;
+    max-width: 525px;
+}
+.company-stats .company-left .company-text.title-5::before {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    border-top: 1px solid #252533;
+}
+.company-stats .company-right {
+    position: relative;
+    width: 45%;
+    padding: 40px 0;
+}
+.company-stats .company-right::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    width: 100vw;
+    height: 100%;
+    background: url('/images/company/company-numbers-shadow-bg.png') no-repeat;
+    background-position: left bottom;
+    background-size: auto 458px;
+}
+.company-numbers {
+    width: 100%;
+    padding: 40px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.company-numbers b {
+    margin-bottom: 12px;
+    font-size: 70px;
+    font-weight: 700;
+    line-height: 64px
+}
+.company-numbers span {
+    max-width: 210px;
+    color: rgba(255, 255, 255, 0.56);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px; 
+}
+.company-games {
+    border-bottom: 1px solid #252533;
+}
+.company-heading {
+    padding: 80px 0;
+    border-bottom: 1px solid #252533;
+}
+.company-heading .container {
+
+}
+.company-heading .title-2 {
+
+}
+.company-content {
+    border-bottom: 1px solid #252533;
+}
+.company-content .container {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: center;
+}
+.company-item {
+    width: 33.3%;
+    padding: 60px 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-left: 1px solid #252533;
+    border-right: 1px solid #252533;
+    margin-left: -1px;
+}
+.company-item:first-child {
+    margin-left: 0;
+}
+.company-item img {
+    width: 100%;
+    max-width: 280px;
+    height: auto;
+    object-fit: contain;
+    object-position: center;
+    vertical-align: middle;
+}
+.company-item span {
+    padding-top: 20px;
+    margin-bottom: -40px;
+    font-size: 14px;
+    line-height: 20px;
+}
+.company-games .button-group {
+    max-width: 284px;
+    margin: 0 auto;
+    padding: 48px 20px 80px;
+}
+.company-team {
+    border-bottom: 1px solid #252533;
+}
+.company-content .container {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+.company-team .company-item {
+    width: 25%;
+    justify-content: flex-start;
+    padding: 48px 16px;
+    text-align: center;
+    border-left: 1px solid #252533;
+    border-right: 1px solid #252533;
+    border-bottom: 1px solid #252533;
+    margin-left: -1px !important;
+}
+.company-team .company-item img {
+    width: 120px;
+    max-width: unset;
+    height: 120px;
+    object-fit: contain;
+    object-position: center;
+    vertical-align: middle;
+    border-radius: 50%;
+    border: 2px solid #C71F16;
+}
+.company-team .company-item .text-primary {
+    padding-bottom: 4px;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 26px;
+    text-transform: uppercase;
+}
+.company-team .company-item .caption {
+    font-size: 16px;
+    line-height: 22px;
+}
+.company-team .company-image {
+    position: relative;
+    margin-bottom: 32px;
+}
+.company-team .company-image a {
+    position: absolute;
+    left: 50%;
+    bottom: -16px;
+    z-index: 1;
+    display: block;
+    padding: 8px;
+    border-radius: 50%;
+    background: #DC000C;
+    transform: translateX(-50%);
+}
+.company-team .company-image a:hover {
+    filter: none;
+    box-shadow: 0px 5px 10px hsla(357, 100%, 43%, 0.35);
+}
+/* ---------------------- company end ----------------------- */
+
 
 /* ---------------------------------------------------------- */
 /* -------------------------- media ------------------------- */
@@ -3247,7 +3500,9 @@ a:hover .pn {
         font-size: 16px;
         line-height: 20px; 
     }
- 
+    .company-title {
+        max-width: 437px;
+    }
 }
 @media (max-width: 920px) {
     .title-1 {
@@ -3454,6 +3709,16 @@ a:hover .pn {
     .contact .form-input {
         margin-bottom: 24px;
         padding-bottom: 0;
+    }
+    .company-team .company-item {
+        margin-bottom: -1px;
+    }
+    .company-title {
+        max-width: 350px;
+    }
+    .company-team .company-item img {
+        width: 100px;
+        height: 100px;
     }
 }
 
@@ -4132,11 +4397,122 @@ a:hover .pn {
         margin-right: 0;
         margin-bottom: 16px;
     }
-}
 
-@media (max-width: 768px) {
-
-  
+    .company-main {
+        background: url('/images/company/company-main-shadow-bg-mob.png') no-repeat;
+        background-position: center bottom;
+        background-size: auto 272px;
+    }
+    .company-main .container {
+        padding: 0;
+    }
+    .company-left {
+        width: 100%;
+        border: 0;
+    }
+    .company-heading {
+        padding: 48px 0;
+    }
+    .company-title {
+        padding: 56px 20px;
+        margin: 0 auto;
+        max-width: 340px;
+    }
+    .company-main .company-image {
+        padding: 0 20px;
+        border-top: 1px solid #252533;
+    }
+    .company-main .company-image img {
+        margin: 0 auto;
+        max-width: 450px;
+        width: 100%;
+        height: auto;
+    }
+    .company-description {
+        padding: 48px 20px;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 22px;
+    }
+    .company-description::after {
+        content: none;
+    }
+    .company-stats .container {
+        padding: 0;
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .company-stats .company-left {
+        width: 100%;
+        border-right: 0;
+        border-bottom: 1px solid #252533;
+    }
+    .company-stats .company-left .company-text {
+        padding: 48px 20px;
+        max-width: unset;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 22px;
+    }
+    .company-stats .company-left .company-text.title-5 {
+        padding: 48px 20px;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 24px;
+    }
+    .company-stats .company-left .company-text.title-5::before {
+        content: '';
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 100vw;
+        border-top: 1px solid #252533;
+    }
+    .company-stats .company-right {
+        width: 100%;
+        padding: 24px 20px;
+    }
+    .company-stats .company-right::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        z-index: -1;
+        width: 100vw;
+        height: 100%;
+        background: url('/images/company/company-numbers-shadow-bg-mob.png') no-repeat;
+        background-position: center bottom;
+        background-size: auto 373px;
+    }
+    .company-numbers {
+        padding: 24px 0;
+    }
+    .company-item {
+        width: 100%;
+        padding: 36px 32px;
+        border-bottom: 1px solid #252533;
+        margin-left: 0;
+        margin-bottom: -1px;
+    }
+    .company-item span {
+        padding-top: 12px;
+        margin-bottom: -12px;
+    }
+    .company-games .button-group {
+        padding: 48px 20px;
+        width: 100%;
+        max-width: unset;
+    }
+    .company-games .button-group .btn-primary {
+        width: 100%;
+    }
+    .company-team .company-item {
+        width: 50%;
+    }
+    .company-team .company-item img {
+        width: 120px;
+        height: 120px;
+    }
 }
 
 @media (max-width: 650px) {
@@ -4145,6 +4521,16 @@ a:hover .pn {
     }
     .launch-video {
         height: 260px;
+    }
+    .company-title {
+        margin: 0;
+    }
+    .company-heading .text-center {
+        text-align: left;
+    }
+    .company-team .company-item {
+        width: 100%;
+        padding: 32px 16px;
     }
 }
 
