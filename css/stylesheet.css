@@ -4420,6 +4420,7 @@ a:hover .pn {
     }
     .company-main .company-image {
         padding: 0 20px;
+        height: 277px;
         border-top: 1px solid #252533;
     }
     .company-main .company-image img {
