@@ -46,7 +46,14 @@ document.addEventListener('DOMContentLoaded', function () {
             }
           });
         })
-      } 
+    } 
+
+    // Game Show more button
+    if (document.querySelector('.released-more')) {
+        document.querySelector('.released-more').addEventListener('click', () => {
+            document.querySelector('.released-content').classList.toggle('released-show-all');
+        })
+    }
 
 });
 

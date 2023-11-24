@@ -3830,19 +3830,29 @@ a:hover .pn {
     flex-wrap: wrap;
 }
 .released-item {
+    display: none;
+    align-items: center;
+    justify-content: center;
     position: relative;
     width: 20%;
     padding: 20px 16px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 24px;
+    border: 0;
     border-left: 1px solid #252533;
     border-right: 1px solid #252533;
     border-bottom: 1px solid #252533;
+    background-color: transparent;
     margin-bottom: -1px;
     margin-left: -1px;
+    cursor: pointer;
 }
-a.released-item:hover {
+.released-item:nth-child(-n+9) {
+    display: flex;
+}
+.released-item:hover {
     background-color: #17171C;
 }
 .released-item img {
@@ -3850,6 +3860,24 @@ a.released-item:hover {
     max-width: 200px;
     object-fit: contain;
     object-position: center;
+}
+.released-show-all .released-item {
+    display: flex;
+}
+.released-more {
+    display: flex;
+}
+.released-more span:first-child {
+    display: block;
+}
+.released-more span:last-child {
+    display: none;
+}
+.released-show-all .released-more span:first-child {
+    display: none;
+}
+.released-show-all .released-more span:last-child {
+    display: block;
 }
 .game-released .button-group {
     padding: 48px 20px 80px;
