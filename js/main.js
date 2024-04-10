@@ -4,10 +4,12 @@ document.addEventListener('DOMContentLoaded', function () {
   const buttonCopy = document.querySelector('.btn-copy');
 
   buttonCopy.addEventListener('click', () => {
-    // let text = buttonCopy.closest('.copy-group').querySelector('.field-copy').value;
-    let text = "efwefwef";
-    console.log(text);
-    copyText(text);    
+    let text = buttonCopy.closest('.copy-group').querySelector('.field-copy').value;
+    copyText(text);
+    document.querySelector('.popup.popup-copy').classList.add('active');
+    setTimeout(function () {
+      document.querySelector('.popup.popup-copy').classList.remove('active');
+    }, 1500);
   });
 
   var snowflakes = new Snowflakes({
