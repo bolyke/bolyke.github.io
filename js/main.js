@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const buttonCopy = document.querySelector('.btn-copy');
 
   buttonCopy.addEventListener('click', () => {
-    let text = buttonCopy.closest('.copy-group').querySelector('.field-copy').value;
+    let text = buttonCopy.closest('.copy-group').querySelector('.field-copy').innerText;
     copyText(text);
     document.querySelector('.popup.popup-copy').classList.add('active');
     setTimeout(function () {
