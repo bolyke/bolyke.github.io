@@ -1165,7 +1165,9 @@ button {
     object-fit: contain;
     object-position: center;
     vertical-align: bottom;
-    touch-action: none;
+    -webkit-user-select: none;
+    user-select: none;
+    pointer-events: none;
 }
 .main-copy {
     position: absolute;
@@ -1482,6 +1484,12 @@ button {
         margin-right: 0;
         width: 16px;
         height: 16px;
+    }
+    .main-socials {
+        padding: 0;
+    }
+    .main-socials a {
+        margin: 0 8px;
     }
     .about::before {
         background-size: cover;
